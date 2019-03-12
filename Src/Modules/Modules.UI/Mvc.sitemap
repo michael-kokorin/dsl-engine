@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+    <mvcSiteMapNode title="$resources:SiteMapResources,Home" controller="Home" action="Index" key="Home">
+        <mvcSiteMapNode title="$resources:SiteMapResources,About" controller="Home" action="About"/>
+        <mvcSiteMapNode title="$resources:SiteMapResources,AdminPanel" controller="Admin" action="Index"/>
+        <mvcSiteMapNode title="$resources:SiteMapResources,Projects" controller="Project" action="Index" key="Projects">
+            <mvcSiteMapNode title="$resources:SiteMapResources,Projects" controller="Task" action="GetByProject"
+                            cacheResolvedUrl="false" preservedRouteParameters="project"
+                            dynamicNodeProvider = "Modules.UI.NodeProviders.ProjectNodeProvider, Modules.UI">
+                <mvcSiteMapNode title="$resources:SiteMapResources,TaskResults" controller="Task" action="GetTaskResults"/>
+                <mvcSiteMapNode title="$resources:SiteMapResources,ScanTaskResult" controller="TaskResult" action="Get"/>
+                <mvcSiteMapNode title="$resources:SiteMapResources,ProjectSettings" controller="Project" action="Edit"/>
+            </mvcSiteMapNode>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="$resources:SiteMapResources,Reports" controller="Report" action="Index">
+            <mvcSiteMapNode title="$resources:SiteMapResources,ReportResults" controller="Report" action="Show"/>
+        </mvcSiteMapNode>
+        <mvcSiteMapNode title="$resources:SiteMapResources,UserCab" controller="User" action="PersonalCabinet"/>
+		<mvcSiteMapNode title="$resources:SiteMapResources,Queries" controller="Query" action="List">
+			<mvcSiteMapNode title="$resources:SiteMapResources,EditQuery" controller="Query" action="Edit"/>
+		</mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+</mvcSiteMap>

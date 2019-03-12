@@ -1,0 +1,11 @@
+﻿Projects
+where #Id# == {ProjectId}
+select
+#DisplayName#
+#DefaultBranchName#
+Created = #Created.ToString()#
+Modified = #Modified.ToString()#
+VcsPlugin = #Plugins1.DisplayName#
+ItPlugin = #Plugins?.DisplayName#
+#VcsLastSyncUtc#
+select end

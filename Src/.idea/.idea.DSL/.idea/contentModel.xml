@@ -1,0 +1,3658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\micha\.Rider2018.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\micha\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\micha\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_DSL.1307419.00" t="ExcludeRecursive" />
+    <e p="Z:\projects\dsl-engine\Src" t="IncludeFlat">
+      <e p="AssemblyInfoGlobal.cs" t="Include" />
+      <e p="Automation\PackageVersionsHelper" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PackageVersionsHelper.csproj" t="IncludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+      </e>
+      <e p="CodeAnalysisRules.ruleset" t="Include" />
+      <e p="Common\Common" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Command" t="Include">
+          <e p="CommandDispatcher.cs" t="Include" />
+          <e p="ContainerCommandHandlerProvider.cs" t="Include" />
+          <e p="ICommand.cs" t="Include" />
+          <e p="ICommandDispatcher.cs" t="Include" />
+          <e p="ICommandHandler.cs" t="Include" />
+          <e p="ICommandHandlerProvider.cs" t="Include" />
+          <e p="UnknownCommandException.cs" t="Include" />
+        </e>
+        <e p="Common.csproj" t="IncludeRecursive" />
+        <e p="CommonContainerModule.cs" t="Include" />
+        <e p="Container" t="Include">
+          <e p="Container.cs" t="Include" />
+          <e p="IContainer.cs" t="Include" />
+          <e p="IContainerModule.cs" t="Include" />
+          <e p="ILifeManagerFactory.cs" t="Include" />
+          <e p="IoC.cs" t="Include" />
+          <e p="LifeManagerFactory.cs" t="Include" />
+          <e p="PerRequestLifetimeManager.cs" t="Include" />
+          <e p="ReuseScope.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="DataSourceProvider.cs" t="Include" />
+          <e p="IDataSourceInitializer.cs" t="Include" />
+          <e p="IDataSourceProvider.cs" t="Include" />
+          <e p="IDataSource{T}.cs" t="Include" />
+        </e>
+        <e p="Enums" t="Include">
+          <e p="DataSourceFieldDataType.cs" t="Include" />
+          <e p="DataSourceFieldType.cs" t="Include" />
+          <e p="DataSourceType.cs" t="Include" />
+          <e p="NotificationProtocolType.cs" t="Include" />
+          <e p="PluginType.cs" t="Include" />
+          <e p="QueryPrivacyType.cs" t="Include" />
+          <e p="QueryVisibilityType.cs" t="Include" />
+          <e p="ReportFileType.cs" t="Include" />
+          <e p="ReportFileTypeExtensionAttribute.cs" t="Include" />
+          <e p="SdlPolicyStatus.cs" t="Include" />
+          <e p="TableColumnType.cs" t="Include" />
+          <e p="TaskResolutionStatus.cs" t="Include" />
+          <e p="TaskStatus.cs" t="Include" />
+          <e p="VulnerabilitySeverityType.cs" t="Include" />
+        </e>
+        <e p="Exceptions" t="Include">
+          <e p="ModuleVersionIsNotSupportedException.cs" t="Include" />
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="DateTimeExtension.cs" t="Include" />
+          <e p="DictionaryExtension.cs" t="Include" />
+          <e p="EnumerableExtensions.cs" t="Include" />
+          <e p="EnumExtensions.cs" t="Include" />
+          <e p="ExceptionExtensions.cs" t="Include" />
+          <e p="JsonExtension.cs" t="Include" />
+          <e p="ObjectExtensions.cs" t="Include" />
+          <e p="StringExtensions.cs" t="Include" />
+          <e p="UnityContainerExtension.cs" t="Include" />
+          <e p="XmlSerializerExtension.cs" t="Include" />
+        </e>
+        <e p="FileSystem" t="Include">
+          <e p="FileLoader.cs" t="Include" />
+          <e p="FileSystemInfoProvider.cs" t="Include" />
+          <e p="FileWriter.cs" t="Include" />
+          <e p="IFileSystemInfoProvider.cs" t="Include" />
+          <e p="IFileWriter.cs" t="Include" />
+        </e>
+        <e p="Html" t="Include">
+          <e p="HtmlEncoder.cs" t="Include" />
+          <e p="IHtmlEncoder.cs" t="Include" />
+        </e>
+        <e p="Json" t="Include">
+          <e p="KnownConverter.cs" t="Include" />
+        </e>
+        <e p="Licencing" t="Include">
+          <e p="ConfigInstallationLicenceIdProvider.cs" t="Include" />
+          <e p="EmptyLicenceIdException.cs" t="Include" />
+          <e p="IInstallationLicenceIdProvider.cs" t="Include" />
+          <e p="ILicence.cs" t="Include" />
+          <e p="ILicenceComponent.cs" t="Include" />
+          <e p="ILicenceProvider.cs" t="Include" />
+          <e p="IncorrectLicenceIdException.cs" t="Include" />
+          <e p="LicenceProvider.cs" t="Include" />
+          <e p="Licences" t="Include">
+            <e p="FtpLicence.cs" t="Include" />
+            <e p="Licence.cs" t="Include" />
+            <e p="LicenceIds.cs" t="Include" />
+            <e p="SdlLicence.cs" t="Include" />
+          </e>
+          <e p="PluginLicenceComponent.cs" t="Include" />
+          <e p="UserCapabilityKey.cs" t="Include" />
+          <e p="UserInterfaceLicenceComponent.cs" t="Include" />
+        </e>
+        <e p="Logging" t="Include">
+          <e p="ExecutionTimeLogger.cs" t="Include" />
+          <e p="ILog.cs" t="Include" />
+          <e p="LogMethodAttribute.cs" t="Include" />
+          <e p="NLogLog.cs" t="Include" />
+        </e>
+        <e p="NLog.config" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Resources.ru.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Query" t="Include">
+          <e p="DataQueryDispatcher.cs" t="Include" />
+          <e p="DataQueryHandlerProvider.cs" t="Include" />
+          <e p="IDataQuery.cs" t="Include" />
+          <e p="IDataQueryDispatcher.cs" t="Include" />
+          <e p="IDataQueryHandler.cs" t="Include" />
+          <e p="IDataQueryHandlerProvider.cs" t="Include" />
+          <e p="UnknownDataQueryException.cs" t="Include" />
+        </e>
+        <e p="Security" t="Include">
+          <e p="Authorities.cs" t="Include" />
+          <e p="IAuthority.cs" t="Include" />
+          <e p="IUserAuthorityValidator.cs" t="Include" />
+          <e p="IUserPrincipal.cs" t="Include" />
+          <e p="IUserPrincipalProvider.cs" t="Include" />
+          <e p="UserInfo.cs" t="Include" />
+          <e p="UserRoleAliases.cs" t="Include" />
+        </e>
+        <e p="Settings" t="Include">
+          <e p="AppConfigManager.cs" t="Include" />
+          <e p="IConfigManager.cs" t="Include" />
+          <e p="WebConfigManager.cs" t="Include" />
+        </e>
+        <e p="SystemComponents" t="Include">
+          <e p="AssemblySystemVersionProvider.cs" t="Include" />
+          <e p="ISystemVersionProvider.cs" t="Include" />
+        </e>
+        <e p="Time" t="Include">
+          <e p="DateTimeService.cs" t="Include" />
+          <e p="ITimeService.cs" t="Include" />
+          <e p="TimeMeasurement.cs" t="Include" />
+        </e>
+        <e p="Transaction" t="Include">
+          <e p="EmptyTransaction.cs" t="Include" />
+          <e p="EmptyUnitOfWork.cs" t="Include" />
+          <e p="ITransaction.cs" t="Include" />
+          <e p="IUnitOfWork.cs" t="Include" />
+        </e>
+        <e p="Validation" t="Include">
+          <e p="IValidator.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Common\Common.Test" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Command" t="Include">
+          <e p="CommandDispatcherTest.cs" t="Include" />
+        </e>
+        <e p="Common.Tests.csproj" t="IncludeRecursive" />
+        <e p="CommonContainerModuleTest.cs" t="Include" />
+        <e p="Container" t="Include">
+          <e p="ContainerTest.cs" t="Include" />
+          <e p="LifeManagerFactoryTest.cs" t="Include" />
+          <e p="UnityTests.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="DataSourceProviderTest.cs" t="Include" />
+        </e>
+        <e p="Enum" t="Include">
+          <e p="ReportFileTypeExtensionAttributeTest.cs" t="Include" />
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="EnumExtensionTest.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Query" t="Include">
+          <e p="DataQueryDispatcherTest.cs" t="Include" />
+        </e>
+        <e p="Transaction" t="Include">
+          <e p="EmptyTransactionTest.cs" t="Include" />
+          <e p="EmptyUnitOfWorkTest.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Data\Database" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Common" t="Include">
+          <e p="Tables" t="Include">
+            <e p="Configuration.sql" t="Include" />
+          </e>
+        </e>
+        <e p="Cultures.sql" t="Include" />
+        <e p="Data" t="Include">
+          <e p="Tables" t="Include">
+            <e p="Events.sql" t="Include" />
+            <e p="NotificationRules.sql" t="Include" />
+            <e p="Plugins.sql" t="Include" />
+            <e p="PolicyRules.sql" t="Include" />
+            <e p="Projects.sql" t="Include" />
+            <e p="Queries.sql" t="Include" />
+            <e p="QueryEntityNames.sql" t="Include" />
+            <e p="ScanAgents.sql" t="Include" />
+            <e p="SdlStatuses.sql" t="Include" />
+            <e p="SettingGroups.sql" t="Include" />
+            <e p="SettingGroups_l10n.sql" t="Include" />
+            <e p="Settings.sql" t="Include" />
+            <e p="Settings_l10n.sql" t="Include" />
+            <e p="SettingValues.sql" t="Include" />
+            <e p="TaskResolutions.sql" t="Include" />
+            <e p="TaskResults.sql" t="Include" />
+            <e p="Tasks.sql" t="Include" />
+            <e p="TaskStatuses.sql" t="Include" />
+            <e p="Templates.sql" t="Include" />
+            <e p="UserInterfaces.sql" t="Include" />
+            <e p="WorkflowActions.sql" t="Include" />
+            <e p="WorkflowRules.sql" t="Include" />
+            <e p="WorkflowRuleToEvents.sql" t="Include" />
+          </e>
+        </e>
+        <e p="Database.sqlproj" t="IncludeRecursive" />
+        <e p="l10n" t="Include">
+          <e p="Functions" t="Include">
+            <e p="GetSettingGroups.sql" t="Include" />
+            <e p="GetSettings.sql" t="Include" />
+            <e p="GetTableColumns.sql" t="Include" />
+            <e p="GetTables.sql" t="Include" />
+          </e>
+        </e>
+        <e p="l10n.sql" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include" />
+        <e p="PT_2.Sdl.Database.publish.xml" t="Include" />
+        <e p="queue" t="Include">
+          <e p="Tables" t="Include">
+            <e p="queue.sql" t="Include" />
+          </e>
+        </e>
+        <e p="Report" t="Include">
+          <e p="Tables" t="Include">
+            <e p="Reports.sql" t="Include" />
+          </e>
+        </e>
+        <e p="Security" t="Include">
+          <e p="common.sql" t="Include" />
+          <e p="data.sql" t="Include" />
+          <e p="queue.sql" t="Include" />
+          <e p="report.sql" t="Include" />
+          <e p="security.sql" t="Include" />
+          <e p="system.sql" t="Include" />
+          <e p="Tables" t="Include">
+            <e p="Authorities.sql" t="Include" />
+            <e p="RoleAuthorities.sql" t="Include" />
+            <e p="Roles.sql" t="Include" />
+            <e p="UserProjectSettings.sql" t="Include" />
+            <e p="Users.sql" t="Include" />
+          </e>
+          <e p="tag.sql" t="Include" />
+          <e p="telemetry.sql" t="Include" />
+        </e>
+        <e p="system" t="Include">
+          <e p="Tables" t="Include">
+            <e p="DbVersions.sql" t="Include" />
+            <e p="PackageVersions.sql" t="Include" />
+            <e p="TableColumns.sql" t="Include" />
+            <e p="TableColumns_l10n.sql" t="Include" />
+            <e p="Tables.sql" t="Include" />
+            <e p="Tables_l10n.sql" t="Include" />
+          </e>
+        </e>
+        <e p="Tag" t="Include">
+          <e p="Tables" t="Include">
+            <e p="TagEntities.sql" t="Include" />
+            <e p="Tags.sql" t="Include" />
+          </e>
+        </e>
+        <e p="Telemetry" t="Include">
+          <e p="Tables" t="Include">
+            <e p="ItPluginTelemetry.sql" t="Include" />
+            <e p="ProjectTelemetry.sql" t="Include" />
+            <e p="QueryTelemetry.sql" t="Include" />
+            <e p="ReportTelemetry.sql" t="Include" />
+            <e p="TaskTelemetry.sql" t="Include" />
+            <e p="VcsPluginTelemetry.sql" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Data\DbActions" t="IncludeRecursive">
+        <e p="ActionsStore" t="Include">
+          <e p="AddProjectAction.cs" t="Include" />
+          <e p="AddRoleAction.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DbAction.cs" t="Include" />
+        <e p="DbActionProvider.cs" t="Include" />
+        <e p="DbActions.csproj" t="IncludeRecursive" />
+        <e p="DbActionsModule.cs" t="Include" />
+        <e p="IDbAction.cs" t="Include" />
+        <e p="IDbActionProvider.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+      </e>
+      <e p="Data\DbMigrations" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Column.cs" t="Include" />
+        <e p="ColumnProperty.cs" t="Include" />
+        <e p="ColumnPropertyExtensions.cs" t="Include" />
+        <e p="ColumnType.cs" t="Include" />
+        <e p="DbConstants.cs" t="Include" />
+        <e p="DbMigration.cs" t="Include" />
+        <e p="DbMigrations.csproj" t="IncludeRecursive" />
+        <e p="DbMigrationsModule.cs" t="Include" />
+        <e p="DbMigrator.cs" t="Include" />
+        <e p="DbTransformationProvider.cs" t="Include" />
+        <e p="ForeignKeyConstraint.cs" t="Include" />
+        <e p="ForeignKeyConstraintMapper.cs" t="Include" />
+        <e p="IColumn.cs" t="Include" />
+        <e p="IDbMigrator.cs" t="Include" />
+        <e p="IDbTransformationProvider.cs" t="Include" />
+        <e p="MigrationPackagesMap.cs" t="Include" />
+        <e p="Migrations" t="Include">
+          <e p="Migration_1" t="Include">
+            <e p="Migration_1.cs" t="Include" />
+          </e>
+          <e p="Migration_10" t="Include">
+            <e p="Migration_10.cs" t="Include" />
+          </e>
+          <e p="Migration_11" t="Include">
+            <e p="Migration_11.cs" t="Include" />
+          </e>
+          <e p="Migration_12" t="Include">
+            <e p="Migration_12.cs" t="Include" />
+          </e>
+          <e p="Migration_13" t="Include">
+            <e p="Migration_13.cs" t="Include" />
+            <e p="MigrationPackageMap_13.cs" t="Include" />
+          </e>
+          <e p="Migration_14" t="Include">
+            <e p="l10n.GetScanCoreParameterGroups.sql" t="Include" />
+            <e p="l10n.GetScanCoreParameters.sql" t="Include" />
+            <e p="Migration_14.cs" t="Include" />
+            <e p="MigrationPackageMap_14.cs" t="Include" />
+          </e>
+          <e p="Migration_15" t="Include">
+            <e p="Migration_15.cs" t="Include" />
+            <e p="MigrationPackageMap_15.cs" t="Include" />
+          </e>
+          <e p="Migration_16" t="Include">
+            <e p="Migration_16.cs" t="Include" />
+          </e>
+          <e p="Migration_17" t="Include">
+            <e p="Migration_17.cs" t="Include" />
+            <e p="MigrationPackageMap_17.cs" t="Include" />
+          </e>
+          <e p="Migration_18" t="Include">
+            <e p="DeleteWrongPermissions.sql" t="Include" />
+            <e p="Migration_18.cs" t="Include" />
+            <e p="UpdatePolicyRules.sql" t="Include" />
+          </e>
+          <e p="Migration_19" t="Include">
+            <e p="Migration_19.cs" t="Include" />
+            <e p="MigrationPackagesMap_19.cs" t="Include" />
+          </e>
+          <e p="Migration_2" t="Include">
+            <e p="Migration_2.cs" t="Include" />
+          </e>
+          <e p="Migration_20" t="Include">
+            <e p="Migration_20.cs" t="Include" />
+            <e p="MigrationPackageMap_20.cs" t="Include" />
+          </e>
+          <e p="Migration_21" t="Include">
+            <e p="Migration_21.cs" t="Include" />
+          </e>
+          <e p="Migration_22" t="Include">
+            <e p="Migration_22.cs" t="Include" />
+            <e p="MigrationPackageMap_22.cs" t="Include" />
+          </e>
+          <e p="Migration_23" t="Include">
+            <e p="Migration_23.cs" t="Include" />
+            <e p="MigrationPackagesMap_23.cs" t="Include" />
+          </e>
+          <e p="Migration_24" t="Include">
+            <e p="Migration_24.cs" t="Include" />
+            <e p="MigrationPackagesMap_24.cs" t="Include" />
+          </e>
+          <e p="Migration_25" t="Include">
+            <e p="Migration_25.cs" t="Include" />
+            <e p="MigrationPackageMap_25.cs" t="Include" />
+          </e>
+          <e p="Migration_26" t="Include">
+            <e p="Migration_26.cs" t="Include" />
+            <e p="MigrationPackageMap_26.cs" t="Include" />
+          </e>
+          <e p="Migration_27" t="Include">
+            <e p="Migration_27.cs" t="Include" />
+          </e>
+          <e p="Migration_28" t="Include">
+            <e p="Migration_28.cs" t="Include" />
+            <e p="MigrationPackageMap_28.cs" t="Include" />
+          </e>
+          <e p="Migration_29" t="Include">
+            <e p="Migration_29.cs" t="Include" />
+            <e p="MigrationPackageMap_29.cs" t="Include" />
+          </e>
+          <e p="Migration_3" t="Include">
+            <e p="l10n.GetTableColumns.sql" t="Include" />
+            <e p="l10n.GetTables.sql" t="Include" />
+            <e p="Migration_3.cs" t="Include" />
+          </e>
+          <e p="Migration_30" t="Include">
+            <e p="Migration_30.cs" t="Include" />
+            <e p="MigrationPackageMap_30.cs" t="Include" />
+          </e>
+          <e p="Migration_31" t="Include">
+            <e p="Migration_31.cs" t="Include" />
+          </e>
+          <e p="Migration_32" t="Include">
+            <e p="l10n.GetSettingGroups.sql" t="Include" />
+            <e p="l10n.GetSettings.sql" t="Include" />
+            <e p="Migration_32.cs" t="Include" />
+            <e p="MigrationPackageMap_32.cs" t="Include" />
+          </e>
+          <e p="Migration_33" t="Include">
+            <e p="Migration_33.cs" t="Include" />
+            <e p="MigrationPackageMap_33.cs" t="Include" />
+          </e>
+          <e p="Migration_34" t="Include">
+            <e p="Migration_34.cs" t="Include" />
+            <e p="MigrationPackageMap_34.cs" t="Include" />
+          </e>
+          <e p="Migration_35" t="Include">
+            <e p="Migration_35.cs" t="Include" />
+            <e p="MigrationPackageMap_35.cs" t="Include" />
+          </e>
+          <e p="Migration_36" t="Include">
+            <e p="Migration_36.cs" t="Include" />
+            <e p="MigrationPackageMap_36.cs" t="Include" />
+          </e>
+          <e p="Migration_37" t="Include">
+            <e p="AllowSnapshotIsolation.sql" t="Include" />
+            <e p="Migration_37.cs" t="Include" />
+          </e>
+          <e p="Migration_39" t="Include">
+            <e p="Migration_39.cs" t="Include" />
+            <e p="MigrationPackageMap_39.cs" t="Include" />
+          </e>
+          <e p="Migration_4" t="Include">
+            <e p="Migration_4.cs" t="Include" />
+            <e p="MigrationPackagesMap_4.cs" t="Include" />
+          </e>
+          <e p="Migration_40" t="Include">
+            <e p="Migration_40.cs" t="Include" />
+            <e p="MigrationPackageMap_40.cs" t="Include" />
+          </e>
+          <e p="Migration_41" t="Include">
+            <e p="Migration_41.cs" t="Include" />
+          </e>
+          <e p="Migration_42" t="Include">
+            <e p="l10n.GetSettings.sql" t="Include" />
+            <e p="Migration_42.cs" t="Include" />
+          </e>
+          <e p="Migration_43" t="Include">
+            <e p="Migration_43.cs" t="Include" />
+            <e p="MigrationPackageMap_43.cs" t="Include" />
+          </e>
+          <e p="Migration_44" t="Include">
+            <e p="Migration_44.cs" t="Include" />
+          </e>
+          <e p="Migration_45" t="Include">
+            <e p="Migration_45.cs" t="Include" />
+            <e p="MigrationPackageMap_45.cs" t="Include" />
+          </e>
+          <e p="Migration_46" t="Include">
+            <e p="Migration_46.cs" t="Include" />
+            <e p="MigrationPackageMap_46.cs" t="Include" />
+            <e p="RemoveUnusedNotificationRules.sql" t="Include" />
+            <e p="RemoveUnusedQueries.sql" t="Include" />
+          </e>
+          <e p="Migration_47" t="Include">
+            <e p="DeleteAuthorityFromRoles.sql" t="Include" />
+            <e p="Migration_47.cs" t="Include" />
+          </e>
+          <e p="Migration_48" t="Include">
+            <e p="Migration_48.cs" t="Include" />
+            <e p="MigrationPackageMap_48.cs" t="Include" />
+          </e>
+          <e p="Migration_49" t="Include">
+            <e p="Migration_49.cs" t="Include" />
+          </e>
+          <e p="Migration_5" t="Include">
+            <e p="Migration_5.cs" t="Include" />
+          </e>
+          <e p="Migration_50" t="Include">
+            <e p="Migration_50.cs" t="Include" />
+            <e p="MigrationPackageMap_50.cs" t="Include" />
+          </e>
+          <e p="Migration_51" t="Include">
+            <e p="Migration_51.cs" t="Include" />
+            <e p="MigrationPackageMap_51.cs" t="Include" />
+          </e>
+          <e p="Migration_52" t="Include">
+            <e p="Migration_52.cs" t="Include" />
+            <e p="MigrationPackageMap_52.cs" t="Include" />
+          </e>
+          <e p="Migration_53" t="Include">
+            <e p="Migration_53.cs" t="Include" />
+            <e p="MigrationPackageMap_53.cs" t="Include" />
+          </e>
+          <e p="Migration_54" t="Include">
+            <e p="Migration_54.cs" t="Include" />
+            <e p="MigrationPackageMap_54.cs" t="Include" />
+          </e>
+          <e p="Migration_55" t="Include">
+            <e p="Migration_55.cs" t="Include" />
+            <e p="MigrationPackageMap_55.cs" t="Include" />
+          </e>
+          <e p="Migration_56" t="Include">
+            <e p="Migration_56.cs" t="Include" />
+            <e p="MigrationPackageMap_56.cs" t="Include" />
+          </e>
+          <e p="Migration_57" t="Include">
+            <e p="Migration_57.cs" t="Include" />
+            <e p="MigrationPackageMap_57.cs" t="Include" />
+          </e>
+          <e p="Migration_58" t="Include">
+            <e p="Migration_58.cs" t="Include" />
+            <e p="MigrationPackageMap_58.cs" t="Include" />
+          </e>
+          <e p="Migration_59" t="Include">
+            <e p="Migration_59.cs" t="Include" />
+            <e p="MigrationPackageMap_59.cs" t="Include" />
+          </e>
+          <e p="Migration_6" t="Include">
+            <e p="Migration_6.cs" t="Include" />
+          </e>
+          <e p="Migration_60" t="Include">
+            <e p="Migration_60.cs" t="Include" />
+            <e p="MigrationPackageMap_60.cs" t="Include" />
+          </e>
+          <e p="Migration_61" t="Include">
+            <e p="Migration_61.cs" t="Include" />
+            <e p="MigrationPackageMap_61.cs" t="Include" />
+          </e>
+          <e p="Migration_62" t="Include">
+            <e p="Migration_62.cs" t="Include" />
+            <e p="MigrationPackageMap_62.cs" t="Include" />
+          </e>
+          <e p="Migration_63" t="Include">
+            <e p="Migration_63.cs" t="Include" />
+            <e p="MigrationPackageMap_63.cs" t="Include" />
+          </e>
+          <e p="Migration_64" t="Include">
+            <e p="Migration_64.cs" t="Include" />
+            <e p="MigrationPackageMap_64.cs" t="Include" />
+          </e>
+          <e p="Migration_7" t="Include">
+            <e p="Migration_7.cs" t="Include" />
+            <e p="MigrationPackagesMap_7.cs" t="Include" />
+          </e>
+          <e p="Migration_8" t="Include">
+            <e p="Migration_8.cs" t="Include" />
+            <e p="MigrationPackageMap_8.cs" t="Include" />
+          </e>
+          <e p="Migration_9" t="Include">
+            <e p="Migration_9.cs" t="Include" />
+          </e>
+        </e>
+        <e p="MsSqlDbTransformationProvider.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+        <e p="TypeNames.cs" t="Include" />
+      </e>
+      <e p="Data\DbMigrations.Install" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DbMigrations.Install.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+      </e>
+      <e p="Data\DbUpdateCommon" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DbInformationProvider.cs" t="Include" />
+        <e p="DbUpdateCommon.csproj" t="IncludeRecursive" />
+        <e p="DbUpdateCommonModule.cs" t="Include" />
+        <e p="Extensions" t="Include">
+          <e p="StringExtensions.cs" t="Include" />
+        </e>
+        <e p="IDbExecutionProvider.cs" t="Include" />
+        <e p="IDbInformationProvider.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+      </e>
+      <e p="Data\Packages" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DependentComponentInfo.cs" t="Include" />
+        <e p="Extensions" t="Include">
+          <e p="ContainerExtension.cs" t="Include" />
+          <e p="DbInformationProviderExtension.cs" t="Include" />
+        </e>
+        <e p="IPackage.cs" t="Include" />
+        <e p="IPackageInstaller.cs" t="Include" />
+        <e p="IPackagesProvider.cs" t="Include" />
+        <e p="ITextPackageLoader.cs" t="Include" />
+        <e p="NotificationRulePackageInfo.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Package.cs" t="Include" />
+        <e p="PackageInstaller.cs" t="Include" />
+        <e p="packages.config" t="Include" />
+        <e p="Packages.csproj" t="IncludeRecursive" />
+        <e p="PackagesContainerModule.cs" t="Include" />
+        <e p="PackagesProvider.cs" t="Include" />
+        <e p="PackageStore" t="Include">
+          <e p="ConfigurationPackage" t="Include">
+            <e p="ConfigurationPackage_1_0_0_0.cs" t="Include" />
+          </e>
+          <e p="DataSourceFields" t="Include">
+            <e p="DataSourceFields_1_0_0_0.cs" t="Include" />
+            <e p="DataSourceFields_1_0_0_1.cs" t="Include" />
+            <e p="DataSourceFields_1_0_0_2.cs" t="Include" />
+            <e p="DataSourceFields_1_0_0_3.cs" t="Include" />
+            <e p="DataSourceFields_1_0_0_4.cs" t="Include" />
+            <e p="DataSourceFields_1_0_0_5.cs" t="Include" />
+            <e p="DataSourceFields_1_0_0_6.cs" t="Include" />
+            <e p="DataSourceFields_1_0_0_7.cs" t="Include" />
+            <e p="DataSourceFields_1_0_0_8.cs" t="Include" />
+          </e>
+          <e p="DataSources" t="Include">
+            <e p="DataSource_1_0_0_0.cs" t="Include" />
+            <e p="DataSource_1_0_0_1.cs" t="Include" />
+            <e p="DataSource_1_0_0_2.cs" t="Include" />
+            <e p="DataSource_1_0_0_3.cs" t="Include" />
+            <e p="DataSource_1_0_0_4.cs" t="Include" />
+          </e>
+          <e p="Notifications" t="Include">
+            <e p="1_0_0_0" t="Include">
+              <e p="AdminPolicySuccessful.txt" t="Include" />
+              <e p="AdminPolicyViolation.txt" t="Include" />
+              <e p="AdminTaskFailed.txt" t="Include" />
+              <e p="AdminTaskFinished.txt" t="Include" />
+              <e p="AdminTaskStopped.txt" t="Include" />
+              <e p="DeveloperPolicySuccessful.txt" t="Include" />
+              <e p="DeveloperPolicyViolation.txt" t="Include" />
+              <e p="DeveloperTaskFailed.txt" t="Include" />
+              <e p="DeveloperTaskFinished.txt" t="Include" />
+              <e p="DeveloperTaskStopped.txt" t="Include" />
+              <e p="ManagerPolicySuccessful.txt" t="Include" />
+              <e p="ManagerPolicyViolation.txt" t="Include" />
+              <e p="ManagerTaskFailed.txt" t="Include" />
+              <e p="ManagerTaskFinished.txt" t="Include" />
+              <e p="ManagerTaskStopped.txt" t="Include" />
+              <e p="NotificationPackage_1_0_0_0.cs" t="Include" />
+            </e>
+            <e p="1_0_0_1" t="Include">
+              <e p="DeveloperPolicySuccessful.txt" t="Include" />
+              <e p="DeveloperPolicyViolation.txt" t="Include" />
+              <e p="DeveloperTaskFinished.txt" t="Include" />
+              <e p="ManagerPolicySuccessful.txt" t="Include" />
+              <e p="ManagerPolicyViolation.txt" t="Include" />
+              <e p="ManagerTaskFinished.txt" t="Include" />
+              <e p="NotificationPackage_1_0_0_1.cs" t="Include" />
+            </e>
+            <e p="1_0_0_2" t="Include">
+              <e p="DeveloperPolicySuccessful.txt" t="Include" />
+              <e p="DeveloperPolicyViolation.txt" t="Include" />
+              <e p="DeveloperTaskFinished.txt" t="Include" />
+              <e p="ManagerPolicySuccessful.txt" t="Include" />
+              <e p="ManagerPolicyViolation.txt" t="Include" />
+              <e p="ManagerTaskFinished.txt" t="Include" />
+              <e p="NotificationPackage_1_0_0_2.cs" t="Include" />
+            </e>
+            <e p="1_0_0_3" t="Include">
+              <e p="AdminPolicySuccessful.txt" t="Include" />
+              <e p="AdminPolicyViolation.txt" t="Include" />
+              <e p="AdminTaskFinished.txt" t="Include" />
+              <e p="DeveloperPolicySuccessful.txt" t="Include" />
+              <e p="DeveloperPolicyViolation.txt" t="Include" />
+              <e p="ManagerPolicySuccessful.txt" t="Include" />
+              <e p="ManagerPolicyViolation.txt" t="Include" />
+              <e p="NotificationPackage_1_0_0_3.cs" t="Include" />
+            </e>
+            <e p="1_0_0_4" t="Include">
+              <e p="NotificationPackage_1_0_0_4.cs" t="Include" />
+              <e p="Rules" t="Include">
+                <e p="DeveloperPolicySuccessful.txt" t="Include" />
+                <e p="DeveloperPolicyViolation.txt" t="Include" />
+                <e p="DeveloperTaskFinished.txt" t="Include" />
+                <e p="ManagerPolicySuccessful.txt" t="Include" />
+                <e p="ManagerPolicyViolation.txt" t="Include" />
+                <e p="ManagerTaskFinished.txt" t="Include" />
+              </e>
+            </e>
+            <e p="1_0_0_5" t="Include">
+              <e p="NotificationPackage_1_0_0_5.cs" t="Include" />
+              <e p="Rules" t="Include">
+                <e p="AdminTaskCancelled.txt" t="Include" />
+                <e p="AdminTaskFailed.txt" t="Include" />
+                <e p="AdminTaskFinished.txt" t="Include" />
+                <e p="DeveloperTaskCancelled.txt" t="Include" />
+                <e p="DeveloperTaskFailed.txt" t="Include" />
+                <e p="ManagerTaskCancelled.txt" t="Include" />
+                <e p="ManagerTaskFailed.txt" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Queries" t="Include">
+            <e p="Queries_1_0_0_0" t="Include">
+              <e p="AdminTaskResults.txt" t="Include" />
+              <e p="AdminTasks.txt" t="Include" />
+              <e p="DevTaskResults.txt" t="Include" />
+              <e p="DevTasks.txt" t="Include" />
+              <e p="ManTaskResults.txt" t="Include" />
+              <e p="ManTasks.txt" t="Include" />
+              <e p="PolicyCompliedNotification.txt" t="Include" />
+              <e p="PolicyViolationNotification.txt" t="Include" />
+              <e p="QueryPackage_1_0_0_0.cs" t="Include" />
+              <e p="SdlPolicy.txt" t="Include" />
+              <e p="TaskFailedNotification.txt" t="Include" />
+              <e p="TaskFinishedNotification.txt" t="Include" />
+              <e p="TaskStoppedNotification.txt" t="Include" />
+            </e>
+            <e p="Queries_1_0_0_1" t="Include">
+              <e p="QueryPackage_1_0_0_1.cs" t="Include" />
+              <e p="SdlPolicyQuery.txt" t="Include" />
+              <e p="UpdateSdlQuery.sql" t="Include" />
+            </e>
+            <e p="Queries_1_0_0_2" t="Include">
+              <e p="AdminPolicySuccessfulTask.txt" t="Include" />
+              <e p="AdminPolicyViolationTask.txt" t="Include" />
+              <e p="AdminTaskFailedTask.txt" t="Include" />
+              <e p="AdminTaskFinishedTask.txt" t="Include" />
+              <e p="AdminTaskStoppedTask.txt" t="Include" />
+              <e p="DeveloperPolicySuccessfulTask.txt" t="Include" />
+              <e p="DeveloperPolicyViolationTask.txt" t="Include" />
+              <e p="DeveloperTaskFailedTask.txt" t="Include" />
+              <e p="DeveloperTaskFinishedResults.txt" t="Include" />
+              <e p="DeveloperTaskFinishedTask.txt" t="Include" />
+              <e p="DeveloperTaskStoppedTask.txt" t="Include" />
+              <e p="ManagerPolicySuccessfulTask.txt" t="Include" />
+              <e p="ManagerPolicyViolationTask.txt" t="Include" />
+              <e p="ManagerTaskFailedTask.txt" t="Include" />
+              <e p="ManagerTaskFinishedTask.txt" t="Include" />
+              <e p="ManagerTaskStoppedTask.txt" t="Include" />
+              <e p="QueryPackage_1_0_0_2.cs" t="Include" />
+            </e>
+            <e p="Queries_1_0_0_3" t="Include">
+              <e p="QueryPackage_1_0_0_3.cs" t="Include" />
+              <e p="ScanResultsReportResults.txt" t="Include" />
+              <e p="ScanResultsReportTask.txt" t="Include" />
+            </e>
+            <e p="Queries_1_0_0_4" t="Include">
+              <e p="ProjectScanCoreSettings.txt" t="Include" />
+              <e p="QueryPackage_1_0_0_4.cs" t="Include" />
+              <e p="ScanResultsReportTask.txt" t="Include" />
+              <e p="TaskScanCoreSettings.txt" t="Include" />
+            </e>
+            <e p="Queries_1_0_0_5" t="Include">
+              <e p="NotificationTaskInfo.txt" t="Include" />
+              <e p="NotificationTaskResultInfo.txt" t="Include" />
+              <e p="NotificationTaskResultSummary.txt" t="Include" />
+              <e p="QueryPackage_1_0_0_5.cs" t="Include" />
+            </e>
+            <e p="Queries_1_0_0_6" t="Include">
+              <e p="FtpAnalystReportProjectsQuery.txt" t="Include" />
+              <e p="FtpAnalystReportProjectsVulnTypeSummaryQuery.txt" t="Include" />
+              <e p="FtpAnalystReportVulnTypesSummaryQuery.txt" t="Include" />
+              <e p="FtpTechReportProjectQuery.txt" t="Include" />
+              <e p="FtpTechReportProjectTasksQuery.txt" t="Include" />
+              <e p="QueryPackage_1_0_0_6.cs" t="Include" />
+            </e>
+            <e p="Queries_1_0_0_7" t="Include">
+              <e p="QueryPackage_1_0_0_7.cs" t="Include" />
+              <e p="ScanResultsReportTask.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Reports" t="Include">
+            <e p="Reports_1_0_0_0" t="Include">
+              <e p="ReportPackage_1_0_0_0.cs" t="Include" />
+              <e p="ReportRule.txt" t="Include" />
+            </e>
+            <e p="Reports_1_0_0_1" t="Include">
+              <e p="ReportPackage_1_0_0_1.cs" t="Include" />
+              <e p="ReportRule.txt" t="Include" />
+            </e>
+            <e p="Reports_1_0_0_10" t="Include">
+              <e p="ReportPackage_1_0_0_10.cs" t="Include" />
+              <e p="Reports" t="Include">
+                <e p="ItTelemetryReport.json" t="Include" />
+                <e p="ProjectTelemetryReport.json" t="Include" />
+                <e p="QueryTelemetryReport.json" t="Include" />
+                <e p="ReportTelemetryReport.json" t="Include" />
+                <e p="TaskTelemetryReport.json" t="Include" />
+              </e>
+            </e>
+            <e p="Reports_1_0_0_2" t="Include">
+              <e p="ReportPackage_1_0_0_2.cs" t="Include" />
+              <e p="Reports" t="Include">
+                <e p="AiOwaspTopTenReport.json" t="Include" />
+                <e p="AiPciDssReport.json" t="Include" />
+                <e p="EmptyReport.json" t="Include" />
+              </e>
+            </e>
+            <e p="Reports_1_0_0_3" t="Include">
+              <e p="ReportPackage_1_0_0_3.cs" t="Include" />
+              <e p="Reports" t="Include">
+                <e p="AiOwaspTopTenReport.json" t="Include" />
+                <e p="AiPciDssReport.json" t="Include" />
+                <e p="DevPolicySucceed.json" t="Include" />
+                <e p="DevPolicyViolated.json" t="Include" />
+                <e p="DevScanFinished.json" t="Include" />
+                <e p="EmptyReport.json" t="Include" />
+                <e p="MgrPolicySucceed.json" t="Include" />
+                <e p="MgrPolicyViolated.json" t="Include" />
+                <e p="MgrScanFinished.json" t="Include" />
+              </e>
+            </e>
+            <e p="Reports_1_0_0_4" t="Include">
+              <e p="ReportPackage_1_0_0_4.cs" t="Include" />
+              <e p="Reports" t="Include">
+                <e p="FtpAnalystReport.json" t="Include" />
+                <e p="FtpTechReport.json" t="Include" />
+                <e p="PlaceholderReport.json" t="Include" />
+              </e>
+            </e>
+            <e p="Reports_1_0_0_5" t="Include">
+              <e p="ReportPackage_1_0_0_5.cs" t="Include" />
+            </e>
+            <e p="Reports_1_0_0_6" t="Include">
+              <e p="ReportPackage_1_0_0_6.cs" t="Include" />
+              <e p="Reports" t="Include">
+                <e p="DevPolicySucceed.json" t="Include" />
+                <e p="DevPolicyViolated.json" t="Include" />
+                <e p="DevScanFinished.json" t="Include" />
+                <e p="MgrPolicySucceed.json" t="Include" />
+                <e p="MgrPolicyViolated.json" t="Include" />
+                <e p="MgrScanFinished.json" t="Include" />
+              </e>
+            </e>
+            <e p="Reports_1_0_0_7" t="Include">
+              <e p="ReportPackage_1_0_0_7.cs" t="Include" />
+              <e p="Reports" t="Include">
+                <e p="AiOwaspTopTenReport.json" t="Include" />
+                <e p="AiPciDssReport.json" t="Include" />
+              </e>
+            </e>
+            <e p="Reports_1_0_0_8" t="Include">
+              <e p="ReportPackage_1_0_0_8.cs" t="Include" />
+              <e p="Reports" t="Include">
+                <e p="FtpTechReport.json" t="Include" />
+              </e>
+            </e>
+            <e p="Reports_1_0_0_9" t="Include">
+              <e p="ReportPackage_1_0_0_9.cs" t="Include" />
+              <e p="Reports" t="Include">
+                <e p="VcsTelemetryReport.json" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="SystemPackage" t="Include">
+            <e p="FillProjectToParametersTable.sql" t="Include" />
+            <e p="RearrangeSettings.sql" t="Include" />
+            <e p="SystemPackage_1_0_0_0.cs" t="Include" />
+            <e p="SystemPackage_1_1_0_0.cs" t="Include" />
+            <e p="SystemPackage_1_1_0_1.cs" t="Include" />
+            <e p="SystemPackage_1_1_0_2.cs" t="Include" />
+            <e p="SystemPackage_1_1_0_3.cs" t="Include" />
+            <e p="SystemPackage_1_2_0_0.cs" t="Include" />
+            <e p="SystemPackage_1_3_0_0.cs" t="Include" />
+            <e p="SystemPackage_1_3_0_1.cs" t="Include" />
+            <e p="SystemPackage_1_4_0_0.cs" t="Include" />
+            <e p="SystemPackage_1_5_0_0.cs" t="Include" />
+            <e p="SystemPackage_1_6_0_0.cs" t="Include" />
+            <e p="SystemPackage_1_7_0_0.cs" t="Include" />
+          </e>
+          <e p="TemplatePackage" t="Include">
+            <e p="1_0_0_0" t="Include">
+              <e p="TemplatePackage_1_0_0_0.cs" t="Include" />
+            </e>
+            <e p="1_0_0_1" t="Include">
+              <e p="Body" t="Include">
+                <e p="AdminPolicySuccessful.html" t="Include" />
+                <e p="AdminPolicyViolation.html" t="Include" />
+                <e p="AdminTaskFailed.html" t="Include" />
+                <e p="AdminTaskFinished.html" t="Include" />
+                <e p="AdminTaskStopped.html" t="Include" />
+                <e p="DeveloperPolicySuccessful.html" t="Include" />
+                <e p="DeveloperPolicyViolation.html" t="Include" />
+                <e p="DeveloperTaskFailed.html" t="Include" />
+                <e p="DeveloperTaskFinished.html" t="Include" />
+                <e p="DeveloperTaskStopped.html" t="Include" />
+                <e p="ManagerPolicySuccessful.html" t="Include" />
+                <e p="ManagerPolicyViolation.html" t="Include" />
+                <e p="ManagerTaskFailed.html" t="Include" />
+                <e p="ManagerTaskFinished.html" t="Include" />
+                <e p="ManagerTaskStopped.html" t="Include" />
+              </e>
+              <e p="TemplatePackage_1_0_0_1.cs" t="Include" />
+              <e p="Title" t="Include">
+                <e p="AdminPolicySuccessful.html" t="Include" />
+                <e p="AdminPolicyViolation.html" t="Include" />
+                <e p="AdminTaskFailed.html" t="Include" />
+                <e p="AdminTaskFinished.html" t="Include" />
+                <e p="AdminTaskStopped.html" t="Include" />
+                <e p="DeveloperPolicySuccessful.html" t="Include" />
+                <e p="DeveloperPolicyViolation.html" t="Include" />
+                <e p="DeveloperTaskFailed.html" t="Include" />
+                <e p="DeveloperTaskFinished.html" t="Include" />
+                <e p="DeveloperTaskStopped.html" t="Include" />
+                <e p="ManagerPolicySuccessful.html" t="Include" />
+                <e p="ManagerPolicyViolation.html" t="Include" />
+                <e p="ManagerTaskFailed.html" t="Include" />
+                <e p="ManagerTaskFinished.html" t="Include" />
+                <e p="ManagerTaskStopped.html" t="Include" />
+              </e>
+            </e>
+            <e p="1_0_0_2" t="Include">
+              <e p="ScanResultsReportTemplate.html" t="Include" />
+              <e p="TemplatePackage_1_0_0_2.cs" t="Include" />
+            </e>
+            <e p="1_0_0_3" t="Include">
+              <e p="ScanResultsReportTemplate.html" t="Include" />
+              <e p="TemplatePackage_1_0_0_3.cs" t="Include" />
+            </e>
+            <e p="1_0_0_4" t="Include">
+              <e p="ScanResultsReportTemplate.html" t="Include" />
+              <e p="TemplatePackage_1_0_0_4.cs" t="Include" />
+            </e>
+            <e p="1_0_0_5" t="Include">
+              <e p="Body" t="Include">
+                <e p="DevPolicySucceed.html" t="Include" />
+                <e p="DevPolicyViolated.html" t="Include" />
+                <e p="DevScanFinished.html" t="Include" />
+                <e p="ManPolicySucceed.html" t="Include" />
+                <e p="ManPolicyViolated.html" t="Include" />
+                <e p="ManScanFinished.html" t="Include" />
+              </e>
+              <e p="TemplatePackage_1_0_0_5.cs" t="Include" />
+              <e p="Title" t="Include">
+                <e p="DevPolicySucceed.txt" t="Include" />
+                <e p="DevPolicyViolated.txt" t="Include" />
+                <e p="DevScanFinished.txt" t="Include" />
+                <e p="ManPolicySucceed.txt" t="Include" />
+                <e p="ManPolicyViolated.txt" t="Include" />
+                <e p="ManScanFinished.txt" t="Include" />
+              </e>
+            </e>
+            <e p="1_0_0_6" t="Include">
+              <e p="Body" t="Include">
+                <e p="DevPolicySucceed.html" t="Include" />
+                <e p="DevPolicyViolated.html" t="Include" />
+                <e p="DevScanFinished.html" t="Include" />
+                <e p="ManPolicySucceed.html" t="Include" />
+                <e p="ManPolicyViolated.html" t="Include" />
+                <e p="ManScanFinished.html" t="Include" />
+              </e>
+              <e p="TemplatePackage_1_0_0_6.cs" t="Include" />
+              <e p="Title" t="Include">
+                <e p="DevPolicySucceed.txt" t="Include" />
+                <e p="DevPolicyViolated.txt" t="Include" />
+                <e p="DevScanFinished.txt" t="Include" />
+                <e p="ManPolicySucceed.txt" t="Include" />
+                <e p="ManPolicyViolated.txt" t="Include" />
+                <e p="ManScanFinished.txt" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="TemplatePackage_1.0.0.1.json" t="Include" />
+        </e>
+        <e p="TemplatePackageInfo.cs" t="Include" />
+        <e p="TextPackage.cs" t="Include" />
+        <e p="TextPackageInfo.cs" t="Include" />
+        <e p="TextPackageLoader.cs" t="Include" />
+      </e>
+      <e p="Data\Repository" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Context" t="Include">
+          <e p="Authorities.cs" t="Include" />
+          <e p="Authoritiespartial.cs" t="Include" />
+          <e p="Configuration.cs" t="Include" />
+          <e p="ConfigurationPartial.cs" t="Include" />
+          <e p="Cultures.cs" t="Include" />
+          <e p="CulturesPartial.cs" t="Include" />
+          <e p="DbVersions.cs" t="Include" />
+          <e p="Events.cs" t="Include" />
+          <e p="EventsPartial.cs" t="Include" />
+          <e p="ItPluginTelemetry.cs" t="Include" />
+          <e p="ItPluginTelemetryPartial.cs" t="Include" />
+          <e p="NotificationRules.cs" t="Include" />
+          <e p="NotificationRulesPartial.cs" t="Include" />
+          <e p="PackageVersions.cs" t="Include" />
+          <e p="Plugins.cs" t="Include" />
+          <e p="PluginsPartial.cs" t="Include" />
+          <e p="PolicyRules.cs" t="Include" />
+          <e p="PolicyRulesPartial.cs" t="Include" />
+          <e p="Projects.cs" t="Include" />
+          <e p="ProjectsPartial.cs" t="Include" />
+          <e p="ProjectTelemetry.cs" t="Include" />
+          <e p="ProjectTelemetryPartial.cs" t="Include" />
+          <e p="Queries.cs" t="Include" />
+          <e p="QueriesPartial.cs" t="Include" />
+          <e p="QueryEntityNames.cs" t="Include" />
+          <e p="QueryEntityNamesPartial.cs" t="Include" />
+          <e p="QueryTelemetry.cs" t="Include" />
+          <e p="QueryTelemetryPartial.cs" t="Include" />
+          <e p="Queue.cs" t="Include" />
+          <e p="QueuePartial.cs" t="Include" />
+          <e p="Reports.cs" t="Include" />
+          <e p="ReportsPartial.cs" t="Include" />
+          <e p="ReportTelemetry.cs" t="Include" />
+          <e p="ReportTelemetryPartial.cs" t="Include" />
+          <e p="RoleAuthorities.cs" t="Include" />
+          <e p="RoleAuthoritiesPartial.cs" t="Include" />
+          <e p="Roles.cs" t="Include" />
+          <e p="ScanAgentPartial.cs" t="Include" />
+          <e p="ScanAgents.cs" t="Include" />
+          <e p="SdlContext.Context.cs" t="Include" />
+          <e p="SdlContext.Context.tt" t="Include" />
+          <e p="SdlContext.cs" t="Include" />
+          <e p="SdlContext.Designer.cs" t="Include" />
+          <e p="SdlContext.edmx" t="Include" />
+          <e p="SdlContext.edmx.diagram" t="Include" />
+          <e p="SdlContext.tt" t="Include" />
+          <e p="SdlContextPartial.cs" t="Include" />
+          <e p="SdlStatuses.cs" t="Include" />
+          <e p="SettingGroups.cs" t="Include" />
+          <e p="SettingGroupsPartial.cs" t="Include" />
+          <e p="Settings.cs" t="Include" />
+          <e p="SettingsPartial.cs" t="Include" />
+          <e p="SettingValues.cs" t="Include" />
+          <e p="SettingValuesPartial.cs" t="Include" />
+          <e p="TableColumns.cs" t="Include" />
+          <e p="TableColumnsPartial.cs" t="Include" />
+          <e p="Tables.cs" t="Include" />
+          <e p="TablesPartial.cs" t="Include" />
+          <e p="TagEntities.cs" t="Include" />
+          <e p="TagEntitiesPartial.cs" t="Include" />
+          <e p="Tags.cs" t="Include" />
+          <e p="TagsPartial.cs" t="Include" />
+          <e p="TaskResolutions.cs" t="Include" />
+          <e p="TaskResults.cs" t="Include" />
+          <e p="TaskResultsPartial.cs" t="Include" />
+          <e p="Tasks.cs" t="Include" />
+          <e p="TasksPartial.cs" t="Include" />
+          <e p="TaskStatuses.cs" t="Include" />
+          <e p="TaskTelemetry.cs" t="Include" />
+          <e p="TaskTelemetryPartial.cs" t="Include" />
+          <e p="Templates.cs" t="Include" />
+          <e p="TemplatesPartial.cs" t="Include" />
+          <e p="UserInterfacePartial.cs" t="Include" />
+          <e p="UserInterfaces.cs" t="Include" />
+          <e p="UserProjectSettings.cs" t="Include" />
+          <e p="UserProjectSettingsPartial.cs" t="Include" />
+          <e p="UserRolesPartial.cs" t="Include" />
+          <e p="Users.cs" t="Include" />
+          <e p="UsersPartial.cs" t="Include" />
+          <e p="VcsPluginTelemetry.cs" t="Include" />
+          <e p="VcsPluginTelemetryPartial.cs" t="Include" />
+          <e p="WorkflowActions.cs" t="Include" />
+          <e p="WorkflowActionsPartial.cs" t="Include" />
+          <e p="WorkflowRules.cs" t="Include" />
+          <e p="WorkflowRulesPartial.cs" t="Include" />
+          <e p="WorkflowRuleToEvents.cs" t="Include" />
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="ContainerExtensions.cs" t="Include" />
+        </e>
+        <e p="IDbContext.cs" t="Include" />
+        <e p="IDbContextFactory.cs" t="Include" />
+        <e p="IDbContextProvider.cs" t="Include" />
+        <e p="IEntity.cs" t="Include" />
+        <e p="IEntityWithProject.cs" t="Include" />
+        <e p="ILocalizedEntity.cs" t="Include" />
+        <e p="ILocalizedRepository.cs" t="Include" />
+        <e p="IPluginTelemetry.cs" t="Include" />
+        <e p="IProjectEntity.cs" t="Include" />
+        <e p="IReadRepository.cs" t="Include" />
+        <e p="ITelemetry.cs" t="Include" />
+        <e p="IWriteRepository.cs" t="Include" />
+        <e p="Localization" t="Include">
+          <e p="IUserLocalizationProvider.cs" t="Include" />
+          <e p="UserLocalizationProvider.cs" t="Include" />
+        </e>
+        <e p="LocalizedRepository.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="AuthorityRepository.cs" t="Include" />
+          <e p="ConfigurationRepository.cs" t="Include" />
+          <e p="CultureRepository.cs" t="Include" />
+          <e p="EventRepository.cs" t="Include" />
+          <e p="IAuthorityRepository.cs" t="Include" />
+          <e p="IConfigurationRepository.cs" t="Include" />
+          <e p="ICultureRepository.cs" t="Include" />
+          <e p="IEventRepository.cs" t="Include" />
+          <e p="IItPluginTelemetryRepository.cs" t="Include" />
+          <e p="INotificationRuleRepository.cs" t="Include" />
+          <e p="IPluginRepository.cs" t="Include" />
+          <e p="IPolicyRuleRepository.cs" t="Include" />
+          <e p="IProjectRepository.cs" t="Include" />
+          <e p="IProjectTelemetryRepository.cs" t="Include" />
+          <e p="IQueryEntityNameRepository.cs" t="Include" />
+          <e p="IQueryRepository.cs" t="Include" />
+          <e p="IQueryTelemetryRepositroy.cs" t="Include" />
+          <e p="IQueueRepository.cs" t="Include" />
+          <e p="IReportRepository.cs" t="Include" />
+          <e p="IReportTelemetryRepository.cs" t="Include" />
+          <e p="IRoleAuthorityRepository.cs" t="Include" />
+          <e p="IRoleRepository.cs" t="Include" />
+          <e p="IScanAgentRepository.cs" t="Include" />
+          <e p="ISettingGroupRepository.cs" t="Include" />
+          <e p="ISettingRepository.cs" t="Include" />
+          <e p="ISettingValuesRepository.cs" t="Include" />
+          <e p="ITableColumnsRepository.cs" t="Include" />
+          <e p="ITableRepository.cs" t="Include" />
+          <e p="ITagEntityRepository.cs" t="Include" />
+          <e p="ITagRepository.cs" t="Include" />
+          <e p="ITaskRepository.cs" t="Include" />
+          <e p="ITaskResultRepository.cs" t="Include" />
+          <e p="ITaskTelemetryRepository.cs" t="Include" />
+          <e p="ITemplateRepository.cs" t="Include" />
+          <e p="ItPluginTelemetryRepository.cs" t="Include" />
+          <e p="IUserInterfaceRepository.cs" t="Include" />
+          <e p="IUserProjectSettingsRepository.cs" t="Include" />
+          <e p="IUserRepository.cs" t="Include" />
+          <e p="IVcsPluginTelemetryRepository.cs" t="Include" />
+          <e p="IWorkflowActionRepository.cs" t="Include" />
+          <e p="IWorkflowRuleRepository.cs" t="Include" />
+          <e p="NotificationRuleRepository.cs" t="Include" />
+          <e p="PluginRepository.cs" t="Include" />
+          <e p="PolicyRuleRepository.cs" t="Include" />
+          <e p="ProjectRepository.cs" t="Include" />
+          <e p="ProjectTelemetryRepository.cs" t="Include" />
+          <e p="QueryEntityNameRepository.cs" t="Include" />
+          <e p="QueryRepository.cs" t="Include" />
+          <e p="QueryTelemetryRepository.cs" t="Include" />
+          <e p="QueueRepository.cs" t="Include" />
+          <e p="ReportRepository.cs" t="Include" />
+          <e p="ReportTelemetryRepository.cs" t="Include" />
+          <e p="RoleAuthorityRepository.cs" t="Include" />
+          <e p="RoleRepository.cs" t="Include" />
+          <e p="ScanAgentRepository.cs" t="Include" />
+          <e p="SettingGroupRepository.cs" t="Include" />
+          <e p="SettingRepository.cs" t="Include" />
+          <e p="SettingValuesRepository.cs" t="Include" />
+          <e p="TableColumnsRepository.cs" t="Include" />
+          <e p="TableRepository.cs" t="Include" />
+          <e p="TaskRepository.cs" t="Include" />
+          <e p="TaskResultRepository.cs" t="Include" />
+          <e p="TaskTelemetryRepository.cs" t="Include" />
+          <e p="TemplateRepository.cs" t="Include" />
+          <e p="UserInterfaceRepository.cs" t="Include" />
+          <e p="UserProjectSettingsRepository.cs" t="Include" />
+          <e p="UserRepository.cs" t="Include" />
+          <e p="VcsPluginTelemetryRepository.cs" t="Include" />
+          <e p="WorkflowActionRepository.cs" t="Include" />
+          <e p="WorkflowRuleRepository.cs" t="Include" />
+        </e>
+        <e p="Repository.cs" t="Include" />
+        <e p="Repository.csproj" t="IncludeRecursive" />
+        <e p="RepositoryContainerModule.cs" t="Include" />
+        <e p="SdlContextFactory.cs" t="Include" />
+        <e p="Transaction.cs" t="Include" />
+        <e p="UnitOfWork.cs" t="Include" />
+        <e p="ValidateDatabase{TContext}.cs" t="Include" />
+      </e>
+      <e p="Data\Repository.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Context" t="Include">
+          <e p="TasksTest.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Repository.Tests.csproj" t="IncludeRecursive" />
+        <e p="SdlContextFactoryTest.cs" t="Include" />
+        <e p="UnitOfWorkTest.cs" t="Include" />
+      </e>
+      <e p="DSL.sln" t="IncludeFlat" />
+      <e p="Infrastructure\Infrastructure" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ConfigurationKeys.cs" t="Include" />
+        <e p="DatabaseConfigurationProvider.cs" t="Include" />
+        <e p="DataSource" t="Include">
+          <e p="DataSourceAccessValidator.cs" t="Include" />
+          <e p="DataSourceAuthorityNameBuilder.cs" t="Include" />
+          <e p="DataSourceAuthorityProvider.cs" t="Include" />
+          <e p="DataSourceDoesNotExistsException.cs" t="Include" />
+          <e p="DataSourceFieldAccessValidator.cs" t="Include" />
+          <e p="DataSourceFieldDoesNotExistsException.cs" t="Include" />
+          <e p="DataSourceFieldInfo.cs" t="Include" />
+          <e p="DataSourceFieldInfoProvider.cs" t="Include" />
+          <e p="DataSourceInfo.cs" t="Include" />
+          <e p="DataSourceInfoProvider.cs" t="Include" />
+          <e p="IDataSourceAccessValidator.cs" t="Include" />
+          <e p="IDataSourceAuthorityNameBuilder.cs" t="Include" />
+          <e p="IDataSourceAuthorityProvider.cs" t="Include" />
+          <e p="IDataSourceFieldAccessValidator.cs" t="Include" />
+          <e p="IDataSourceFieldInfoProvider.cs" t="Include" />
+          <e p="IDataSourceInfoProvider.cs" t="Include" />
+        </e>
+        <e p="Events" t="Include">
+          <e p="Event.cs" t="Include" />
+          <e p="EventProvider.cs" t="Include" />
+          <e p="Events.cs" t="Include" />
+          <e p="IEventProvider.cs" t="Include" />
+          <e p="UnknownEventException.cs" t="Include" />
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="ConfigurationProviderExtension.cs" t="Include" />
+          <e p="ContainerExtension.cs" t="Include" />
+          <e p="DatabaseExtension.cs" t="Include" />
+          <e p="EntityExtension.cs" t="Include" />
+        </e>
+        <e p="IConfigurationProvider.cs" t="Include" />
+        <e p="Infrastructure.csproj" t="IncludeRecursive" />
+        <e p="InfrastructureContainerModule.cs" t="Include" />
+        <e p="Mail" t="Include">
+          <e p="DatabaseMailConnectionParametersProvider.cs" t="Include" />
+          <e p="Email.cs" t="Include" />
+          <e p="IMailClient.cs" t="Include" />
+          <e p="IMailConnectionParametersProvider.cs" t="Include" />
+          <e p="IMailProvider.cs" t="Include" />
+          <e p="IMailSender.cs" t="Include" />
+          <e p="IncorrectMailSettingsException.cs" t="Include" />
+          <e p="MailClient.cs" t="Include" />
+          <e p="MailConnectionParameters.cs" t="Include" />
+          <e p="MailProvider.cs" t="Include" />
+          <e p="MailSettingIsNotDefinedException.cs" t="Include" />
+          <e p="SmtpMailSender.cs" t="Include" />
+        </e>
+        <e p="MessageQueue" t="Include">
+          <e p="DatabaseMessageQueue.cs" t="Include" />
+          <e p="DatabaseQueueReader.cs" t="Include" />
+          <e p="DatabaseQueueWriter.cs" t="Include" />
+          <e p="IMessageQueue.cs" t="Include" />
+          <e p="IQueueReader.cs" t="Include" />
+          <e p="IQueueWriter.cs" t="Include" />
+          <e p="MessageQueueKeys.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Policy" t="Include">
+          <e p="ISdlPolicyProvider.cs" t="Include" />
+          <e p="SdlPolicyProvider.cs" t="Include" />
+        </e>
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Resources.ru.resx" t="Include" />
+          <e p="SeverityMap.vsm" t="Include" />
+          <e p="TypeMap.vtm" t="Include" />
+        </e>
+        <e p="Security" t="Include">
+          <e p="Authority.cs" t="Include" />
+          <e p="AuthorityAlreadyExistsException.cs" t="Include" />
+          <e p="AuthorityExtension.cs" t="Include" />
+          <e p="AuthorityProvider.cs" t="Include" />
+          <e p="IAuthorityProvider.cs" t="Include" />
+        </e>
+        <e p="Tags" t="Include">
+          <e p="IncorrectTagLengthException.cs" t="Include" />
+          <e p="IncorrectTagNameException.cs" t="Include" />
+          <e p="ITagDataSourceProvider.cs" t="Include" />
+          <e p="ITagEntityProvider.cs" t="Include" />
+          <e p="ITagEntityRepositoryProvider.cs" t="Include" />
+          <e p="ITagProvider.cs" t="Include" />
+          <e p="ITagService.cs" t="Include" />
+          <e p="ITagValidator.cs" t="Include" />
+          <e p="TagDataSourceProvider.cs" t="Include" />
+          <e p="TagDoesNotExistsException.cs" t="Include" />
+          <e p="TagEntityLinkDoesNotExists.cs" t="Include" />
+          <e p="TagEntityProvider.cs" t="Include" />
+          <e p="TagEntityRepositoryProvider.cs" t="Include" />
+          <e p="TagProvider.cs" t="Include" />
+          <e p="TagService.cs" t="Include" />
+          <e p="TagValidator.cs" t="Include" />
+        </e>
+        <e p="Telemetry" t="Include">
+          <e p="Entities" t="Include">
+            <e p="ItPluginInfo.cs" t="Include" />
+            <e p="ItPluginTelemetryCreator.cs" t="Include" />
+            <e p="ProjectTelemetryCreator.cs" t="Include" />
+            <e p="QueryTelemetryCreator.cs" t="Include" />
+            <e p="ReportTelemetryCreator.cs" t="Include" />
+            <e p="TaskTelemetryCreator.cs" t="Include" />
+            <e p="VcsPluginInfo.cs" t="Include" />
+            <e p="VcsPluginTelemetryCreator.cs" t="Include" />
+          </e>
+          <e p="EntityTelemetryCreatorProvider.cs" t="Include" />
+          <e p="IEntityTelemetryCreator.cs" t="Include" />
+          <e p="IEntityTelemetryCreatorProvider.cs" t="Include" />
+          <e p="ITelemetryInitializer.cs" t="Include" />
+          <e p="ITelemetryQueue.cs" t="Include" />
+          <e p="ITelemetryRepositoryResolver.cs" t="Include" />
+          <e p="ITelemetryRouter.cs" t="Include" />
+          <e p="ITelemetryScope.cs" t="Include" />
+          <e p="ITelemetryScopeProvider.cs" t="Include" />
+          <e p="TelemetryInitializer.cs" t="Include" />
+          <e p="TelemetryOperationNames.cs" t="Include" />
+          <e p="TelemetryOperationStatus.cs" t="Include" />
+          <e p="TelemetryQueue.cs" t="Include" />
+          <e p="TelemetryRepositoryResolver.cs" t="Include" />
+          <e p="TelemetryRouter.cs" t="Include" />
+          <e p="TelemetryScope.cs" t="Include" />
+          <e p="TelemetryScopeProvider.cs" t="Include" />
+        </e>
+        <e p="Templates" t="Include">
+          <e p="Antlr4Template.cs" t="Include" />
+          <e p="ITemplate.cs" t="Include" />
+          <e p="ITemplateBuilder.cs" t="Include" />
+          <e p="ITemplateProvider.cs" t="Include" />
+          <e p="ITemplateWithTitle.cs" t="Include" />
+          <e p="TemplateBuilder.cs" t="Include" />
+          <e p="TemplateNames.cs" t="Include" />
+          <e p="TemplateNotFoundException.cs" t="Include" />
+          <e p="TemplateProvider.cs" t="Include" />
+          <e p="TemplateWithTitle.cs" t="Include" />
+        </e>
+        <e p="Variables.cs" t="Include" />
+        <e p="Vulnerability" t="Include">
+          <e p="IVulnerabilitySeverityResolver.cs" t="Include" />
+          <e p="IVulnerabilityShortTypeResolver.cs" t="Include" />
+          <e p="XmlVulnerabilitySeverityResolver.cs" t="Include" />
+          <e p="XmlVulnerabilityShortTypeResolver.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Infrastructure\Infrastructure.AD" t="IncludeRecursive">
+        <e p="ActiveDirectoryClient.cs" t="Include" />
+        <e p="ActiveDirectoryPathProvider.cs" t="Include" />
+        <e p="AdContainerModule.cs" t="Include" />
+        <e p="AdGroupInfo.cs" t="Include" />
+        <e p="AdUserAuthorityValidator.cs" t="Include" />
+        <e p="AdUserInfo.cs" t="Include" />
+        <e p="AdUserInfoProvider.cs" t="Include" />
+        <e p="AdUserRoleProvider.cs" t="Include" />
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GroupNameBuilder.cs" t="Include" />
+        <e p="IActiveDirectoryClient.cs" t="Include" />
+        <e p="IActiveDirectoryPathProvider.cs" t="Include" />
+        <e p="IAdUserInfoProvider.cs" t="Include" />
+        <e p="IGroupNameBuilder.cs" t="Include" />
+        <e p="Infrastructure.AD.csproj" t="IncludeRecursive" />
+        <e p="IRoleProvider.cs" t="Include" />
+        <e p="ISolutionGroupManager.cs" t="Include" />
+        <e p="IUserGroupMembershipProvider.cs" t="Include" />
+        <e p="IUserInfoProvider.cs" t="Include" />
+        <e p="IUserProvider.cs" t="Include" />
+        <e p="IUserRoleProvider.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Resources.ru.resx" t="Include" />
+        </e>
+        <e p="RoleProvider.cs" t="Include" />
+        <e p="Security" t="Include">
+          <e p="CurrentUserDataProvider.cs" t="Include" />
+          <e p="ICurrentUserDataProvider.cs" t="Include" />
+          <e p="UserPrincipal.cs" t="Include" />
+          <e p="WindowsIdentityUserPrincipalProvider.cs" t="Include" />
+        </e>
+        <e p="SolutionGroupManager.cs" t="Include" />
+        <e p="UserGroupMembershipProvider.cs" t="Include" />
+        <e p="UserInfoProvider.cs" t="Include" />
+        <e p="UserProvider.cs" t="Include" />
+        <e p="WrapperImpersonationContext.cs" t="Include" />
+      </e>
+      <e p="Infrastructure\Infrastructure.AD.Tests" t="IncludeRecursive">
+        <e p="ActiveDirectoryClientTest.cs" t="Include" />
+        <e p="AdTest.cs" t="Include" />
+        <e p="AdUserInfoProviderTest.cs" t="Include" />
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GroupNameBuilderTests.cs" t="Include" />
+        <e p="Infrastructure.AD.Tests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Security" t="Include">
+          <e p="UserPrincipalTest.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Infrastructure\Infrastructure.Engines" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DataQueryCompilationException.cs" t="Include" />
+        <e p="DataQueryExecutor.cs" t="Include" />
+        <e p="DataQueryExpressionTranslator.cs" t="Include" />
+        <e p="EnginesContainerModule.cs" t="Include" />
+        <e p="Extensions" t="Include">
+          <e p="ContainerExtension.cs" t="Include" />
+        </e>
+        <e p="IDataQueryExecutor.cs" t="Include" />
+        <e p="IDataQueryExpressionTranslator.cs" t="Include" />
+        <e p="Infrastructure.Engines.csproj" t="IncludeRecursive" />
+        <e p="IQueryBuilder.cs" t="Include" />
+        <e p="IQueryEntityNameTranslator.cs" t="Include" />
+        <e p="IUserDataProvider.cs" t="Include" />
+        <e p="IUserProvider.cs" t="Include" />
+        <e p="IWorkflowAction.cs" t="Include" />
+        <e p="IWorkflowActionProvider.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Query" t="Include">
+          <e p="Filter" t="Include">
+            <e p="FilterSpecificationTranslatorDirector.cs" t="Include" />
+            <e p="FilterSpecificationTranslatorResolver.cs" t="Include" />
+            <e p="IFilterSpecificationTranslator.cs" t="Include" />
+            <e p="IFilterSpecificationTranslatorDirector.cs" t="Include" />
+            <e p="IFilterSpecificationTranslatorResolver.cs" t="Include" />
+            <e p="Specification" t="Include">
+              <e p="FilterArraySpecificationTranslator.cs" t="Include" />
+              <e p="FilterConditionTranslator.cs" t="Include" />
+              <e p="FilterConstantSpecificationTranslator.cs" t="Include" />
+              <e p="FilterGroupSpecificationTranslator.cs" t="Include" />
+              <e p="FilterParameterSpecificationTranslator.cs" t="Include" />
+              <e p="FilterSpecificationTranslator.cs" t="Include" />
+            </e>
+          </e>
+          <e p="FilterBlockTranslator.cs" t="Include" />
+          <e p="FormatBlockTranslator.cs" t="Include" />
+          <e p="GroupBlockTranslator.cs" t="Include" />
+          <e p="IQueryBlockTranslationManager.cs" t="Include" />
+          <e p="IQueryBlockTranslator.cs" t="Include" />
+          <e p="IQueryBlockTranslatorResolver.cs" t="Include" />
+          <e p="IQueryToTableRenderer.cs" t="Include" />
+          <e p="IQueryTranslator.cs" t="Include" />
+          <e p="IQueryVariableNameBuilder.cs" t="Include" />
+          <e p="LimitBlockTranslator.cs" t="Include" />
+          <e p="OrderBlockTranslator.cs" t="Include" />
+          <e p="QueryBlockTranslationManager.cs" t="Include" />
+          <e p="QueryBlockTranslatorResolver.cs" t="Include" />
+          <e p="QueryToTableRenderer.cs" t="Include" />
+          <e p="QueryTranslator.cs" t="Include" />
+          <e p="QueryVariableNameBuilder.cs" t="Include" />
+          <e p="Result" t="Include">
+            <e p="QueryException.cs" t="Include" />
+            <e p="QueryResult.cs" t="Include" />
+            <e p="QueryResultColumn.cs" t="Include" />
+            <e p="QueryResultItem.cs" t="Include" />
+          </e>
+        </e>
+        <e p="QueryBuilder.cs" t="Include" />
+        <e p="QueryEntityNameTranslator.cs" t="Include" />
+        <e p="QueryKey.cs" t="Include" />
+        <e p="Resources" t="Include">
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Resources.ru.resx" t="Include" />
+        </e>
+        <e p="UnknownQueryEntityTypeException.cs" t="Include" />
+        <e p="UserDataProvider.cs" t="Include" />
+        <e p="UserProvider.cs" t="Include" />
+        <e p="WorkflowActionProvider.cs" t="Include" />
+      </e>
+      <e p="Infrastructure\Infrastructure.Engines.Dsl" t="IncludeRecursive">
+        <e p="AnyGroupExpr.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CommentExprBlock.cs" t="Include" />
+        <e p="DataConditionExpr.cs" t="Include" />
+        <e p="DataParameterExpr.cs" t="Include" />
+        <e p="DslKeywords.cs" t="Include" />
+        <e p="DslParser.cs" t="Include" />
+        <e p="EnginesDslModule.cs" t="Include" />
+        <e p="ExcludeEventExpr.cs" t="Include" />
+        <e p="FirstQueryMode.cs" t="Include" />
+        <e p="GroupActionType.cs" t="Include" />
+        <e p="GroupExpr.cs" t="Include" />
+        <e p="IDslParser.cs" t="Include" />
+        <e p="IncludeEventExpr.cs" t="Include" />
+        <e p="Infrastructure.Engines.Dsl.csproj" t="IncludeRecursive" />
+        <e p="INotificationAttachBlock.cs" t="Include" />
+        <e p="KeyValuePairExpr.cs" t="Include" />
+        <e p="NotificationRuleExpr.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="OrderBlockItem.cs" t="Include" />
+        <e p="packages.config" t="Include" />
+        <e p="ParameterExpr.cs" t="Include" />
+        <e p="PolicyRuleExpr.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Query" t="Include">
+          <e p="DslDataQuery.cs" t="Include" />
+          <e p="DslFormatBlock.cs" t="Include" />
+          <e p="DslFormatItem.cs" t="Include" />
+          <e p="DslGroupBlock.cs" t="Include" />
+          <e p="DslGroupItem.cs" t="Include" />
+          <e p="DslLimitBlock.cs" t="Include" />
+          <e p="DslOrderBlock.cs" t="Include" />
+          <e p="DslQueryParameter.cs" t="Include" />
+          <e p="Filter" t="Include">
+            <e p="DslFilterBlock.cs" t="Include" />
+            <e p="DslFilterBlockParser.cs" t="Include" />
+            <e p="FilterCondition.cs" t="Include" />
+            <e p="FilterKeywords.cs" t="Include" />
+            <e p="FilterOperator.cs" t="Include" />
+            <e p="Specification" t="Include">
+              <e p="FilterArraySpecification.cs" t="Include" />
+              <e p="FilterConditionSpecification.cs" t="Include" />
+              <e p="FilterConstantSpecification.cs" t="Include" />
+              <e p="FilterGroupSpecification.cs" t="Include" />
+              <e p="FilterParameterSpecification.cs" t="Include" />
+              <e p="FilterSpecification.cs" t="Include" />
+              <e p="IFilterSpecification.cs" t="Include" />
+            </e>
+          </e>
+          <e p="IDslQueryBlock.cs" t="Include" />
+        </e>
+        <e p="ReportAttachmentBlockExpr.cs" t="Include" />
+        <e p="RoleExpr.cs" t="Include" />
+        <e p="SubjectGroupExpr.cs" t="Include" />
+        <e p="SubjectsExpr.cs" t="Include" />
+        <e p="TimeTriggerExpr.cs" t="Include" />
+        <e p="WorkflowRuleExpr.cs" t="Include" />
+      </e>
+      <e p="Infrastructure\Infrastructure.Engines.Dsl.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DslParserTest.cs" t="Include" />
+        <e p="GroupExprTest.cs" t="Include" />
+        <e p="Infrastructure.Engines.Dsl.Tests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Query" t="Include">
+          <e p="DslDataQueryTests.cs" t="Include" />
+          <e p="DslFilterBlockTests.cs" t="Include" />
+          <e p="DslGroupBlockTest.cs" t="Include" />
+          <e p="DslLimitBlockTest.cs" t="Include" />
+          <e p="Filter" t="Include">
+            <e p="DslFilterBlockParserTest.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Infrastructure\Infrastructure.Engines.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DataQueryExecutorTest.cs" t="Include" />
+        <e p="Infrastructure.Engines.Tests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Query" t="Include">
+          <e p="Filter" t="Include">
+            <e p="Specification" t="Include">
+              <e p="FilterArraySpecificationTranslatorTest.cs" t="Include" />
+              <e p="FilterConstantSpecificationTranslatorTest.cs" t="Include" />
+            </e>
+          </e>
+          <e p="GroupBlockTranslatorTest.cs" t="Include" />
+          <e p="LimitBlockTranslatorTest.cs" t="Include" />
+          <e p="OrderBlockTranslatorTest.cs" t="Include" />
+          <e p="QueryTranslatorTests.cs" t="Include" />
+        </e>
+        <e p="QueryBuilderTest.cs" t="Include" />
+      </e>
+      <e p="Infrastructure\Infrastructure.Notifications" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="ContainerExtension.cs" t="Include" />
+        </e>
+        <e p="Infrastructure.Notifications.csproj" t="IncludeRecursive" />
+        <e p="INotificationProvider.cs" t="Include" />
+        <e p="INotificationRuleProvider.cs" t="Include" />
+        <e p="INotificationSendDirector.cs" t="Include" />
+        <e p="INotificationSender.cs" t="Include" />
+        <e p="INotificationSenderProvider.cs" t="Include" />
+        <e p="MailNotificationSender.cs" t="Include" />
+        <e p="Notification.cs" t="Include" />
+        <e p="NotificationAlreadyExistsException.cs" t="Include" />
+        <e p="NotificationProvider.cs" t="Include" />
+        <e p="NotificationRuleProvider.cs" t="Include" />
+        <e p="NotificationsContainerModule.cs" t="Include" />
+        <e p="NotificationSendDirector.cs" t="Include" />
+        <e p="NotificationSenderProvider.cs" t="Include" />
+        <e p="NotificationValidator.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+        <e p="UnknownNotificationProtocolTypeException.cs" t="Include" />
+      </e>
+      <e p="Infrastructure\Infrastructure.Notifications.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Infrastructure.Notifications.Tests.csproj" t="IncludeRecursive" />
+        <e p="MailNotificationSenderTest.cs" t="Include" />
+        <e p="NotificationProviderTest.cs" t="Include" />
+        <e p="NotificationValidatorTest.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Infrastructure\Infrastructure.Plugins" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="ContainerExtension.cs" t="Include" />
+        </e>
+        <e p="Infrastructure.Plugins.csproj" t="IncludeRecursive" />
+        <e p="IPluginActivator.cs" t="Include" />
+        <e p="IPluginContainerManager.cs" t="Include" />
+        <e p="IPluginFactory.cs" t="Include" />
+        <e p="IPluginProvider.cs" t="Include" />
+        <e p="IPluginSettingProvider.cs" t="Include" />
+        <e p="IProjectPluginSettingsProvider.cs" t="Include" />
+        <e p="IUserPluginSettingsProvider.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PluginActivator.cs" t="Include" />
+        <e p="PluginContainerManager.cs" t="Include" />
+        <e p="PluginFactory.cs" t="Include" />
+        <e p="PluginInitializer.cs" t="Include" />
+        <e p="PluginProvider.cs" t="Include" />
+        <e p="PluginsContainerModule.cs" t="Include" />
+        <e p="PluginSetting.cs" t="Include" />
+        <e p="PluginSettingProvider.cs" t="Include" />
+        <e p="ProjectPluginSetting.cs" t="Include" />
+        <e p="ProjectPluginSettingsProvider.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+        <e p="UserPluginSettingsProvider.cs" t="Include" />
+      </e>
+      <e p="Infrastructure\Infrastructure.Plugins.Common" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CommonPluginsContainerModule.cs" t="Include" />
+        <e p="Infrastructure.Plugins.Common.csproj" t="IncludeRecursive" />
+        <e p="IPluginDirectoriesProvider.cs" t="Include" />
+        <e p="IPluginDirectoryNameProvider.cs" t="Include" />
+        <e p="IPluginInitializer.cs" t="Include" />
+        <e p="IPluginLoader.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PluginActivationDeniedByLicenseException.cs" t="Include" />
+        <e p="PluginDirectoriesProvider.cs" t="Include" />
+        <e p="PluginDirectoryNameProvider.cs" t="Include" />
+        <e p="PluginLoader.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+      </e>
+      <e p="Infrastructure\Infrastructure.Plugins.Common.Contracts" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Infrastructure.Plugins.Common.Contracts.csproj" t="IncludeRecursive" />
+        <e p="IPlugin.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PluginSettingDefinition.cs" t="Include" />
+        <e p="PluginSettingGroupDefinition.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="SettingOwner.cs" t="Include" />
+        <e p="SettingType.cs" t="Include" />
+      </e>
+      <e p="Infrastructure\Infrastructure.Plugins.Contracts" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BranchInfo.cs" t="Include" />
+        <e p="Commit.cs" t="Include" />
+        <e p="CreateIssueRequest.cs" t="Include" />
+        <e p="ICorePlugin.cs" t="Include" />
+        <e p="IIssueTrackerPlugin.cs" t="Include" />
+        <e p="Infrastructure.Plugins.Contracts.csproj" t="IncludeRecursive" />
+        <e p="Issue.cs" t="Include" />
+        <e p="IssueStatus.cs" t="Include" />
+        <e p="IVersionControlPlugin.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PluginSettingDefinition.cs" t="Include" />
+        <e p="PluginSettingLevel.cs" t="Include" />
+        <e p="PluginSettingValueType.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="UpdateIssueRequest.cs" t="Include" />
+        <e p="User.cs" t="Include" />
+      </e>
+      <e p="Infrastructure\Infrastructure.Plugins.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Infrastructure.Plugins.Tests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PluginActivatorTest.cs" t="Include" />
+        <e p="PluginDirectoryNameProviderTest.cs" t="Include" />
+        <e p="PluginFactoryTests.cs" t="Include" />
+        <e p="PluginInitializerTest.cs" t="Include" />
+        <e p="PluginProviderTests.cs" t="Include" />
+        <e p="PluginSettingProviderTests.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Infrastructure\Infrastructure.Query" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Evaluation" t="Include">
+          <e p="DslDataQueryEvaluator.cs" t="Include" />
+          <e p="Exceptions" t="Include">
+            <e p="PropertyDoesNotBelongsToEntityException.cs" t="Include" />
+            <e p="SelectFieldNameEmptyException.cs" t="Include" />
+          </e>
+          <e p="FormatBlockValueAccessEvaluator.cs" t="Include" />
+          <e p="IDslDataQueryEvaluator.cs" t="Include" />
+          <e p="IFormatBlockValueAccessEvaluator.cs" t="Include" />
+          <e p="IQueryEntityNamePropertyTypeNameResolver.cs" t="Include" />
+          <e p="QueryEntityNamePropertyTypeNameResolver.cs" t="Include" />
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="EntityExtension.cs" t="Include" />
+        </e>
+        <e p="Infrastructure.Query.csproj" t="IncludeRecursive" />
+        <e p="IQueryAccessValidator.cs" t="Include" />
+        <e p="IQueryExecutor.cs" t="Include" />
+        <e p="IQueryModelAccessValidator.cs" t="Include" />
+        <e p="IQueryModelProcessor.cs" t="Include" />
+        <e p="IQueryModelValidator.cs" t="Include" />
+        <e p="IQueryProjectRestrictor.cs" t="Include" />
+        <e p="IQueryStorage.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="QueryAccessValidator.cs" t="Include" />
+        <e p="QueryContainerModule.cs" t="Include" />
+        <e p="QueryDoesNotExistsException.cs" t="Include" />
+        <e p="QueryExecutor.cs" t="Include" />
+        <e p="QueryInfo.cs" t="Include" />
+        <e p="QueryModelAccessValidator.cs" t="Include" />
+        <e p="QueryModelProcessor.cs" t="Include" />
+        <e p="QueryModelValidator.cs" t="Include" />
+        <e p="QueryProjectRestrictor.cs" t="Include" />
+        <e p="QueryStorage.cs" t="Include" />
+        <e p="Resources" t="Include">
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Resources.ru.resx" t="Include" />
+        </e>
+      </e>
+      <e p="Infrastructure\Infrastructure.Query.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Evaluation" t="Include">
+          <e p="FormatBlockValueAccessEvaluatorTest.cs" t="Include" />
+          <e p="QueryEntityNamePropertyTypeNameResolverTests.cs" t="Include" />
+        </e>
+        <e p="Infrastructure.Query.Tests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="QueryAccessValidatorTest.cs" t="Include" />
+        <e p="QueryModelAccessValidatorTest.cs" t="Include" />
+        <e p="QueryModelProcessorTests.cs" t="Include" />
+        <e p="QueryModelValidatorTest.cs" t="Include" />
+      </e>
+      <e p="Infrastructure\Infrastructure.Reports" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Blocks" t="Include">
+          <e p="BoolReportBlock" t="Include">
+            <e p="BoolReportBlock.cs" t="Include" />
+            <e p="BoolReportBlockVizualizer.cs" t="Include" />
+          </e>
+          <e p="Chart" t="Include">
+            <e p="Chart.js" t="Include" />
+            <e p="ChartColumn.cs" t="Include" />
+            <e p="ChartLabel.cs" t="Include" />
+            <e p="ChartReportBlock.cs" t="Include" />
+            <e p="ChartReportBlockVizualizer.cs" t="Include" />
+            <e p="ChartType.cs" t="Include" />
+            <e p="IChartScriptProvider.cs" t="Include" />
+            <e p="ResourceChartScriptProvider.cs" t="Include" />
+          </e>
+          <e p="Container" t="Include">
+            <e p="ContainerOrientation.cs" t="Include" />
+            <e p="ContainerReportBlock.cs" t="Include" />
+            <e p="ContainerReportBlockVizualizer.cs" t="Include" />
+          </e>
+          <e p="Html" t="Include">
+            <e p="HtmlReportBlock.cs" t="Include" />
+            <e p="HtmlReportBlockVizualizer.cs" t="Include" />
+          </e>
+          <e p="HtmlDoc" t="Include">
+            <e p="HtmlDocReportBlock.cs" t="Include" />
+            <e p="HtmlDocReportBlockVizualizer.cs" t="Include" />
+          </e>
+          <e p="Image" t="Include">
+            <e p="ImageReportBlock.cs" t="Include" />
+            <e p="ImageReportBlockVizualizer.cs" t="Include" />
+          </e>
+          <e p="IncorrectBlockQueryKeyException.cs" t="Include" />
+          <e p="IQuaryableReportBlock.cs" t="Include" />
+          <e p="IReportBlocks.cs" t="Include" />
+          <e p="IReportBlockVizualizationManager.cs" t="Include" />
+          <e p="IReportBlockVizualizer.cs" t="Include" />
+          <e p="IReportBlockVizualizerFabric.cs" t="Include" />
+          <e p="Iterator" t="Include">
+            <e p="EmptyIteratorTemplateException.cs" t="Include" />
+            <e p="IteratorReportBlock.cs" t="Include" />
+            <e p="IteratorReportBlockVizualizer.cs" t="Include" />
+          </e>
+          <e p="Label" t="Include">
+            <e p="LabelFontStyle.cs" t="Include" />
+            <e p="LabelHorizontalAlign.cs" t="Include" />
+            <e p="LabelReportBlock.cs" t="Include" />
+            <e p="LabelReportBlockVizualizer.cs" t="Include" />
+            <e p="LabelVerticalalign.cs" t="Include" />
+          </e>
+          <e p="Link" t="Include">
+            <e p="EmptyLinkReportBlockChildException.cs" t="Include" />
+            <e p="EmptyLinkReportBlockTargetException.cs" t="Include" />
+            <e p="LinkReportBlock.cs" t="Include" />
+            <e p="LinkReportBlockVizualizer.cs" t="Include" />
+          </e>
+          <e p="QueryResultNotFoundException.cs" t="Include" />
+          <e p="QueryScope" t="Include">
+            <e p="QueryScopeReportBlock.cs" t="Include" />
+            <e p="QueryScopeReportBlockVizualizer.cs" t="Include" />
+          </e>
+          <e p="ReportBlock.cs" t="Include" />
+          <e p="ReportBlockVizualizationManager.cs" t="Include" />
+          <e p="ReportBlockVizualizerFabric.cs" t="Include" />
+          <e p="ReportItemColor.cs" t="Include" />
+          <e p="Table" t="Include">
+            <e p="TableReportBlock.cs" t="Include" />
+            <e p="TableReportBlockParameters.cs" t="Include" />
+            <e p="TableReportBlockVizualizer.cs" t="Include" />
+          </e>
+        </e>
+        <e p="ConfigReportFolderPathStorage.cs" t="Include" />
+        <e p="Extensions" t="Include">
+          <e p="ContainerExtension.cs" t="Include" />
+        </e>
+        <e p="Generation" t="Include">
+          <e p="IncorrectReportRuleException.cs" t="Include" />
+          <e p="IReportGenerationPipelineManager.cs" t="Include" />
+          <e p="ReportGenerationPipelineManager.cs" t="Include" />
+          <e p="Stages" t="Include">
+            <e p="AddDefaultParametersStage.cs" t="Include" />
+            <e p="DefaultReportParameters.cs" t="Include" />
+            <e p="DefaultTemplateVariables.cs" t="Include" />
+            <e p="EmptyReportRuleTemplateException.cs" t="Include" />
+            <e p="ExecuteQueriesStage.cs" t="Include" />
+            <e p="IReportGenerationStage.cs" t="Include" />
+            <e p="IReportGenerationStageDispatcher.cs" t="Include" />
+            <e p="Query" t="Include">
+              <e p="IReportQueryLinkDirector.cs" t="Include" />
+              <e p="IReportQueryLinkExecutor.cs" t="Include" />
+              <e p="ReportQueryExecutor.cs" t="Include" />
+              <e p="ReportQueryLinkDirector.cs" t="Include" />
+              <e p="ReportQueryLinkExecutor.cs" t="Include" />
+            </e>
+            <e p="RenderTitleStage.cs" t="Include" />
+            <e p="ReportGenerationStage.cs" t="Include" />
+            <e p="ReportGenerationStageDispatcher.cs" t="Include" />
+            <e p="ReportVizualizationStage.cs" t="Include" />
+            <e p="RequiredParameterDoesNotSpecifiedException.cs" t="Include" />
+            <e p="UnknownReportGenerationStageException.cs" t="Include" />
+            <e p="ValidateParametersStage.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Html" t="Include">
+          <e p="HtmlStyle.cs" t="Include" />
+          <e p="HtmlStyleAlreadyDefinedException.cs" t="Include" />
+          <e p="HtmlStyleKey.cs" t="Include" />
+        </e>
+        <e p="Infrastructure.Reports.csproj" t="IncludeRecursive" />
+        <e p="IReportAuthorityValidator.cs" t="Include" />
+        <e p="IReportBuilder.cs" t="Include" />
+        <e p="IReportFileExtensionProvider.cs" t="Include" />
+        <e p="IReportFileStorage.cs" t="Include" />
+        <e p="IReportFolderPathProvider.cs" t="Include" />
+        <e p="IReportFolderPathStorage.cs" t="Include" />
+        <e p="IReportQuery.cs" t="Include" />
+        <e p="IReportStorage.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="ReportAlreadyExistsException.cs" t="Include" />
+        <e p="ReportAuthorityValidator.cs" t="Include" />
+        <e p="ReportBuilder.cs" t="Include" />
+        <e p="ReportBundle.cs" t="Include" />
+        <e p="ReportContainerModule.cs" t="Include" />
+        <e p="ReportDoesNotExistsException.cs" t="Include" />
+        <e p="ReportFile.cs" t="Include" />
+        <e p="ReportFileExtensionProvider.cs" t="Include" />
+        <e p="ReportFileStorage.cs" t="Include" />
+        <e p="ReportFolderPathProvider.cs" t="Include" />
+        <e p="ReportParameter.cs" t="Include" />
+        <e p="ReportQuery.cs" t="Include" />
+        <e p="ReportQueryLink.cs" t="Include" />
+        <e p="ReportQueryParameter.cs" t="Include" />
+        <e p="ReportRule.cs" t="Include" />
+        <e p="ReportRuleIsEmptyException.cs" t="Include" />
+        <e p="ReportStorage.cs" t="Include" />
+        <e p="ReportTemplate.cs" t="Include" />
+        <e p="Translation" t="Include">
+          <e p="HtmlReportTranslator.cs" t="Include" />
+          <e p="IReportTranslationManager.cs" t="Include" />
+          <e p="IReportTranslator.cs" t="Include" />
+          <e p="IReportTranslatorFabric.cs" t="Include" />
+          <e p="PdfReportTranslator.cs" t="Include" />
+          <e p="ReportTranslationManager.cs" t="Include" />
+          <e p="ReportTranslatorFabric.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Infrastructure\Infrastructure.Reports.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Blocks" t="Include">
+          <e p="Chart" t="Include">
+            <e p="ChartColorTest.cs" t="Include" />
+          </e>
+          <e p="Container" t="Include">
+            <e p="ContainerReportBlockVizualizerTest.cs" t="Include" />
+          </e>
+          <e p="HtmlDoc" t="Include">
+            <e p="HtmlDocReportBlockVizualizerTest.cs" t="Include" />
+          </e>
+          <e p="Label" t="Include">
+            <e p="LabelReportBlockTest.cs" t="Include" />
+            <e p="LabelReportBlockVizualizerTest.cs" t="Include" />
+          </e>
+          <e p="Table" t="Include">
+            <e p="TableReportBlockVizualizerTest.cs" t="Include" />
+          </e>
+        </e>
+        <e p="ConfigReportFolderPathStorageTests.cs" t="Include" />
+        <e p="Infrastructure.Reports.Tests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="ReportAuthorityValidatorTest.cs" t="Include" />
+        <e p="ReportBuilderTest.cs" t="Include" />
+        <e p="ReportRuleTest.cs" t="Include" />
+        <e p="ReportSamples" t="Include">
+          <e p="AiOwaspTopTenReport.cs" t="Include" />
+          <e p="AiPciDssReport.cs" t="Include" />
+          <e p="FtpReportTest.cs" t="Include" />
+          <e p="FtpTechReportTest.cs" t="Include" />
+          <e p="InnerQueriesExample.cs" t="Include" />
+          <e p="NotificationHtmlReport.cs" t="Include" />
+          <e p="NotificationTemplates" t="Include">
+            <e p="DevPolicySucceed.html" t="Include" />
+            <e p="DevPolicyViolated.html" t="Include" />
+            <e p="DevScanFinished.html" t="Include" />
+            <e p="ManPolicySucceed.html" t="Include" />
+            <e p="ManPolicyViolated.html" t="Include" />
+            <e p="ManScanFinished.html" t="Include" />
+          </e>
+          <e p="PlaceholderReportTest.cs" t="Include" />
+          <e p="Queries" t="Include">
+            <e p="Project.txt" t="Include" />
+            <e p="Projects.txt" t="Include" />
+            <e p="ProjectsVulnTypeSummary.txt" t="Include" />
+            <e p="ProjectTasks.txt" t="Include" />
+          </e>
+          <e p="Telemetry" t="Include">
+            <e p="ItPluginTelemetryReport.cs" t="Include" />
+            <e p="ProjectTelemetryReport.cs" t="Include" />
+            <e p="QueryTelemetry.cs" t="Include" />
+            <e p="ReportTelemetryReport.cs" t="Include" />
+            <e p="TaskTelemetryReport.cs" t="Include" />
+            <e p="VcsTelemetryReport.cs" t="Include" />
+          </e>
+        </e>
+        <e p="ReportStorageTests.cs" t="Include" />
+      </e>
+      <e p="Infrastructure\Infrastructure.RequestHandling" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Infrastructure.RequestHandling.csproj" t="IncludeRecursive" />
+        <e p="IRequestExecutor.cs" t="Include" />
+        <e p="IRequestExecutorProvider.cs" t="Include" />
+        <e p="ISAParameterTranslator.cs" t="Include" />
+        <e p="ISAParameterTranslatorProvider.cs" t="Include" />
+        <e p="LaunchParameterTranslator.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="RequestExecutor.cs" t="Include" />
+        <e p="RequestExecutorProvider.cs" t="Include" />
+        <e p="RequestHandlingModule.cs" t="Include" />
+        <e p="RootScanFolderParameterTranslator.cs" t="Include" />
+        <e p="SAParameterTranslatorProvider.cs" t="Include" />
+        <e p="ScanAgentRequestExecutor.cs" t="Include" />
+        <e p="SiteAddressSAParameterTranslator.cs" t="Include" />
+        <e p="SolutionFileParameterTranslator.cs" t="Include" />
+        <e p="VulnerabilitySearchTimeoutSAParameterTranslator.cs" t="Include" />
+      </e>
+      <e p="Infrastructure\Infrastructure.RequestHandling.Contracts" t="IncludeRecursive">
+        <e p="ApiRequest.cs" t="Include" />
+        <e p="ApiResponse.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Infrastructure.RequestHandling.Contracts.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="ScanAgentRequests.cs" t="Include" />
+        <e p="SourceTypes.cs" t="Include" />
+      </e>
+      <e p="Infrastructure\Infrastructure.Rules" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="ContainerExtension.cs" t="Include" />
+        </e>
+        <e p="Infrastructure.Rules.csproj" t="IncludeRecursive" />
+        <e p="IRule.cs" t="Include" />
+        <e p="IRuleExecutor.cs" t="Include" />
+        <e p="IRuleExecutorDirector.cs" t="Include" />
+        <e p="IRuleParser.cs" t="Include" />
+        <e p="IRuleResult.cs" t="Include" />
+        <e p="Notification" t="Include">
+          <e p="EventNotificationRule.cs" t="Include" />
+          <e p="IEventNotificationRule.cs" t="Include" />
+          <e p="INotificationRule.cs" t="Include" />
+          <e p="ITimeNotificationRule.cs" t="Include" />
+          <e p="NotificationRule.cs" t="Include" />
+          <e p="NotificationRuleBundle.cs" t="Include" />
+          <e p="NotificationRuleExecutor.cs" t="Include" />
+          <e p="NotificationRuleResult.cs" t="Include" />
+          <e p="Stages" t="Include" />
+          <e p="TimeNotificationRule.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Policy" t="Include">
+          <e p="IPolicyRule.cs" t="Include" />
+          <e p="PolicyRule.cs" t="Include" />
+          <e p="PolicyRuleExecutor.cs" t="Include" />
+          <e p="PolicyRuleQueryException.cs" t="Include" />
+          <e p="PolicyRuleResult.cs" t="Include" />
+        </e>
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Resources.ru.resx" t="Include" />
+        </e>
+        <e p="RuleExecutorDirector.cs" t="Include" />
+        <e p="RuleParser.cs" t="Include" />
+        <e p="RulesContainerModule.cs" t="Include" />
+        <e p="RuleType.cs" t="Include" />
+        <e p="Workflow" t="Include">
+          <e p="EventWorkflowRule.cs" t="Include" />
+          <e p="IEventWorkflowRule.cs" t="Include" />
+          <e p="ITimeWorkflowRule.cs" t="Include" />
+          <e p="IWorkflowRule.cs" t="Include" />
+          <e p="TimeWorkflowRule.cs" t="Include" />
+          <e p="WorkflowRule.cs" t="Include" />
+          <e p="WorkflowRuleExecutor.cs" t="Include" />
+          <e p="WorkflowRuleResult.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Infrastructure\infrastructure.Scheduler" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ContainerJobFactory.cs" t="Include" />
+        <e p="Extensions" t="Include">
+          <e p="ContainerExtensions.cs" t="Include" />
+        </e>
+        <e p="ICustomJobInitializer.cs" t="Include" />
+        <e p="ICustomScheduledJob.cs" t="Include" />
+        <e p="IJobNameBuilder.cs" t="Include" />
+        <e p="IJobScheduler.cs" t="Include" />
+        <e p="Infrastructure.Scheduler.csproj" t="IncludeRecursive" />
+        <e p="ISchedulerJobTypesLoader.cs" t="Include" />
+        <e p="ITriggerBuilder.cs" t="Include" />
+        <e p="job_scheduling_data_2_0.xsd" t="Include" />
+        <e p="JobNameBuilder.cs" t="Include" />
+        <e p="JobScheduler.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+        <e p="ScheduledJob.cs" t="Include" />
+        <e p="SchedulerContainerModule.cs" t="Include" />
+        <e p="SchedulerJobTypesLoader.cs" t="Include" />
+        <e p="SequentialTriggerBuilder.cs" t="Include" />
+      </e>
+      <e p="Infrastructure\Infrastructure.Scheduler.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Infrastructure.Scheduler.Tests.csproj" t="IncludeRecursive" />
+        <e p="job_scheduling_data_2_0.xsd" t="Include" />
+        <e p="JobNameBuilderTest.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="SchedulerJobTypesLoaderTests.cs" t="Include" />
+      </e>
+      <e p="Infrastructure\Infrastructure.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DatabaseConfigurationProviderTest.cs" t="Include" />
+        <e p="DataSource" t="Include">
+          <e p="DataSourceAccessValidatorTest.cs" t="Include" />
+          <e p="DataSourceFieldAccessValidatorTest.cs" t="Include" />
+          <e p="DataSourceFieldInfoTests.cs" t="Include" />
+          <e p="DataSourceInfoProviderTest.cs" t="Include" />
+        </e>
+        <e p="Events" t="Include">
+          <e p="EventProviderTest.cs" t="Include" />
+        </e>
+        <e p="Infrastructure.Tests.csproj" t="IncludeRecursive" />
+        <e p="Mail" t="Include">
+          <e p="MailProviderTest.cs" t="Include" />
+          <e p="SmtpMailSenderTest.cs" t="Include" />
+        </e>
+        <e p="MessageQueue" t="Include">
+          <e p="DatabaseMessageQueueTest.cs" t="Include" />
+          <e p="DatabaseQueueReaderTest.cs" t="Include" />
+          <e p="DatabaseQueueWriterTest.cs" t="Include" />
+          <e p="MessageQueueIntegrationTest.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Tags" t="Include">
+          <e p="TagValidatorTest.cs" t="Include" />
+        </e>
+        <e p="Templates" t="Include">
+          <e p="Antlr4TemplateTest.cs" t="Include" />
+          <e p="Body" t="Include">
+            <e p="DevPolicySucceed.html" t="Include" />
+            <e p="DevPolicyViolated.html" t="Include" />
+            <e p="DevScanFinished.html" t="Include" />
+            <e p="ManPolicySucceed.html" t="Include" />
+            <e p="ManPolicyViolated.html" t="Include" />
+            <e p="ManScanFinished.html" t="Include" />
+          </e>
+          <e p="TemplateBuilderTest.cs" t="Include" />
+          <e p="TemplateProviderTest.cs" t="Include" />
+          <e p="TemplateTest.cs" t="Include" />
+          <e p="TemplateWirhTitleTest.cs" t="Include" />
+          <e p="Title" t="Include">
+            <e p="DevPolicySucceed.txt" t="Include" />
+            <e p="DevPolicyViolated.txt" t="Include" />
+            <e p="DevScanFinished.txt" t="Include" />
+            <e p="ManPolicySucceed.txt" t="Include" />
+            <e p="ManPolicyViolated.txt" t="Include" />
+            <e p="ManScanFinished.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Vulnerability" t="Include">
+          <e p="XmlVulnerabilitySeverityResolverTest.cs" t="Include" />
+          <e p="XmlVulnerabilityShortTypeResolverTest.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Infrastructure\Infrastructure.UserInterface" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="OperationContextExtension.cs" t="Include" />
+        </e>
+        <e p="Infrastructure.UserInterface.csproj" t="IncludeRecursive" />
+        <e p="IUserInterfaceChecker.cs" t="Include" />
+        <e p="IUserInterfaceProvider.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="UserInterfaceChecker.cs" t="Include" />
+        <e p="UserInterfaceInfrastructureContainerModule.cs" t="Include" />
+        <e p="UserInterfaceProvider.cs" t="Include" />
+      </e>
+      <e p="Local.testsettings" t="Include" />
+      <e p="Modules\Modules.Core" t="IncludeRecursive">
+        <e p="app.manifest" t="Include" />
+        <e p="App_Start" t="Include">
+          <e p="FilterConfig.cs" t="Include" />
+          <e p="RouteConfig.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Container" t="Include">
+          <e p="UnityInstanceProvider.cs" t="Include" />
+          <e p="UnityServiceBehaviour.cs" t="Include" />
+          <e p="UnityServiceHostFactory.cs" t="Include" />
+          <e p="UnityWebServiceHost.cs" t="Include" />
+        </e>
+        <e p="Controllers" t="Include">
+          <e p="HomeController.cs" t="Include" />
+        </e>
+        <e p="CoreContainerModule.cs" t="Include" />
+        <e p="Environment" t="Include">
+          <e p="DataSourceAccessInitializer.cs" t="Include" />
+          <e p="DataSourceInitializer.cs" t="Include" />
+          <e p="EnvironmentConstants.cs" t="Include" />
+          <e p="EnvironmentInitializer.cs" t="Include" />
+          <e p="EnvironmentProvider.cs" t="Include" />
+          <e p="IDataSourceAccessInitializer.cs" t="Include" />
+          <e p="IEnvironmentProvider.cs" t="Include" />
+          <e p="NotificationRules" t="Include">
+            <e p="DeveloperFtpTechByTrigger.txt" t="Include" />
+            <e p="DeveloperPolicySuccessful.txt" t="Include" />
+            <e p="DeveloperPolicyViolation.txt" t="Include" />
+            <e p="DeveloperTaskFinished.txt" t="Include" />
+            <e p="ManagerFtpAnalystReportByTrigget.txt" t="Include" />
+            <e p="ManagerPolicySuccessful.txt" t="Include" />
+            <e p="ManagerPolicyViolation.txt" t="Include" />
+            <e p="ManagerTaskFinished.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="PropertyNameTranslator.cs" t="Include" />
+        </e>
+        <e p="Global.asax" t="Include" />
+        <e p="Global.asax.cs" t="Include" />
+        <e p="Helpers" t="Include">
+          <e p="ISAParameterTranslator.cs" t="Include" />
+          <e p="ISAParameterTranslatorProvider.cs" t="Include" />
+          <e p="ISettingConditionValidator.cs" t="Include" />
+          <e p="ISettingConditionValidatorProvider.cs" t="Include" />
+          <e p="ISettingsHelper.cs" t="Include" />
+          <e p="ISettingValidator.cs" t="Include" />
+          <e p="MinSettingConditionValidator.cs" t="Include" />
+          <e p="SAParameterTranslatorProvider.cs" t="Include" />
+          <e p="SettingConditionValidatorProvider.cs" t="Include" />
+          <e p="SettingsHelper.cs" t="Include" />
+          <e p="SettingValidator.cs" t="Include" />
+          <e p="SettingValueMapHelper.cs" t="Include" />
+          <e p="SiteAddressSAParameterTranslator.cs" t="Include" />
+          <e p="VulnerabilitySearchTimeoutSAParameterTranslator.cs" t="Include" />
+        </e>
+        <e p="job_scheduling_data_2_0.xsd" t="Include" />
+        <e p="Modules.Core.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="PublishProfiles" t="Include">
+            <e p="PublishLocal.pubxml" t="Include" />
+          </e>
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Resources.ru.resx" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="ExternalSystems" t="Include">
+            <e p="ApiService.svc" t="Include" />
+            <e p="ApiService.svc.cs" t="Include" />
+          </e>
+          <e p="Query" t="Include">
+            <e p="CommandHandlers" t="Include">
+              <e p="CreateQueryCommandHandler.cs" t="Include" />
+              <e p="UpdateQueryCommandHandler.cs" t="Include" />
+            </e>
+            <e p="Commands" t="Include">
+              <e p="CreateQueryCommand.cs" t="Include" />
+              <e p="UpdateQueryCommand.cs" t="Include" />
+            </e>
+            <e p="DataQueries" t="Include">
+              <e p="CanEditQueryQuery.cs" t="Include" />
+              <e p="DataSourcesQuery.cs" t="Include" />
+              <e p="GetDataSourceFieldsQuery.cs" t="Include" />
+              <e p="GetQueriesListQuery.cs" t="Include" />
+              <e p="GetQueryFilterConditionsQuery.cs" t="Include" />
+              <e p="GetQueryFilterOperationsQuery.cs" t="Include" />
+              <e p="GetQueryModelQuery.cs" t="Include" />
+              <e p="GetQueryPrivacyQuery.cs" t="Include" />
+              <e p="GetQueryResultsQuery.cs" t="Include" />
+              <e p="GetQueryTextQuery.cs" t="Include" />
+              <e p="GetRolesByProjectQuery.cs" t="Include" />
+              <e p="GetRolesByUserQuery.cs" t="Include" />
+              <e p="GetSortDirectionsQuery.cs" t="Include" />
+              <e p="QueryByIdQuery.cs" t="Include" />
+              <e p="QueryByNameQuery.cs" t="Include" />
+              <e p="QueryParameterValue.cs" t="Include" />
+            </e>
+            <e p="DataQueryHandlers" t="Include">
+              <e p="CanEditQueryQueryHandler.cs" t="Include" />
+              <e p="DataSourcesQueryHandler.cs" t="Include" />
+              <e p="GetDataSourceFieldsQueryHandler.cs" t="Include" />
+              <e p="GetQueriesListQueryHandler.cs" t="Include" />
+              <e p="GetQueryFilterConditionsQueryHandler.cs" t="Include" />
+              <e p="GetQueryFilterOperationsQueryHandler.cs" t="Include" />
+              <e p="GetQueryModelQueryHandler.cs" t="Include" />
+              <e p="GetQueryPrivacyQueryHandler.cs" t="Include" />
+              <e p="GetQueryResultsQueryHandler.cs" t="Include" />
+              <e p="GetQueryTextQueryHandler.cs" t="Include" />
+              <e p="GetRolesByProjectQueryHandler.cs" t="Include" />
+              <e p="GetRolesByUserQueryHandler.cs" t="Include" />
+              <e p="GetSortDirectionsQueryHandler.cs" t="Include" />
+              <e p="ModelExtension.cs" t="Include" />
+              <e p="QueryByIdQueryHandler.cs" t="Include" />
+              <e p="QueryByNameQueryHandler.cs" t="Include" />
+            </e>
+            <e p="QueryService.svc" t="Include" />
+            <e p="QueryService.svc.cs" t="Include" />
+          </e>
+          <e p="Report" t="Include">
+            <e p="CommandHandlers" t="Include">
+              <e p="DeleteReportCommandHandler.cs" t="Include" />
+              <e p="UpdateReportCommandHandler.cs" t="Include" />
+            </e>
+            <e p="Commands" t="Include">
+              <e p="DeleteReportCommand.cs" t="Include" />
+              <e p="UpdateReportCommand.cs" t="Include" />
+            </e>
+            <e p="DataQueries" t="Include">
+              <e p="BuildReportQuery.cs" t="Include" />
+              <e p="GetReportQuery.cs" t="Include" />
+              <e p="GetReportsListQuery.cs" t="Include" />
+            </e>
+            <e p="DataQueryHandlers" t="Include">
+              <e p="BuildReportQueryHandler.cs" t="Include" />
+              <e p="GetReportQueryHandler.cs" t="Include" />
+              <e p="GetReportsListQueryHandler.cs" t="Include" />
+            </e>
+            <e p="ReportService.svc" t="Include" />
+            <e p="ReportService.svc.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="ApiService.svc" t="Include" />
+            <e p="ApiService.svc.cs" t="Include" />
+            <e p="Commands" t="Include">
+              <e p="CommandExtensions.cs" t="Include" />
+              <e p="CreateProjectCommand.cs" t="Include" />
+              <e p="CreateTaskCommand.cs" t="Include" />
+              <e p="StopTaskCommand.cs" t="Include" />
+              <e p="UpdateNotificationRuleCommand.cs" t="Include" />
+              <e p="UpdateProjectPluginSettingsCommand.cs" t="Include" />
+              <e p="UpdateProjectSettingsCommand.cs" t="Include" />
+            </e>
+            <e p="DtoExtension.cs" t="Include" />
+            <e p="Handlers" t="Include">
+              <e p="CommandHandler.cs" t="Include" />
+              <e p="CreateProjectCommandHandler.cs" t="Include" />
+              <e p="CreateTaskCommandHandler.cs" t="Include" />
+              <e p="ProjectCommandHandler.cs" t="Include" />
+              <e p="StopTaskCommandHandler.cs" t="Include" />
+              <e p="UpdateNotificationRuleCommandHandler.cs" t="Include" />
+              <e p="UpdateProjectPluginSettingsCommandHandler.cs" t="Include" />
+              <e p="UpdateProjectSettingsCommandHandler.cs" t="Include" />
+            </e>
+            <e p="Queries" t="Include">
+              <e p="GetCapabilityByKeyQuery.cs" t="Include" />
+              <e p="GetLicenceInfoQuery.cs" t="Include" />
+              <e p="GetNotificationQuery.cs" t="Include" />
+              <e p="GetPluginByIdQuery.cs" t="Include" />
+              <e p="GetPluginsByProjectQuery.cs" t="Include" />
+              <e p="GetPluginsByTypeQuery.cs" t="Include" />
+              <e p="GetProjectTasksQuery.cs" t="Include" />
+              <e p="GetSystemSettingsQuery.cs" t="Include" />
+              <e p="GetTaskResultsQuery.cs" t="Include" />
+              <e p="GetUsersByProjectQuery.cs" t="Include" />
+            </e>
+            <e p="QueryHandlers" t="Include">
+              <e p="GetCapabilityByKeyQueryHandler.cs" t="Include" />
+              <e p="GetLicenceInfoQueryHandler.cs" t="Include" />
+              <e p="GetNotificationQueryHandler.cs" t="Include" />
+              <e p="GetPluginByIdQueryHandler.cs" t="Include" />
+              <e p="GetPluginsByProjectQueryHandler.cs" t="Include" />
+              <e p="GetPluginsByTypeQueryHandler.cs" t="Include" />
+              <e p="GetProjectTasksQueryHandler.cs" t="Include" />
+              <e p="GetSystemSettingsQueryHandler.cs" t="Include" />
+              <e p="GetTaskResultsQueryHandler.cs" t="Include" />
+              <e p="GetUsersByProjectQueryHandler.cs" t="Include" />
+            </e>
+            <e p="Renderers" t="Include">
+              <e p="AuthorityRenderer.cs" t="Include" />
+              <e p="IDataRenderer.cs" t="Include" />
+              <e p="NotificationRuleRenderer.cs" t="Include" />
+              <e p="PluginRenderer.cs" t="Include" />
+              <e p="PluginSettingRenderer.cs" t="Include" />
+              <e p="ProjectDtoRenderer.cs" t="Include" />
+              <e p="RoleRenderer.cs" t="Include" />
+              <e p="SdlRuleRenderer.cs" t="Include" />
+              <e p="TableRenderer.cs" t="Include" />
+              <e p="TaskResultRenderer.cs" t="Include" />
+              <e p="TasksRenderer.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Views" t="Include">
+          <e p="Home" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+        </e>
+        <e p="Web.config" t="Include" />
+        <e p="Web.Debug.config" t="Include" />
+        <e p="Web.Release.config" t="Include" />
+      </e>
+      <e p="Modules\Modules.Core.Contracts" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Dto" t="Include">
+          <e p="ReferenceItemDto.cs" t="Include" />
+        </e>
+        <e p="ExternalSystems" t="Include">
+          <e p="IApiService.cs" t="Include" />
+        </e>
+        <e p="Modules.Core.Contracts.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Query" t="Include">
+          <e p="Dto" t="Include">
+            <e p="DataSourceDto.cs" t="Include" />
+            <e p="DataSourceFieldDto.cs" t="Include" />
+            <e p="QueryDto.cs" t="Include" />
+          </e>
+          <e p="IQueryService.cs" t="Include" />
+        </e>
+        <e p="Report" t="Include">
+          <e p="Dto" t="Include">
+            <e p="ReportDto.cs" t="Include" />
+            <e p="ReportFileDto.cs" t="Include" />
+          </e>
+          <e p="IReportService.cs" t="Include" />
+        </e>
+        <e p="SA" t="Include">
+          <e p="Dto" t="Include">
+            <e p="GetScanTaskDto.cs" t="Include" />
+            <e p="IsTaskCancelledRequestDto.cs" t="Include" />
+            <e p="IsTaskCancelledResponseDto.cs" t="Include" />
+            <e p="ScanAgentInfoDto.cs" t="Include" />
+            <e p="ScanAgentSettingsDto.cs" t="Include" />
+            <e p="ScanTaskCoreDto.cs" t="Include" />
+            <e p="ScanTaskDto.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Tag" t="Include">
+          <e p="Dto" t="Include">
+            <e p="TagDto.cs" t="Include" />
+          </e>
+          <e p="ITagService.cs" t="Include" />
+        </e>
+        <e p="Transport" t="Include">
+          <e p="LocaleBehaviour.cs" t="Include" />
+          <e p="LocaleBehaviourElement.cs" t="Include" />
+          <e p="LocaleMessageInspector.cs" t="Include" />
+        </e>
+        <e p="UI" t="Include">
+          <e p="Dto" t="Include">
+            <e p="Admin" t="Include">
+              <e p="ActiveDirectorySettingsDto.cs" t="Include" />
+              <e p="DatabaseSettingsDto.cs" t="Include" />
+              <e p="FileStorageSettingsDto.cs" t="Include" />
+              <e p="LicenceInfoDto.cs" t="Include" />
+              <e p="NotificationSettingsDto.cs" t="Include" />
+              <e p="PluginSettingsDto.cs" t="Include" />
+              <e p="ScanAgentSettingsDto.cs" t="Include" />
+              <e p="SettingsDto.cs" t="Include" />
+            </e>
+            <e p="AuthorityDto.cs" t="Include" />
+            <e p="AuthorityRequestDto.cs" t="Include" />
+            <e p="BranchDto.cs" t="Include" />
+            <e p="CreateTaskDto.cs" t="Include" />
+            <e p="Data" t="Include">
+              <e p="QueryExceptionDto.cs" t="Include" />
+              <e p="TableColumnDto.cs" t="Include" />
+              <e p="TableDto.cs" t="Include" />
+              <e p="TableRowDto.cs" t="Include" />
+              <e p="TableRowItemDto.cs" t="Include" />
+            </e>
+            <e p="NewProjectDto.cs" t="Include" />
+            <e p="NotificationRuleDto.cs" t="Include" />
+            <e p="ProjectDto.cs" t="Include" />
+            <e p="ProjectSettings" t="Include">
+              <e p="ProjectItSettingsDto.cs" t="Include" />
+              <e p="ProjectSettingsDto.cs" t="Include" />
+              <e p="UpdateProjectPluginSettingDto.cs" t="Include" />
+              <e p="UpdateProjectPluginSettingsDto.cs" t="Include" />
+            </e>
+            <e p="ScanCoreDto.cs" t="Include" />
+            <e p="SdlPolicyStatus.cs" t="Include" />
+            <e p="SdlRuleDto.cs" t="Include" />
+            <e p="SettingGroupDto.cs" t="Include" />
+            <e p="SettingOwnerDto.cs" t="Include" />
+            <e p="SettingSubitem.cs" t="Include" />
+            <e p="SettingValueDto.cs" t="Include" />
+            <e p="SettingValueTypeDto.cs" t="Include" />
+            <e p="TaskDto.cs" t="Include" />
+            <e p="TaskResolutionStatusDto.cs" t="Include" />
+            <e p="TaskResultDto.cs" t="Include" />
+            <e p="TaskStatusDto.cs" t="Include" />
+            <e p="UserDto.cs" t="Include" />
+            <e p="UserInterfaceInfoDto.cs" t="Include" />
+            <e p="UserRoleDto.cs" t="Include" />
+            <e p="UserSettings" t="Include">
+              <e p="PluginDto.cs" t="Include" />
+              <e p="PluginSettingDto.cs" t="Include" />
+              <e p="SettingsTypeDto.cs" t="Include" />
+            </e>
+            <e p="UserUpdatedDto.cs" t="Include" />
+          </e>
+          <e p="IApiService.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Modules\Modules.Core.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Modules.Core.Tests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="Query" t="Include">
+            <e p="DataQueries" t="Include">
+              <e p="QueryParameterValueTest.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Report" t="Include">
+            <e p="CommandHandlers" t="Include">
+              <e p="DeleteReportCommandHandlerTest.cs" t="Include" />
+              <e p="UpdateReportCommandHandlerTest.cs" t="Include" />
+            </e>
+          </e>
+          <e p="UI" t="Include">
+            <e p="Renderers" t="Include">
+              <e p="TableRendererTest.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Modules\Modules.SA" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="config" t="Include">
+          <e p="ConfigScanAgentIdProvider.cs" t="Include" />
+          <e p="FileScanAgentIdProvider.cs" t="Include" />
+          <e p="IScanAgentIdFilePathProvider.cs" t="Include" />
+          <e p="IScanAgentIdGenerator.cs" t="Include" />
+          <e p="IScanAgentIdProvider.cs" t="Include" />
+          <e p="ScanAgentIdFilePathProvider.cs" t="Include" />
+          <e p="ScanAgentIdGenerator.cs" t="Include" />
+          <e p="TextFile.cs" t="Include" />
+        </e>
+        <e p="IPluginProvider.cs" t="Include" />
+        <e p="job_scheduling_data_2_0.xsd" t="Include" />
+        <e p="Modules.SA.csproj" t="IncludeRecursive" />
+        <e p="Modules.SA_TemporaryKey.pfx" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PluginProvider.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="app.manifest" t="Include" />
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+        <e p="ScanAgent.cs" t="Include" />
+        <e p="ScanAgentContainerModule.cs" t="Include" />
+        <e p="Settings.Designer.cs" t="Include" />
+        <e p="Settings.settings" t="Include" />
+      </e>
+      <e p="Modules\Modules.SA.Tests" t="IncludeRecursive">
+        <e p="AgentTests.cs" t="Include" />
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Modules.SA.Tests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Modules\Modules.UI" t="IncludeRecursive">
+        <e p="App_Data" t="Include" />
+        <e p="App_GlobalResources" t="Include">
+          <e p="SiteMapResources.Designer.cs" t="Include" />
+          <e p="SiteMapResources.resx" t="Include" />
+          <e p="SiteMapResources.ru.designer.cs" t="Include" />
+          <e p="SiteMapResources.ru.resx" t="Include" />
+        </e>
+        <e p="App_Start" t="Include">
+          <e p="BundleConfig.cs" t="Include" />
+          <e p="FilterConfig.cs" t="Include" />
+          <e p="RouteConfig.cs" t="Include" />
+          <e p="UnityConfig.cs" t="Include" />
+          <e p="UnityMvcActivator.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Content" t="Include">
+          <e p="bootstrap-theme.css" t="Include" />
+          <e p="bootstrap-theme.css.map" t="Include" />
+          <e p="bootstrap-theme.min.css" t="Include" />
+          <e p="bootstrap.css" t="Include" />
+          <e p="bootstrap.css.map" t="Include" />
+          <e p="bootstrap.min.css" t="Include" />
+          <e p="Default.css" t="Include" />
+          <e p="Site.css" t="Include" />
+        </e>
+        <e p="Controllers" t="Include">
+          <e p="AdminController.cs" t="Include" />
+          <e p="BaseController.cs" t="Include" />
+          <e p="HomeController.cs" t="Include" />
+          <e p="ProjectController.cs" t="Include" />
+          <e p="QueryController.cs" t="Include" />
+          <e p="ReportController.cs" t="Include" />
+          <e p="TaskController.cs" t="Include" />
+          <e p="TaskResultController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="AuthorityProviderExtension.cs" t="Include" />
+          <e p="HtmlExtension.cs" t="Include" />
+          <e p="RequestExtemsion.cs" t="Include" />
+        </e>
+        <e p="favicon.ico" t="Include" />
+        <e p="fonts" t="Include">
+          <e p="glyphicons-halflings-regular.eot" t="Include" />
+          <e p="glyphicons-halflings-regular.svg" t="Include" />
+          <e p="glyphicons-halflings-regular.ttf" t="Include" />
+          <e p="glyphicons-halflings-regular.woff" t="Include" />
+          <e p="glyphicons-halflings-regular.woff2" t="Include" />
+        </e>
+        <e p="Global.asax" t="Include" />
+        <e p="Global.asax.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="Data" t="Include">
+            <e p="DataModelExtension.cs" t="Include" />
+            <e p="TableColumnModel.cs" t="Include" />
+            <e p="TableModel.cs" t="Include" />
+            <e p="TableRenderModel.cs" t="Include" />
+            <e p="TableRowItemModel.cs" t="Include" />
+            <e p="TableRowModel.cs" t="Include" />
+          </e>
+          <e p="Entities" t="Include">
+            <e p="ModelExtension.cs" t="Include" />
+            <e p="PluginModel.cs" t="Include" />
+            <e p="PluginSettingModel.cs" t="Include" />
+            <e p="PluginSettingTypeModel.cs" t="Include" />
+            <e p="ProjectModel.cs" t="Include" />
+            <e p="QueryModel.cs" t="Include" />
+            <e p="ReportModel.cs" t="Include" />
+            <e p="RoleModel.cs" t="Include" />
+            <e p="ScanCoreModel.cs" t="Include" />
+            <e p="SdlPolicyStatusModel.cs" t="Include" />
+            <e p="TaskModel.cs" t="Include" />
+            <e p="TaskResultModel.cs" t="Include" />
+            <e p="TaskStatus.cs" t="Include" />
+            <e p="UserModel.cs" t="Include" />
+            <e p="UserPluginSettingModel.cs" t="Include" />
+          </e>
+          <e p="UserHeaderActionsViewModel.cs" t="Include" />
+          <e p="Views" t="Include">
+            <e p="Admin" t="Include">
+              <e p="ActiveDirectorySettingsModel.cs" t="Include" />
+              <e p="FileStorageSettingsModel.cs" t="Include" />
+              <e p="NotificationSettingsModel.cs" t="Include" />
+              <e p="PluginSettingsModel.cs" t="Include" />
+              <e p="ScanAgentSettingsModel.cs" t="Include" />
+              <e p="SettingsExtension.cs" t="Include" />
+              <e p="SettingsModel.cs" t="Include" />
+              <e p="SummarySettingsModel.cs" t="Include" />
+            </e>
+            <e p="PersonalCabinet" t="Include">
+              <e p="ModelExtension.cs" t="Include" />
+              <e p="PluginSettingsViewModel.cs" t="Include" />
+              <e p="ProjectPluginViewModel.cs" t="Include" />
+              <e p="UserSettingsViewModel.cs" t="Include" />
+            </e>
+            <e p="Plugin" t="Include">
+              <e p="PluginSettingsModel.cs" t="Include" />
+            </e>
+            <e p="Project" t="Include">
+              <e p="EditNotificationRuleViewModel.cs" t="Include" />
+              <e p="EditProjectViewModel.cs" t="Include" />
+              <e p="NewProjectViewModel.cs" t="Include" />
+              <e p="ProjectItSettingsModel.cs" t="Include" />
+              <e p="ProjectNotificationSettingsModel.cs" t="Include" />
+              <e p="ProjectRbacSettingsModel.cs" t="Include" />
+              <e p="ProjectSdlSettingsModel.cs" t="Include" />
+              <e p="ProjectSettingsModel.cs" t="Include" />
+              <e p="ProjectSettingsModelBase.cs" t="Include" />
+              <e p="ProjectsViewModel.cs" t="Include" />
+              <e p="ProjectVcsSettingsModel.cs" t="Include" />
+              <e p="ProjectViewModel.cs" t="Include" />
+            </e>
+            <e p="Query" t="Include">
+              <e p="CreateQueryViewModel.cs" t="Include" />
+              <e p="QueryListViewModel.cs" t="Include" />
+              <e p="QueryViewModel.cs" t="Include" />
+            </e>
+            <e p="ReferenceItemModel.cs" t="Include" />
+            <e p="Report" t="Include">
+              <e p="ReportsViewModel.cs" t="Include" />
+              <e p="ReportViewModel.cs" t="Include" />
+            </e>
+            <e p="Result" t="Include">
+              <e p="TaskResultViewModel.cs" t="Include" />
+            </e>
+            <e p="Task" t="Include">
+              <e p="CreateTaskViewModel.cs" t="Include" />
+              <e p="ProjectTasksViewModel.cs" t="Include" />
+              <e p="TaskResultsViewModel.cs" t="Include" />
+            </e>
+            <e p="User" t="Include">
+              <e p="UserInfoViewModel.cs" t="Include" />
+            </e>
+            <e p="ViewModelExtensions.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Modules.UI.csproj" t="IncludeRecursive" />
+        <e p="Mvc.sitemap" t="Include" />
+        <e p="MvcSiteMapSchema.xsd" t="Include" />
+        <e p="NodeProviders" t="Include">
+          <e p="ProjectNodeProvider.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="pager" t="Include">
+          <e p="first.png" t="Include" />
+          <e p="last.png" t="Include" />
+          <e p="next.png" t="Include" />
+          <e p="pager.css" t="Include" />
+          <e p="prev.png" t="Include" />
+        </e>
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="PublishProfiles" t="Include">
+            <e p="PublishLocal.pubxml" t="Include" />
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Resources.ru.Designer.cs" t="Include" />
+          <e p="Resources.ru.resx" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="_references.js" t="Include" />
+          <e p="angular-mocks.js" t="Include" />
+          <e p="angular-route.js" t="Include" />
+          <e p="angular-route.min.js" t="Include" />
+          <e p="angular-route.min.js.map" t="Include" />
+          <e p="angular.js" t="Include" />
+          <e p="angular.min.js" t="Include" />
+          <e p="angular.min.js.map" t="Include" />
+          <e p="App" t="Include">
+            <e p="Query" t="Include">
+              <e p="Controllers" t="Include">
+                <e p="EditQueryController.ts" t="Include" />
+              </e>
+              <e p="Directives" t="Include">
+                <e p="BlockRenderer" t="Include">
+                  <e p="FilterBlockSpecifications" t="Include">
+                    <e p="FilterCondition.html" t="Include" />
+                    <e p="FilterConstant.html" t="Include" />
+                    <e p="FilterGroup.html" t="Include" />
+                    <e p="FilterSpecification.html" t="Include" />
+                  </e>
+                  <e p="FilterQueryBlock.html" t="Include" />
+                  <e p="FormatQueryBlock.html" t="Include" />
+                  <e p="GroupQueryBlock.html" t="Include" />
+                  <e p="LimitQueryBlock.html" t="Include" />
+                  <e p="OrderQueryBlock.html" t="Include" />
+                </e>
+                <e p="sdlFilterBlockSpecification.ts" t="Include" />
+                <e p="sdlQueryBlock.ts" t="Include" />
+                <e p="sdlQueryBlockName.ts" t="Include" />
+              </e>
+              <e p="Interfaces" t="Include">
+                <e p="IQueryService.ts" t="Include" />
+              </e>
+              <e p="Model" t="Include">
+                <e p="DslQuery.ts" t="Include" />
+                <e p="DslQueryBlocks.ts" t="Include" />
+              </e>
+              <e p="Query.app.ts" t="Include" />
+              <e p="Services" t="Include">
+                <e p="QueryService.ts" t="Include" />
+              </e>
+            </e>
+            <e p="Report" t="Include">
+              <e p="Controllers" t="Include">
+                <e p="ShowReportController.ts" t="Include" />
+              </e>
+              <e p="Interfaces" t="Include">
+                <e p="IReportService.ts" t="Include" />
+              </e>
+              <e p="Report.app.ts" t="Include" />
+              <e p="Services" t="Include">
+                <e p="ReportService.ts" t="Include" />
+              </e>
+            </e>
+            <e p="Shared" t="Include">
+              <e p="Table" t="Include">
+                <e p="Table.ts" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="bootstrap.js" t="Include" />
+          <e p="bootstrap.min.js" t="Include" />
+          <e p="jquery-2.1.4.intellisense.js" t="Include" />
+          <e p="jquery-2.2.0.intellisense.js" t="Include" />
+          <e p="jquery-2.2.0.js" t="Include" />
+          <e p="jquery-2.2.0.min.js" t="Include" />
+          <e p="jquery-2.2.0.min.map" t="Include" />
+          <e p="jquery.tablesorter.min.js" t="Include" />
+          <e p="jquery.tablesorter.pager.js" t="Include" />
+          <e p="jquery.validate-vsdoc.js" t="Include" />
+          <e p="jquery.validate.js" t="Include" />
+          <e p="jquery.validate.min.js" t="Include" />
+          <e p="jquery.validate.unobtrusive.js" t="Include" />
+          <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+          <e p="modernizr-2.8.3.js" t="Include" />
+          <e p="respond.js" t="Include" />
+          <e p="respond.matchmedia.addListener.js" t="Include" />
+          <e p="respond.matchmedia.addListener.min.js" t="Include" />
+          <e p="respond.min.js" t="Include" />
+          <e p="typings" t="Include">
+            <e p="angularjs" t="Include">
+              <e p="angular-animate.d.ts" t="Include" />
+              <e p="angular-component-router.d.ts" t="Include" />
+              <e p="angular-cookies.d.ts" t="Include" />
+              <e p="angular-mocks.d.ts" t="Include" />
+              <e p="angular-resource.d.ts" t="Include" />
+              <e p="angular-route.d.ts" t="Include" />
+              <e p="angular-sanitize.d.ts" t="Include" />
+              <e p="angular.d.ts" t="Include" />
+            </e>
+            <e p="es6-promise" t="Include">
+              <e p="es6-promise.d.ts" t="Include" />
+            </e>
+            <e p="jquery" t="Include">
+              <e p="jquery.d.ts" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Services" t="Include">
+          <e p="ApiAuthorityProvider.cs" t="Include" />
+          <e p="IAuthorityProvider.cs" t="Include" />
+        </e>
+        <e p="sorter" t="Include">
+          <e p="asc.gif" t="Include" />
+          <e p="bg.gif" t="Include" />
+          <e p="desc.gif" t="Include" />
+          <e p="style.css" t="Include" />
+        </e>
+        <e p="UiContainerModule.cs" t="Include" />
+        <e p="Views" t="Include">
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Admin" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Home" t="Include">
+            <e p="About.cshtml" t="Include" />
+            <e p="Contact.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Project" t="Include">
+            <e p="Edit.cshtml" t="Include" />
+            <e p="GetPluginSettings.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+            <e p="NewProject.cshtml" t="Include" />
+          </e>
+          <e p="Query" t="Include">
+            <e p="CreateQuery.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="List.cshtml" t="Include" />
+          </e>
+          <e p="Report" t="Include">
+            <e p="Index.cshtml" t="Include" />
+            <e p="Show.cshtml" t="Include" />
+          </e>
+          <e p="Settings" t="Include">
+            <e p="BooleanItem.cshtml" t="Include" />
+            <e p="ListItem.cshtml" t="Include" />
+            <e p="NumberItem.cshtml" t="Include" />
+            <e p="PasswordItem.cshtml" t="Include" />
+            <e p="SettingsTab.cshtml" t="Include" />
+            <e p="TextItem.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="DisplayTemplates" t="Include">
+              <e p="CanonicalHelperModel.ascx" t="Include" />
+              <e p="CanonicalHelperModel.cshtml" t="Include" />
+              <e p="MenuHelperModel.ascx" t="Include" />
+              <e p="MenuHelperModel.cshtml" t="Include" />
+              <e p="MetaRobotsHelperModel.ascx" t="Include" />
+              <e p="MetaRobotsHelperModel.cshtml" t="Include" />
+              <e p="SiteMapHelperModel.ascx" t="Include" />
+              <e p="SiteMapHelperModel.cshtml" t="Include" />
+              <e p="SiteMapNodeModel.ascx" t="Include" />
+              <e p="SiteMapNodeModel.cshtml" t="Include" />
+              <e p="SiteMapNodeModelList.ascx" t="Include" />
+              <e p="SiteMapNodeModelList.cshtml" t="Include" />
+              <e p="SiteMapPathHelperModel.ascx" t="Include" />
+              <e p="SiteMapPathHelperModel.cshtml" t="Include" />
+              <e p="SiteMapTitleHelperModel.ascx" t="Include" />
+              <e p="SiteMapTitleHelperModel.cshtml" t="Include" />
+            </e>
+            <e p="EditorTemplates" t="Include">
+              <e p="PluginSettingModelView.cshtml" t="Include" />
+              <e p="ProjectPluginsModel.cshtml" t="Include" />
+            </e>
+            <e p="Error.cshtml" t="Include" />
+            <e p="Table" t="Include">
+              <e p="TableRenderView.cshtml" t="Include" />
+            </e>
+          </e>
+          <e p="Task" t="Include">
+            <e p="GetByProject.cshtml" t="Include" />
+            <e p="GetTaskResults.cshtml" t="Include" />
+            <e p="NewTask.cshtml" t="Include" />
+          </e>
+          <e p="TaskResult" t="Include">
+            <e p="Get.cshtml" t="Include" />
+          </e>
+          <e p="User" t="Include">
+            <e p="HeaderActions.cshtml" t="Include" />
+            <e p="Info.cshtml" t="Include" />
+            <e p="PersonalCabinet.cshtml" t="Include" />
+          </e>
+          <e p="Web.config" t="Include" />
+        </e>
+        <e p="Web.config" t="Include" />
+      </e>
+      <e p="Packages" t="ExcludeRecursive">
+        <e p="LibGit2Sharp.NativeBinaries.1.0.129\libgit2" t="Include">
+          <e p="libgit2_filename.txt" t="Include" />
+          <e p="libgit2_hash.txt" t="Include" />
+          <e p="LibGit2Sharp.dll.config" t="Include" />
+          <e p="linux\amd64\libgit2-785d8c4.so" t="Include" />
+          <e p="osx\libgit2-785d8c4.dylib" t="Include" />
+          <e p="windows\amd64\git2-785d8c4.dll" t="Include" />
+          <e p="windows\amd64\git2-785d8c4.pdb" t="Include" />
+          <e p="windows\x86\git2-785d8c4.dll" t="Include" />
+          <e p="windows\x86\git2-785d8c4.pdb" t="Include" />
+        </e>
+      </e>
+      <e p="PackageVersions.txt" t="Include" />
+      <e p="Plugins\Plugins.Ftp" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="FtpClient.cs" t="Include" />
+        <e p="FtpFileInfo.cs" t="Include" />
+        <e p="FtpServerType.cs" t="Include" />
+        <e p="FtpSettings.cs" t="Include" />
+        <e p="FtpVcsPlugin.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.Ftp.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.Ftp.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="FtpVcsPluginTests.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.Ftp.Tests.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.Git.Vcs" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Client" t="Include">
+          <e p="CloneRepository.cs" t="Include" />
+          <e p="CreateBranch.cs" t="Include" />
+          <e p="GetCommits.cs" t="Include" />
+          <e p="GitRepository.cs" t="Include" />
+          <e p="ListBranches.cs" t="Include" />
+          <e p="TakeCommit.cs" t="Include" />
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="DirectoryHelper.cs" t="Include" />
+          <e p="StringExtension.cs" t="Include" />
+        </e>
+        <e p="GitSettingKeys.cs" t="Include" />
+        <e p="GitVcsPlugin.cs" t="Include" />
+        <e p="NativeBinaries" t="Include">
+          <e p="amd64" t="Include" />
+          <e p="linux" t="Include">
+            <e p="amd64" t="Include" />
+          </e>
+          <e p="osx" t="Include" />
+          <e p="x86" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.Git.Vcs.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.Git.Vcs.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GitVcsPluginTests.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.Git.Vcs.Tests.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.GitHub" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="ObjectExtension.cs" t="Include" />
+        </e>
+        <e p="GitHubItSettingKeys.cs" t="Include" />
+        <e p="GitHubPlugin.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.GitHub.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.GitHub.It" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="IssueExtensions.cs" t="Include" />
+        </e>
+        <e p="GitHubItPlugin.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.GitHub.It.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.GitHub.It.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="IssueExtensionsTest.cs" t="Include" />
+        </e>
+        <e p="GitHubItPluginTest.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.GitHub.It.Tests.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.GitHub.Load.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PluginActivatorTest.cs" t="Include" />
+        <e p="Plugins.GitHub.Load.Tests.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.GitHub.Vcs" t="IncludeRecursive">
+        <e p="ArchiveFolderNameBuilder.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="ObjectExtension.cs" t="Include" />
+          <e p="StringExtension.cs" t="Include" />
+        </e>
+        <e p="GitHubVcsPlugin.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.GitHub.Vcs.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.GitHub.Vcs.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="ObjectExtensionTest.cs" t="Include" />
+          <e p="StringExtensionTest.cs" t="Include" />
+        </e>
+        <e p="GitHubVcsPluginTest.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.GitHub.Vcs.Tests.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.GitLab" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Client" t="Include">
+          <e p="Api" t="Include">
+            <e p="BaseApi.cs" t="Include" />
+            <e p="BranchesApi.cs" t="Include" />
+            <e p="CommitsApi.cs" t="Include" />
+            <e p="CreateIssue.cs" t="Include" />
+            <e p="FileApi.cs" t="Include" />
+            <e p="GetIssue.cs" t="Include" />
+            <e p="IssueApi.cs" t="Include" />
+            <e p="ProjectApi.cs" t="Include" />
+            <e p="UpdateFile.cs" t="Include" />
+            <e p="UpdateIssue.cs" t="Include" />
+            <e p="UserApi.cs" t="Include" />
+          </e>
+          <e p="Entity" t="Include">
+            <e p="Branch.cs" t="Include" />
+            <e p="Commit.cs" t="Include" />
+            <e p="File.cs" t="Include" />
+            <e p="Issue.cs" t="Include" />
+            <e p="Project.cs" t="Include" />
+            <e p="User.cs" t="Include" />
+          </e>
+          <e p="GitLabClient.cs" t="Include" />
+        </e>
+        <e p="GitLabPlugin.cs" t="Include" />
+        <e p="GitLabSetting.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.GitLab.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.GitLab.It" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="EntityExtension.cs" t="Include" />
+        </e>
+        <e p="GitLabItPlugin.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.GitLab.It.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.GitLab.It.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GitLabItPluginTests.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.GitLab.It.Tests.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.GitLab.Vcs" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="StringExtension.cs" t="Include" />
+        </e>
+        <e p="FileExtractor.cs" t="Include" />
+        <e p="GitLabVcsPlugin.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.GitLab.Vcs.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.GitLab.Vcs.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="FileExtractorTest.cs" t="Include" />
+        <e p="GitLabVcsPluginTests.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.GitLab.Vcs.Tests.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Plugins\Plugins.Rtc.It" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Client" t="Include">
+          <e p="Api" t="Include">
+            <e p="AuthApi.cs" t="Include" />
+            <e p="BaseApi.cs" t="Include" />
+            <e p="ChangeWorkItem.cs" t="Include" />
+            <e p="CreateWorkItem.cs" t="Include" />
+            <e p="GetIssue.cs" t="Include" />
+            <e p="IssueApi.cs" t="Include" />
+            <e p="ProjectApi.cs" t="Include" />
+          </e>
+          <e p="BasicAuthentication.cs" t="Include" />
+          <e p="ClientFactory.cs" t="Include" />
+          <e p="DataFormat.cs" t="Include" />
+          <e p="Entity" t="Include">
+            <e p="Category.cs" t="Include" />
+            <e p="ChangeIssue.cs" t="Include" />
+            <e p="EntityList.cs" t="Include" />
+            <e p="Identity.cs" t="Include" />
+            <e p="Issue.cs" t="Include" />
+            <e p="IssueState.cs" t="Include" />
+            <e p="Project.cs" t="Include" />
+            <e p="RDF.cs" t="Include" />
+            <e p="ResourceLink.cs" t="Include" />
+            <e p="SecurityCheck.cs" t="Include" />
+            <e p="User.cs" t="Include" />
+            <e p="WorkItemType.cs" t="Include" />
+          </e>
+          <e p="HttpMethod.cs" t="Include" />
+          <e p="IClientFactory.cs" t="Include" />
+          <e p="IRequest.cs" t="Include" />
+          <e p="IRequestFactory.cs" t="Include" />
+          <e p="RequestFactory.cs" t="Include" />
+          <e p="RequestResult.cs" t="Include" />
+          <e p="Requiest.cs" t="Include" />
+          <e p="RestSharpJsonSerializer.cs" t="Include" />
+          <e p="RtcClient.cs" t="Include" />
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="DtoExtension.cs" t="Include" />
+        </e>
+        <e p="IncorrectProjectResourceException.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.Rtc.It.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="RequestException.cs" t="Include" />
+        <e p="RtcItPlugin.cs" t="Include" />
+        <e p="RtcSettings.cs" t="Include" />
+        <e p="WorkItemStates.cs" t="Include" />
+        <e p="WorkItemTypes.cs" t="Include" />
+      </e>
+      <e p="Plugins\Plugins.Rtc.It.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.Rtc.It.Tests.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="RtcAuthorizationTest.cs" t="Include" />
+        <e p="RtcItPluginTest.cs" t="Include" />
+      </e>
+      <e p="Plugins\Plugins.SharedFolder" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="StringExtensions.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.SharedFolder.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resource.ru-ru.resx" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+        <e p="SharedFolderClient.cs" t="Include" />
+        <e p="SharedFolderSettings.cs" t="Include" />
+        <e p="SharedFolderVcsPlugin.cs" t="Include" />
+      </e>
+      <e p="Plugins\Plugins.SharedFolder.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.SharedFolder.Tests.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="SharedFolderVcsPluginTest.cs" t="Include" />
+      </e>
+      <e p="Plugins\Plugins.Tfs" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.Tfs.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="TfsPlugin.cs" t="Include" />
+        <e p="TfsSettings.cs" t="Include" />
+      </e>
+      <e p="Plugins\Plugins.Tfs.It" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.Tfs.It.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="TeamFoundationIssueDoesNotExistsException.cs" t="Include" />
+        <e p="TfsItPlugin.cs" t="Include" />
+        <e p="WorkItemFields.cs" t="Include" />
+        <e p="WorkItemStatuses.cs" t="Include" />
+      </e>
+      <e p="Plugins\Plugins.Tfs.It.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.Tfs.It.Tests.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="TfsItPluginTest.cs" t="Include" />
+      </e>
+      <e p="Plugins\Plugins.Tfs.Vcs" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.Tfs.Vcs.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="SourceFolder.cs" t="Include" />
+        <e p="TfsVcsPlugin.cs" t="Include" />
+      </e>
+      <e p="Plugins\Plugins.Tfs.Vcs.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Plugins.Tfs.Vcs.Tests.csproj" t="IncludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="TfsVcsPluginTest.cs" t="Include" />
+      </e>
+      <e p="Setup\Core\Setup.Core" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Binaries.wxs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Product.wxs" t="Include" />
+        <e p="Setup.Core.wixproj" t="IncludeRecursive" />
+        <e p="WixUIExtension" t="Include" />
+        <e p="WixUtilExtension" t="Include" />
+      </e>
+      <e p="Setup\SA\Setup.SA" t="IncludeRecursive">
+        <e p="AppBinaries.wxs" t="Include" />
+        <e p="AppFilter.xslt" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CoreBinaries.wxs" t="Include" />
+        <e p="CoresFilter.xslt" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Product.wxs" t="Include" />
+        <e p="Setup.SA.wixproj" t="IncludeRecursive" />
+        <e p="WixUIExtension" t="Include" />
+        <e p="WixUtilExtension" t="Include" />
+      </e>
+      <e p="Setup\Setup" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Config.wxi" t="Include" />
+        <e p="favicon.ico" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Setup.wixproj" t="IncludeRecursive" />
+      </e>
+      <e p="Setup\UI\Setup.UI" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Binaries.wxs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Product.wxs" t="Include" />
+        <e p="Setup.UI.wixproj" t="IncludeRecursive" />
+        <e p="WixUIExtension" t="Include" />
+        <e p="WixUtilExtension" t="Include" />
+      </e>
+      <e p="Solution" t="Include">
+        <e p="Automation" t="Include" />
+        <e p="Common" t="Include" />
+        <e p="Data" t="Include" />
+        <e p="Infrastructure" t="Include" />
+        <e p="Modules" t="Include" />
+        <e p="Plugins" t="Include">
+          <e p="Ftp" t="Include" />
+          <e p="Git" t="Include" />
+          <e p="GitHub" t="Include" />
+          <e p="GitLab" t="Include" />
+          <e p="Rtc" t="Include" />
+          <e p="SharedFolder" t="Include" />
+          <e p="Tfs" t="Include" />
+        </e>
+        <e p="Setup" t="Include">
+          <e p="Core" t="Include" />
+          <e p="SA" t="Include" />
+          <e p="UI" t="Include" />
+        </e>
+        <e p="Solution Items" t="Include" />
+        <e p="Tests" t="Include" />
+        <e p="Workflow" t="Include" />
+      </e>
+      <e p="SolutionBuild.txt" t="Include" />
+      <e p="Tests\SolutionTests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="SolutionTest.cs" t="Include" />
+        <e p="SolutionTests.csproj" t="IncludeRecursive" />
+        <e p="TestUtils.cs" t="Include" />
+      </e>
+      <e p="Workflow\Workflow" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Event" t="Include">
+          <e p="EventHandlerDispatcher.cs" t="Include" />
+          <e p="EventProcessingJob.cs" t="Include" />
+          <e p="EventProcessor.cs" t="Include" />
+          <e p="Handlers" t="Include">
+            <e p="ExternalSystemActionEventHandler.cs" t="Include" />
+            <e p="NotificationEventHandler.cs" t="Include" />
+            <e p="PolicyCheckEventHandler.cs" t="Include" />
+            <e p="PostprocessingScanTaskFinishedEventHandler.cs" t="Include" />
+            <e p="VcsCommittedEventHandler.cs" t="Include" />
+            <e p="WorkflowEventHandler.cs" t="Include" />
+          </e>
+          <e p="IEventHandler.cs" t="Include" />
+          <e p="IEventHandlerDispatcher.cs" t="Include" />
+          <e p="IEventProcessor.cs" t="Include" />
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="ContainerExtension.cs" t="Include" />
+        </e>
+        <e p="job_scheduling_data_2_0.xsd" t="Include" />
+        <e p="Notification" t="Include">
+          <e p="INotificationProcessor.cs" t="Include" />
+          <e p="NotificationPollJob.cs" t="Include" />
+          <e p="NotificationPollJobInitializer.cs" t="Include" />
+          <e p="NotificationProcessingJob.cs" t="Include" />
+          <e p="NotificationProcessor.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Resources.ru.resx" t="Include" />
+        </e>
+        <e p="VersionControl" t="Include">
+          <e p="BranchNameBuilder.cs" t="Include" />
+          <e p="BranchNameBuilderInfo.cs" t="Include" />
+          <e p="IBranchNameBuilder.cs" t="Include" />
+          <e p="IVcsSynchronizer.cs" t="Include" />
+          <e p="SyncVcsJob.cs" t="Include" />
+          <e p="VcsPollJob.cs" t="Include" />
+          <e p="VcsPollJobInitializer.cs" t="Include" />
+          <e p="VcsSynchronizer.cs" t="Include" />
+        </e>
+        <e p="Workflow.csproj" t="IncludeRecursive" />
+        <e p="WorkflowContainerModule.cs" t="Include" />
+      </e>
+      <e p="Workflow\Workflow.GitHub" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="BackendPluginProvider.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="ContainerExtension.cs" t="Include" />
+          <e p="StringExtension.cs" t="Include" />
+        </e>
+        <e p="FileChangeAnnotation.cs" t="Include" />
+        <e p="FileChangeAnnotationType.cs" t="Include" />
+        <e p="GitHubWorkflowContainerModule.cs" t="Include" />
+        <e p="IAnnotationIssuesProvider.cs" t="Include" />
+        <e p="IBackendPluginProvider.cs" t="Include" />
+        <e p="IIssueAnnotationFormatter.cs" t="Include" />
+        <e p="IIssueAnnotationSerializer.cs" t="Include" />
+        <e p="IIssueAnnotationStateSerializer.cs" t="Include" />
+        <e p="IIssueAnnotationWorkflow.cs" t="Include" />
+        <e p="IIssueNameBuilder.cs" t="Include" />
+        <e p="IssueAnnotation.cs" t="Include" />
+        <e p="IssueAnnotationSerializer.cs" t="Include" />
+        <e p="IssueAnnotationsProvider.cs" t="Include" />
+        <e p="IssueAnnotationState.cs" t="Include" />
+        <e p="IssueAnnotationStateSerializer.cs" t="Include" />
+        <e p="IssueAnnotationWorkflow.cs" t="Include" />
+        <e p="IssueNameBuilder.cs" t="Include" />
+        <e p="IssueNameBuilderInfo.cs" t="Include" />
+        <e p="IVulnerabilitiesProcessor.cs" t="Include" />
+        <e p="IVulnerabilityInfoProvider.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+        <e p="SharpSingleLineIssueAnnotationFormatter.cs" t="Include" />
+        <e p="Stages" t="Include">
+          <e p="PostProcessing" t="Include">
+            <e p="FilterByBranchPostProcessingStage.cs" t="Include" />
+            <e p="GetRemainingIssuesPostProcessingStage.cs" t="Include" />
+            <e p="IPostProcessingStage.cs" t="Include" />
+            <e p="IPostProcessingStageProvider.cs" t="Include" />
+            <e p="LoadIssueAnnotationsPostProcessingStage.cs" t="Include" />
+            <e p="LoadIssuesPostProcessingStage.cs" t="Include" />
+            <e p="LoadItPluginPostProcessingStage.cs" t="Include" />
+            <e p="LoadVcsPluginPostProcessingStage.cs" t="Include" />
+            <e p="LoadVulnInfoPostProcessingStage.cs" t="Include" />
+            <e p="PostProcessingBundle.cs" t="Include" />
+            <e p="PostProcessingStage.cs" t="Include" />
+            <e p="PostProcessingStageProvider.cs" t="Include" />
+            <e p="ProcessRemainingIssuesPostProcessingStage.cs" t="Include" />
+            <e p="SaveToItPostProcessingStage.cs" t="Include" />
+            <e p="SaveToVcsPostProcessingStage.cs" t="Include" />
+            <e p="UpdatePairsPostProcessingStage.cs" t="Include" />
+            <e p="UpdateVulnerabilitiesPostProcessingStage.cs" t="Include" />
+          </e>
+        </e>
+        <e p="TaskProcessingResult.cs" t="Include" />
+        <e p="VulnerabilitiesProcessor.cs" t="Include" />
+        <e p="VulnerabilityInfoProvider.cs" t="Include" />
+        <e p="Workflow.GitHub.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Workflow\Workflow.SA" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="job_scheduling_data_2_0.xsd" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PostScanTask.cs" t="Include" />
+        <e p="PreScanTaskJob.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="ScanTaskJob.cs" t="Include" />
+        <e p="ScanWorkflowModule.cs" t="Include" />
+        <e p="Workflow.SA.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Workflow\Workflow.Tests" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Event" t="Include">
+          <e p="EventProcessorTest.cs" t="Include" />
+        </e>
+        <e p="Notification" t="Include">
+          <e p="NotificationProcessorTest.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Workflow.Tests.csproj" t="IncludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

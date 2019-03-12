@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Modules.Core.Services.ExternalSystems.ApiService" Factory="Modules.Core.Container.UnityServiceHostFactory" CodeBehind="ApiService.svc.cs" %>

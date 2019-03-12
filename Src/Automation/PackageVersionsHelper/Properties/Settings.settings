@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PackageVersionsHelper.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RootFolderPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\..\..</Value>
+    </Setting>
+    <Setting Name="IdAttributeName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">id</Value>
+    </Setting>
+    <Setting Name="VersionAttributeName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">version</Value>
+    </Setting>
+    <Setting Name="OutputFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PackageVersions.txt</Value>
+    </Setting>
+    <Setting Name="PackageConfigurationFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">packages.config</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

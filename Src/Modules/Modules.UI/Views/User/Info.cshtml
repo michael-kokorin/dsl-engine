@@ -1,0 +1,5 @@
+﻿@model Modules.UI.Models.Views.User.UserInfoViewModel
+
+<div class="nav navbar-text navbar-right">
+	@Html.ActionLink(Model.User.DisplayName ?? Model.User.Login, "PersonalCabinet")
+</div>

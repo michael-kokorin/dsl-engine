@@ -1,0 +1,20 @@
+﻿<div class="panel panel-info">
+	<div class="panel-heading">
+		<div class="form-group">
+			<label>Group</label>
+			<div class="btn-group pull-right" role="group">
+				<button class="btn btn-warning" ng-show="controller.isCanEdit"
+						ng-click="controller.removeGroup(block, parent, parentParent, specification)">
+					<span class="glyphicon glyphicon-trash"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="panel-body">
+		<sdl-filter-block-specification block="block"
+		                                parent="specification"
+		                                parentparent="parent"
+		                                specification="specification.Specification"
+		                                controller="controller"/>
+	</div>
+</div>

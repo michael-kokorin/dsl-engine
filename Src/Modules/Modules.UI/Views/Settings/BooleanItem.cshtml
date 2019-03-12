@@ -1,0 +1,13 @@
+﻿@model Modules.Core.Contracts.UI.Dto.SettingValueDto
+@{
+	Layout = null;
+}
+
+<div class="form-group">
+	<label class="col-sm-4 control-label" for="@Model.Id">@Model.Title</label>
+	<div class="col-sm-8">
+		<div class="checkbox">
+			<input data-val="true" style="margin-left: 3px" type="checkbox" value="true" id="@Model.Id" name="@Model.Id" data-id="setting_@Model.Id" @(Convert.ToBoolean(Model.Value) ? "checked" : "")>
+		</div>
+	</div>
+</div>

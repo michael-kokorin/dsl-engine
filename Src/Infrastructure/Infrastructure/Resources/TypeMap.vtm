@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Map>
+	<name long_name="SQL Injection" short_name="SQL" />
+	<name long_name="OS commanding" short_name="OSC" />
+	<name long_name="Remote Code Execution" short_name="RCE" />
+	<name long_name="Arbitrary File Reading" short_name="AFR" />
+	<name long_name="Arbitrary File Deletion" short_name="AFD" />
+	<name long_name="Arbitrary File Modification" short_name="AFM" />
+	<name long_name="Arbitrary File Creation" short_name="AFC" />
+	<name long_name="Local File Inclusion" short_name="LFI" />
+	<name long_name="Remote File Inclusion" short_name="RFI" />
+	<name long_name="Unrestricted File Upload" short_name="UFP" />
+	<name long_name="XML External Entity" short_name="XXE" />
+	<name long_name="XPath Injection" short_name="XI" />
+	<name long_name="LDAP Injection" short_name="LDAP" />
+	<name long_name="SSRF" short_name="SSRF" />
+	<name long_name="Deserialization of Untrusted Data" short_name="DUD" />
+	<name long_name="Cross-site Scripting" short_name="XSS" />
+	<name long_name="HTTP Response Splitting" short_name="HRS" />
+	<name long_name="Open Redirect" short_name="OR" />
+	<name long_name="Log Forging" short_name="LF" />|
+</Map>

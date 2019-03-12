@@ -1,0 +1,59 @@
+﻿<div class="row">
+	<div class="col-md-1">
+		
+	</div>	
+	<div class="col-md-2">
+		<label>Variable name</label>
+	</div>
+	<div class="col-md-2">
+		<b>Value</b>
+	</div>
+	<div class="col-md-2">
+		<b>Display name</b>
+	</div>
+</div>
+<div ng-repeat="select in block.Selects.$values">
+	<div class="row">
+		<div class="col-md-1">
+			<label class="control-label text-center">#{{$index + 1}}</label>
+		</div>
+		<div class="col-md-2">
+			<input type="text" ng-model="select.Name" class="form-control"
+				   ng-readonly="!controller.isCanEdit" ng-change="controller.syncWithText()"/>
+		</div>
+		<div class="col-md-2">
+			<input type="text" ng-model="select.Value" class="form-control" ng-readonly="!controller.isCanEdit"
+				   list="dataSourceFieldsList" ng-change="controller.syncWithText()" ng-required="true"/>
+		</div>
+		<div class="col-md-2">
+			<input type="text" ng-model="select.DisplayName" ng-readonly="!controller.isCanEdit"
+				   class="form-control" ng-change="controller.syncWithText()"/>
+		</div>
+		<div class="col-md-5">
+			<button class="btn btn-defaul" ng-show="controller.isCanEdit" ng-click="controller.moveSelectItemUp(block, select)">
+				<span class="glyphicon glyphicon-chevron-up"></span>
+			</button>
+			<button class="btn btn-defaul" ng-show="controller.isCanEdit" ng-click="controller.moveSelectItemDown(block, select)">
+				<span class="glyphicon glyphicon-chevron-down"></span>
+			</button>
+			<button class="btn btn-warning" ng-show="controller.isCanEdit" ng-click="controller.removeSelectItem(block, select)">
+				<span class="glyphicon glyphicon-trash"></span>
+			</button>
+		</div>
+	</div>
+	<br />
+</div>
+<div class="row">
+	<div class="col-md-1">
+
+	</div>
+	<div class="col-md-2">
+		<button class="btn btn-primary" ng-show="controller.isCanEdit" ng-click="controller.addSelectItem(block)">Add format item</button>
+	</div>
+	<div class="col-md-2">
+		
+	</div>
+	<div class="col-md-2">
+		
+	</div>
+</div>

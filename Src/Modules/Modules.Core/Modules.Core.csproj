@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F9479F9C-3CE3-4FF4-AC83-131CC4C2A08A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Modules.Core</RootNamespace>
+    <AssemblyName>Modules.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <DontImportPostSharp>True</DontImportPostSharp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabases>false</PublishDatabases>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\..\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JetBrains.Annotations, Version=10.1.5.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\JetBrains.Annotations.10.1.5\lib\net\JetBrains.Annotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PostSharp, Version=4.2.18.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PostSharp.4.2.18\lib\net35-client\PostSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Quartz, Version=2.3.3.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Quartz.2.3.3\lib\net40\Quartz.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.1.37.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Collections.Immutable.1.1.37\lib\dotnet\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Reflection.Metadata, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Reflection.Metadata.1.1.0\lib\dotnet5.2\System.Reflection.Metadata.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Environment\NotificationRules\DeveloperPolicySuccessful.txt" />
+    <EmbeddedResource Include="Environment\NotificationRules\DeveloperPolicyViolation.txt" />
+    <EmbeddedResource Include="Environment\NotificationRules\DeveloperTaskFinished.txt" />
+    <EmbeddedResource Include="Environment\NotificationRules\ManagerPolicySuccessful.txt" />
+    <EmbeddedResource Include="Environment\NotificationRules\ManagerPolicyViolation.txt" />
+    <EmbeddedResource Include="Environment\NotificationRules\ManagerTaskFinished.txt" />
+    <EmbeddedResource Include="Environment\NotificationRules\DeveloperFtpTechByTrigger.txt" />
+    <EmbeddedResource Include="Environment\NotificationRules\ManagerFtpAnalystReportByTrigget.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="Services\ExternalSystems\ApiService.svc" />
+    <Content Include="Services\Query\QueryService.svc" />
+    <Content Include="Services\Report\ReportService.svc" />
+    <Content Include="Services\UI\ApiService.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfoGlobal.cs">
+      <Link>Properties\AssemblyInfoGlobal.cs</Link>
+    </Compile>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Container\UnityInstanceProvider.cs" />
+    <Compile Include="Container\UnityServiceBehaviour.cs" />
+    <Compile Include="Container\UnityServiceHostFactory.cs" />
+    <Compile Include="Container\UnityWebServiceHost.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="CoreContainerModule.cs" />
+    <Compile Include="Environment\DataSourceAccessInitializer.cs" />
+    <Compile Include="Environment\DataSourceInitializer.cs" />
+    <Compile Include="Environment\EnvironmentConstants.cs" />
+    <Compile Include="Environment\EnvironmentInitializer.cs" />
+    <Compile Include="Environment\IDataSourceAccessInitializer.cs" />
+    <Compile Include="Environment\IEnvironmentProvider.cs" />
+    <Compile Include="Environment\EnvironmentProvider.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ISAParameterTranslator.cs" />
+    <Compile Include="Helpers\ISAParameterTranslatorProvider.cs" />
+    <Compile Include="Helpers\ISettingConditionValidator.cs" />
+    <Compile Include="Helpers\ISettingConditionValidatorProvider.cs" />
+    <Compile Include="Helpers\ISettingsHelper.cs" />
+    <Compile Include="Helpers\ISettingValidator.cs" />
+    <Compile Include="Helpers\MinSettingConditionValidator.cs" />
+    <Compile Include="Helpers\SAParameterTranslatorProvider.cs" />
+    <Compile Include="Helpers\SettingConditionValidatorProvider.cs" />
+    <Compile Include="Helpers\SettingsHelper.cs" />
+    <Compile Include="Helpers\SettingValidator.cs" />
+    <Compile Include="Helpers\SettingValueMapHelper.cs" />
+    <Compile Include="Helpers\SiteAddressSAParameterTranslator.cs" />
+    <Compile Include="Helpers\VulnerabilitySearchTimeoutSAParameterTranslator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ExternalSystems\ApiService.svc.cs">
+      <DependentUpon>ApiService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Query\CommandHandlers\CreateQueryCommandHandler.cs" />
+    <Compile Include="Services\Query\Commands\CreateQueryCommand.cs" />
+    <Compile Include="Services\Query\DataQueries\GetRolesByProjectQuery.cs" />
+    <Compile Include="Services\Query\DataQueries\GetRolesByUserQuery.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\GetRolesByProjectQueryHandler.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\GetRolesByUserQueryHandler.cs" />
+    <Compile Include="Services\Report\CommandHandlers\DeleteReportCommandHandler.cs" />
+    <Compile Include="Services\Report\CommandHandlers\UpdateReportCommandHandler.cs" />
+    <Compile Include="Services\Report\Commands\DeleteReportCommand.cs" />
+    <Compile Include="Services\Query\DataQueries\CanEditQueryQuery.cs" />
+    <Compile Include="Services\Query\DataQueries\GetDataSourceFieldsQuery.cs" />
+    <Compile Include="Services\Query\DataQueries\DataSourcesQuery.cs" />
+    <Compile Include="Services\Query\DataQueries\GetQueriesListQuery.cs" />
+    <Compile Include="Services\Query\DataQueries\GetQueryFilterConditionsQuery.cs" />
+    <Compile Include="Services\Query\DataQueries\GetQueryModelQuery.cs" />
+    <Compile Include="Services\Query\DataQueries\GetQueryFilterOperationsQuery.cs" />
+    <Compile Include="Services\Query\DataQueries\GetQueryPrivacyQuery.cs" />
+    <Compile Include="Services\Query\DataQueries\GetQueryResultsQuery.cs" />
+    <Compile Include="Services\Query\DataQueries\GetQueryTextQuery.cs" />
+    <Compile Include="Services\Query\DataQueries\GetSortDirectionsQuery.cs" />
+    <Compile Include="Services\Query\DataQueries\QueryByNameQuery.cs" />
+    <Compile Include="Services\Query\DataQueries\QueryByIdQuery.cs" />
+    <Compile Include="Services\Query\Commands\UpdateQueryCommand.cs" />
+    <Compile Include="Services\Query\DataQueries\QueryParameterValue.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\CanEditQueryQueryHandler.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\GetDataSourceFieldsQueryHandler.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\DataSourcesQueryHandler.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\GetQueriesListQueryHandler.cs" />
+    <Compile Include="Services\Query\CommandHandlers\UpdateQueryCommandHandler.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\GetQueryFilterConditionsQueryHandler.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\GetQueryFilterOperationsQueryHandler.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\GetQueryModelQueryHandler.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\GetQueryPrivacyQueryHandler.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\GetQueryResultsQueryHandler.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\GetQueryTextQueryHandler.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\GetSortDirectionsQueryHandler.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\ModelExtension.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\QueryByIdQueryHandler.cs" />
+    <Compile Include="Services\Query\DataQueryHandlers\QueryByNameQueryHandler.cs" />
+    <Compile Include="Services\Query\QueryService.svc.cs">
+      <DependentUpon>QueryService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Report\Commands\UpdateReportCommand.cs" />
+    <Compile Include="Services\Report\DataQueries\BuildReportQuery.cs" />
+    <Compile Include="Services\Report\DataQueries\GetReportQuery.cs" />
+    <Compile Include="Services\Report\DataQueries\GetReportsListQuery.cs" />
+    <Compile Include="Services\Report\DataQueryHandlers\BuildReportQueryHandler.cs" />
+    <Compile Include="Services\Report\DataQueryHandlers\GetReportQueryHandler.cs" />
+    <Compile Include="Services\Report\DataQueryHandlers\GetReportsListQueryHandler.cs" />
+    <Compile Include="Services\Report\ReportService.svc.cs">
+      <DependentUpon>ReportService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\UI\ApiService.svc.cs">
+      <DependentUpon>ApiService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\UI\Commands\CommandExtensions.cs" />
+    <Compile Include="Services\UI\Commands\CreateProjectCommand.cs" />
+    <Compile Include="Services\UI\Commands\CreateTaskCommand.cs" />
+    <Compile Include="Services\UI\Commands\StopTaskCommand.cs" />
+    <Compile Include="Services\UI\Commands\UpdateNotificationRuleCommand.cs" />
+    <Compile Include="Services\UI\Commands\UpdateProjectSettingsCommand.cs" />
+    <Compile Include="Services\UI\Commands\UpdateProjectPluginSettingsCommand.cs" />
+    <Compile Include="Services\UI\DtoExtension.cs" />
+    <Compile Include="Services\UI\Handlers\CommandHandler.cs" />
+    <Compile Include="Services\UI\Handlers\CreateProjectCommandHandler.cs" />
+    <Compile Include="Services\UI\Handlers\CreateTaskCommandHandler.cs" />
+    <Compile Include="Services\UI\Handlers\ProjectCommandHandler.cs" />
+    <Compile Include="Services\UI\Handlers\StopTaskCommandHandler.cs" />
+    <Compile Include="Services\UI\Handlers\UpdateNotificationRuleCommandHandler.cs" />
+    <Compile Include="Services\UI\Handlers\UpdateProjectSettingsCommandHandler.cs" />
+    <Compile Include="Services\UI\Handlers\UpdateProjectPluginSettingsCommandHandler.cs" />
+    <Compile Include="Services\UI\Queries\GetCapabilityByKeyQuery.cs" />
+    <Compile Include="Services\UI\Queries\GetLicenceInfoQuery.cs" />
+    <Compile Include="Services\UI\Queries\GetNotificationQuery.cs" />
+    <Compile Include="Services\UI\Queries\GetPluginByIdQuery.cs" />
+    <Compile Include="Services\UI\Queries\GetPluginsByProjectQuery.cs" />
+    <Compile Include="Services\UI\Queries\GetPluginsByTypeQuery.cs" />
+    <Compile Include="Services\UI\Queries\GetProjectTasksQuery.cs" />
+    <Compile Include="Services\UI\Queries\GetSystemSettingsQuery.cs" />
+    <Compile Include="Services\UI\Queries\GetTaskResultsQuery.cs" />
+    <Compile Include="Services\UI\Queries\GetUsersByProjectQuery.cs" />
+    <Compile Include="Services\UI\QueryHandlers\GetCapabilityByKeyQueryHandler.cs" />
+    <Compile Include="Services\UI\QueryHandlers\GetLicenceInfoQueryHandler.cs" />
+    <Compile Include="Services\UI\QueryHandlers\GetNotificationQueryHandler.cs" />
+    <Compile Include="Services\UI\QueryHandlers\GetPluginByIdQueryHandler.cs" />
+    <Compile Include="Services\UI\QueryHandlers\GetPluginsByProjectQueryHandler.cs" />
+    <Compile Include="Services\UI\QueryHandlers\GetPluginsByTypeQueryHandler.cs" />
+    <Compile Include="Services\UI\QueryHandlers\GetProjectTasksQueryHandler.cs" />
+    <Compile Include="Services\UI\QueryHandlers\GetSystemSettingsQueryHandler.cs" />
+    <Compile Include="Services\UI\QueryHandlers\GetTaskResultsQueryHandler.cs" />
+    <Compile Include="Services\UI\QueryHandlers\GetUsersByProjectQueryHandler.cs" />
+    <Compile Include="Services\UI\Renderers\AuthorityRenderer.cs" />
+    <Compile Include="Services\UI\Renderers\IDataRenderer.cs" />
+    <Compile Include="Services\UI\Renderers\NotificationRuleRenderer.cs" />
+    <Compile Include="Services\UI\Renderers\PluginRenderer.cs" />
+    <Compile Include="Services\UI\Renderers\PluginSettingRenderer.cs" />
+    <Compile Include="Services\UI\Renderers\ProjectDtoRenderer.cs" />
+    <Compile Include="Extensions\PropertyNameTranslator.cs" />
+    <Compile Include="Services\UI\Renderers\RoleRenderer.cs" />
+    <Compile Include="Services\UI\Renderers\SdlRuleRenderer.cs" />
+    <Compile Include="Services\UI\Renderers\TableRenderer.cs" />
+    <Compile Include="Services\UI\Renderers\TaskResultRenderer.cs" />
+    <Compile Include="Services\UI\Renderers\TasksRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common\Common.csproj">
+      <Project>{991bfedd-c5d6-4a01-8138-682a0d6115f3}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\DbActions\DbActions.csproj">
+      <Project>{ec7b26de-2744-43de-a9f2-6c75b52533cd}</Project>
+      <Name>DbActions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\DbMigrations\DbMigrations.csproj">
+      <Project>{9512f56f-4060-4939-9d33-ebf8ff4e0bbe}</Project>
+      <Name>DbMigrations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\DbUpdateCommon\DbUpdateCommon.csproj">
+      <Project>{833bb883-1c6d-4785-9c82-9eea78165c23}</Project>
+      <Name>DbUpdateCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Packages\Packages.csproj">
+      <Project>{456b13fd-2997-474c-b83a-fcc825db2e0d}</Project>
+      <Name>Packages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Repository\Repository.csproj">
+      <Project>{8DE5DBC1-AC8F-48AB-A5A9-9C119657CF8D}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.AD\Infrastructure.AD.csproj">
+      <Project>{D9698140-F8B9-4F4F-945A-3513B482A923}</Project>
+      <Name>Infrastructure.AD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Engines.Dsl\Infrastructure.Engines.Dsl.csproj">
+      <Project>{810ccb2c-dbc4-4186-a1d0-9f574b1b6c24}</Project>
+      <Name>Infrastructure.Engines.Dsl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Engines\Infrastructure.Engines.csproj">
+      <Project>{3E4FEB5C-54A1-4E94-B072-7DF67AFC897B}</Project>
+      <Name>Infrastructure.Engines</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Notifications\Infrastructure.Notifications.csproj">
+      <Project>{e9cc6b80-3092-4df1-8cb8-ed4bbaa57c8d}</Project>
+      <Name>Infrastructure.Notifications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Plugins.Agent.Contracts\Infrastructure.Plugins.Agent.Contracts.csproj">
+      <Project>{57eb173a-906c-4c1b-b501-e945960c8031}</Project>
+      <Name>Infrastructure.Plugins.Agent.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Plugins.Agent.Server.Contracts\Infrastructure.Plugins.Agent.Server.Contracts.csproj">
+      <Project>{e6a5fed6-fb6a-438f-adc6-8fdc66192d5c}</Project>
+      <Name>Infrastructure.Plugins.Agent.Server.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Plugins.Common.Contracts\Infrastructure.Plugins.Common.Contracts.csproj">
+      <Project>{a0fa309b-3a2e-4131-a653-aee1b11115b9}</Project>
+      <Name>Infrastructure.Plugins.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Plugins.Common\Infrastructure.Plugins.Common.csproj">
+      <Project>{7388c815-c5e3-4b7b-8219-cff50469c1f6}</Project>
+      <Name>Infrastructure.Plugins.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Plugins.Contracts\Infrastructure.Plugins.Contracts.csproj">
+      <Project>{f1d55529-03a7-4a12-9bdd-e268ea4de947}</Project>
+      <Name>Infrastructure.Plugins.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Plugins\Infrastructure.Plugins.csproj">
+      <Project>{E680430D-057C-4088-971B-5D3DFA08685F}</Project>
+      <Name>Infrastructure.Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Query\Infrastructure.Query.csproj">
+      <Project>{4ABDD478-E5AA-4985-9FE8-09FF1D02A16F}</Project>
+      <Name>Infrastructure.Query</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Reports\Infrastructure.Reports.csproj">
+      <Project>{8E6DB353-7298-4AD0-A8B7-3349E6EC8FA3}</Project>
+      <Name>Infrastructure.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.RequestHandling.Contracts\Infrastructure.RequestHandling.Contracts.csproj">
+      <Project>{1935e830-deec-43a2-bd6e-276bb87844bc}</Project>
+      <Name>Infrastructure.RequestHandling.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.RequestHandling\Infrastructure.RequestHandling.csproj">
+      <Project>{50b5aeaf-87b5-4a9e-85b0-0d65d5ef5b0c}</Project>
+      <Name>Infrastructure.RequestHandling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Rules\Infrastructure.Rules.csproj">
+      <Project>{41359E0E-5455-46DC-A91D-4118277F967C}</Project>
+      <Name>Infrastructure.Rules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\infrastructure.Scheduler\Infrastructure.Scheduler.csproj">
+      <Project>{3f1d1f4b-602d-49a5-affe-2ce64fe80b71}</Project>
+      <Name>Infrastructure.Scheduler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.UserInterface\Infrastructure.UserInterface.csproj">
+      <Project>{245F195B-2A57-4B49-9A80-921BBCE69E59}</Project>
+      <Name>Infrastructure.UserInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure\Infrastructure.csproj">
+      <Project>{ebdd610e-c30b-44c3-9056-77f57387cb46}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Workflow\Workflow.GitHub\Workflow.GitHub.csproj">
+      <Project>{D5F4ADD6-44F9-4BC9-B99B-0E4B24237C73}</Project>
+      <Name>Workflow.GitHub</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Workflow\Workflow.SA\Workflow.SA.csproj">
+      <Project>{14E2AA6A-CA52-45CA-987E-6FC6607C8066}</Project>
+      <Name>Workflow.SA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Workflow\Workflow\Workflow.csproj">
+      <Project>{6D861959-1069-43D9-8C4D-D13535A4E09A}</Project>
+      <Name>Workflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules.Core.Contracts\Modules.Core.Contracts.csproj">
+      <Project>{ceb41129-4ead-4209-90a1-97fd1bbe0441}</Project>
+      <Name>Modules.Core.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="app.manifest" />
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\PublishLocal.pubxml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\packages\Microsoft.AnalyzerPowerPack.1.1.0\analyzers\dotnet\cs\Microsoft.AnalyzerPowerPack.Common.dll" />
+    <Analyzer Include="..\..\packages\Microsoft.AnalyzerPowerPack.1.1.0\analyzers\dotnet\cs\Microsoft.AnalyzerPowerPack.CSharp.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>17047</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:17047</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://localhost:812/</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>"$(MSBuildBinPath)\msbuild.exe" "$(ProjectPath)" /p:Configuration=Release /p:PublishProfile=PublishLocal /p:DeployOnBuild=True
+
+xcopy "$(ProjectDir)Plugins" "$(ProjectDir)Publish\Plugins" /Y /I /E
+
+call "%25wix%25\bin\heat.exe" dir "$(ProjectDir)Publish." -var var.Modules.Core.ProjectDir -dr INSTALLFOLDER -cg Binaries -ag -scom -sreg -sfrag -srd -o "$(ProjectDir)..\..\Setup\Core\Setup.Core\Binaries.wxs</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\..\packages\PostSharp.4.2.18\tools\PostSharp.targets" Condition="Exists('..\..\packages\PostSharp.4.2.18\tools\PostSharp.targets')" />
+  <Target Name="EnsurePostSharpImported" BeforeTargets="BeforeBuild" Condition="'$(PostSharp30Imported)' == ''">
+    <Error Condition="!Exists('..\..\packages\PostSharp.4.2.18\tools\PostSharp.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://www.postsharp.net/links/nuget-restore." />
+    <Error Condition="Exists('..\..\packages\PostSharp.4.2.18\tools\PostSharp.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://www.postsharp.net/links/nuget-restore." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

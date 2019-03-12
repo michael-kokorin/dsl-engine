@@ -1,0 +1,22 @@
+﻿TaskResults
+select
+Project = #Tasks.Projects.DisplayName#
+
+Branch = #Tasks.Repository#
+Finished = #Tasks.Finished#
+MaxFinished = #Tasks.Projects.Tasks.OrderBy(t => t.Finished).LastOrDefault()?.Finished#
+
+#Type#
+#TypeShort#
+
+select end
+where #Finished# == #MaxFinished#
+group #Project# #Type# #TypeShort#
+select
+Project = #Key.Project#
+Type = #Key.Type#
+TypeShort = #Key.TypeShort#
+Count = #Count()#
+select end
+
+order #Project# asc #Type# asc #TypeShort# asc

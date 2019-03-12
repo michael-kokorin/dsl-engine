@@ -1,0 +1,218 @@
+﻿@using Modules.UI.Extensions
+@using Modules.UI.Models.Data
+@using Modules.UI.Resources
+@model Modules.UI.Models.Views.Admin.SettingsModel
+
+@{
+	ViewBag.Title = Resources._Layout_cshtml_Execute_Administration;
+}
+
+<div class="row">
+	<div class="col-lg-3">
+		<ul class="nav nav-pills nav-stacked red" role="tablist">
+			<li role="presentation" class="active">
+				<a href="#database" aria-controls="database" role="tab" data-toggle="tab">
+					<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+					@Html.DisplayNameFor(_ => _.SummarySettings)
+				</a>
+			</li>
+			<li role="presentation">
+				<a href="#filestorage" aria-controls="filestorage" role="tab" data-toggle="tab">
+					<span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+					@Html.DisplayNameFor(_ => _.FileStorageSettings)
+				</a>
+			</li>
+			<li role="presentation">
+				<a href="#activedirectory" aria-controls="activedirectory" role="tab" data-toggle="tab">
+					<span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+					@Html.DisplayNameFor(_ => _.ActiveDirectorySettings)
+				</a>
+			</li>
+			<li role="presentation">
+				<a href="#scanAgents" aria-controls="scanAgents" role="tab" data-toggle="tab">
+					<span class="glyphicon glyphicon glyphicon-hdd" aria-hidden="true"></span>
+					@Html.DisplayNameFor(_ => _.ScanAgentSettings)
+				</a>
+			</li>
+			<li role="presentation">
+				<a href="#pluginSettings" aria-controls="plugins" role="tab" data-toggle="tab">
+					<span class="glyphicon glyphicon-modal-window" aria-hidden="true"></span>
+					@Html.DisplayNameFor(_ => _.PluginSettings)
+				</a>
+			</li>
+			<li role="presentation">
+				<a href="#tabNotifications" aria-controls="tabNotifications" role="tab" data-toggle="tab">
+					<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+					@Html.DisplayNameFor(_ => _.NotificationSettings)
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-lg-9">
+		<div class="panel panel-default row-height active">
+			<div class="panel-body">
+				@using (Html.BeginForm("Index", "Admin", FormMethod.Post, new {@class = "form-horizontal", role = "form", id = "formSettings"}))
+				{
+					if (!Html.ViewData.ModelState.IsValid)
+					{
+						<div class="alert alert-danger">
+							@Html.ValidationSummary(false)
+						</div>
+					}
+
+					@Html.HiddenFor(_ => _.SummarySettings.ConnectionString)
+
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane fade in active" id="database">
+							<div class="form-group">
+								@Html.LabelFor(_ => _.SummarySettings.LicenceId, new {@class = "col-sm-3 control-label"})
+								<div class="col-sm-9">
+									@Html.TextBoxFor(m => m.SummarySettings.LicenceId, new {@class = "form-control", @style = "max-width:320px"}.Disabled(true))
+								</div>
+							</div>
+							<div class="form-group">
+								@Html.LabelFor(_ => _.SummarySettings.LicenceDescription, new { @class = "col-sm-3 control-label" })
+								<div class="col-sm-9" style="margin-top: 7px">
+									@Html.DisplayTextFor(_ => _.SummarySettings.LicenceDescription)
+								</div>
+							</div>
+							<div class="form-group">
+								@Html.LabelFor(_ => _.SummarySettings.ConnectionString, new {@class = "col-sm-3 control-label"})
+								<div class="col-sm-9">
+									@Html.TextAreaFor(m => m.SummarySettings.ConnectionString, new {@id = "db_connection_string", @class = "form-control", @style = "max-width:100%", @rows = 5}.Disabled(true))
+									@Html.ValidationMessageFor(_ => _.SummarySettings.ConnectionString, null, new {@class = "label label-danger"})
+									<p>
+										<small>@Html.DescriptionFor(_ => Model.SummarySettings.ConnectionString)</small>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="filestorage">
+							<div class="form-group">
+								@Html.LabelFor(_ => _.FileStorageSettings.TempDirPath, new {@class = "col-sm-3 control-label"})
+								<div class="col-sm-9">
+									@Html.TextBoxFor(m => m.FileStorageSettings.TempDirPath, new {@class = "form-control"})
+									@Html.ValidationMessageFor(_ => _.FileStorageSettings.TempDirPath, null, new {@class = "label label-danger"})
+									<p>
+										<small>@Html.DescriptionFor(_ => Model.FileStorageSettings.TempDirPath)</small>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="activedirectory">
+							<div class="form-group">
+								@Html.LabelFor(_ => _.ActiveDirectorySettings.RootGroupPath, new {@class = "col-sm-3 control-label"})
+								<div class="col-sm-9">
+									@Html.TextBoxFor(m => m.ActiveDirectorySettings.RootGroupPath, new {@class = "form-control"})
+									@Html.ValidationMessageFor(_ => _.ActiveDirectorySettings.RootGroupPath, null, new {@class = "label label-danger"})
+									<p>
+										<small>@Html.DescriptionFor(_ => Model.ActiveDirectorySettings.RootGroupPath)</small>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="scanAgents">
+							<div class="form-group">
+								@Html.LabelFor(_ => _.ScanAgentSettings.ScanAgents, new {@class = "col-sm-3 control-label"})
+								<div class="col-sm-9">
+									@{ Html.RenderPartial(
+										   "Table/TableRenderView",
+										   new TableRenderModel
+										   {
+											   RowIconClassName = "glyphicon glyphicon glyphicon-hdd",
+											   Table = Model.ScanAgentSettings.ScanAgents
+										   }); }
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="pluginSettings">
+							<div class="form-group">
+								@Html.LabelFor(_ => _.PluginSettings.Plugins, new {@class = "col-sm-3 control-label"})
+								<div class="col-sm-9">
+									@{ Html.RenderPartial(
+										   "Table/TableRenderView",
+										   new TableRenderModel
+										   {
+											   RowIconClassName = "glyphicon glyphicon-modal-window",
+											   Table = Model.PluginSettings.Plugins,
+											   TableName = "tablePlugins"
+										   }); }
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="tabNotifications">
+							<div class="form-group">
+								@Html.LabelFor(_ => _.NotificationSettings.MailServerHost, new {@class = "col-sm-3 control-label"})
+								<div class="col-sm-9">
+									@Html.TextBoxFor(m => m.NotificationSettings.MailServerHost, new {@class = "form-control"})
+									@Html.ValidationMessageFor(_ => _.NotificationSettings.MailServerHost, null, new {@class = "label label-danger"})
+								</div>
+							</div>
+							<div class="form-group">
+								@Html.LabelFor(_ => _.NotificationSettings.MainServerPort, new {@class = "col-sm-3 control-label"})
+								<div class="col-sm-9">
+									@Html.TextBoxFor(m => m.NotificationSettings.MainServerPort, new {@class = "form-control", @style = "max-width:10%"})
+									@Html.ValidationMessageFor(_ => _.NotificationSettings.MainServerPort, null, new {@class = "label label-danger"})
+								</div>
+							</div>
+							<div class="form-group">
+								@Html.LabelFor(_ => _.NotificationSettings.IsSslEnabled, new {@class = "col-sm-3 control-label"})
+								<div class="col-sm-9">
+									<div class="checkbox">
+										@Html.CheckBoxFor(_ => _.NotificationSettings.IsSslEnabled, new {@style = "margin-left:3px"})
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								@Html.LabelFor(_ => _.NotificationSettings.MailBox, new {@class = "col-sm-3 control-label"})
+								<div class="col-sm-9">
+									@Html.TextBoxFor(m => m.NotificationSettings.MailBox, new {@class = "form-control"})
+									@Html.ValidationMessageFor(_ => _.NotificationSettings.MailBox, null, new {@class = "label label-danger"})
+								</div>
+							</div>
+							<div class="form-group">
+								@Html.LabelFor(_ => _.NotificationSettings.UserName, new {@class = "col-sm-3 control-label"})
+								<div class="col-sm-9">
+									@Html.TextBoxFor(m => m.NotificationSettings.UserName, new {@class = "form-control"})
+									@Html.ValidationMessageFor(_ => _.NotificationSettings.UserName, null, new {@class = "label label-danger"})
+								</div>
+							</div>
+							<div class="form-group">
+								@Html.LabelFor(_ => _.NotificationSettings.Password, new {@class = "col-sm-3 control-label"})
+								<div class="col-sm-9">
+									@Html.PasswordFor(m => m.NotificationSettings.Password, new {@class = "form-control", value = Model.NotificationSettings.Password})
+									@Html.ValidationMessageFor(_ => _.NotificationSettings.Password, null, new {@class = "label label-danger"})
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-3 col-sm-9">
+							<button id="buttonSaveChanges" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSave">@Resources.Index_cshtml_Execute_Save</button>
+
+							<!-- Modal Save -->
+							<div id="modalSave" class="modal fade" role="dialog">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+											<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+											<b>@Resources.Index_cshtml_Execute_Warning</b>
+										</div>
+										<div class="modal-body">
+											<p>@Resources.Index_cshtml_Execute_Do_you_really_want_to_save_changes_</p>
+										</div>
+										<div class="modal-footer">
+											<button type="submit" class="btn btn-default">@Resources.Index_cshtml_Execute_Save</button>
+											<button type="button" class="btn btn-primary" data-dismiss="modal">@Resources.Index_cshtml_Execute_Close</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>

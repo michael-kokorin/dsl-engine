@@ -1,0 +1,14 @@
+﻿<div class="row">
+	<div class="col-md-6">
+		<form class="form-inline">
+			<label>Skip:&nbsp;</label>
+			<input type="text" class="form-control" ng-readonly="!controller.isCanEdit" ng-model="block.Skip" ng-change="controller.syncWithText()"/>
+		</form>
+	</div>
+	<div class="col-md-6">
+		<form class="form-inline">
+			<label>Take:&nbsp;</label>
+			<input type="text" class="form-control" ng-readonly="!controller.isCanEdit" ng-model="block.Take" ng-change="controller.syncWithText()"/>
+		</form>
+	</div>
+</div>

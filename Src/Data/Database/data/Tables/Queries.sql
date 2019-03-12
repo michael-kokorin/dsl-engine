@@ -1,0 +1,22 @@
+﻿CREATE TABLE [data].[Queries] (
+    [Id]              BIGINT         IDENTITY (1, 1) NOT NULL,
+    [ProjectId]       BIGINT         NULL,
+    [Visibility]      INT            NOT NULL,
+    [Privacy]         INT            NOT NULL,
+    [TargetCultureId] BIGINT         NULL,
+    [Name]            NVARCHAR (128) NOT NULL,
+    [Comment]         NVARCHAR (MAX) NULL,
+    [CreatedById]     BIGINT         NOT NULL,
+    [CreatedUtc]      DATETIME2 (7)  NOT NULL,
+    [ModifiedById]    BIGINT         NOT NULL,
+    [ModifiedUtc]     DATETIME2 (7)  NOT NULL,
+    [Query]           NVARCHAR (MAX) NULL,
+    [JsonQuery]       NVARCHAR (MAX) NULL,
+    [IsSystem]        BIT            DEFAULT ((0)) NOT NULL,
+    CONSTRAINT [PK_Queries] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Queries_Cultures_TargetCultureId] FOREIGN KEY ([TargetCultureId]) REFERENCES [l10n].[Cultures] ([Id]),
+    CONSTRAINT [FK_Queries_Projects_ProjectId] FOREIGN KEY ([ProjectId]) REFERENCES [data].[Projects] ([Id]),
+    CONSTRAINT [FK_Queries_Users_CreatedById] FOREIGN KEY ([CreatedById]) REFERENCES [security].[Users] ([Id]),
+    CONSTRAINT [FK_Queries_Users_ModifiedById] FOREIGN KEY ([ModifiedById]) REFERENCES [security].[Users] ([Id]),
+    CONSTRAINT [UK_Queries_ProjectId_Name_CreatedById] UNIQUE NONCLUSTERED ([ProjectId] ASC, [Name] ASC, [CreatedById] ASC)
+);

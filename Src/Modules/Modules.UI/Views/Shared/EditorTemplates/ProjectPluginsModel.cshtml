@@ -1,0 +1,33 @@
+﻿@using Modules.UI.Resources
+
+@model IList<Modules.UI.Models.Views.PersonalCabinet.ProjectPluginViewModel>
+
+@if((Model != null) && Model.Any())
+{
+	for (var projNum = 0; projNum < Model.Count; projNum++)
+	{
+		@Html.HiddenFor(m => m[projNum].Project.Id)
+		@Html.HiddenFor(m => m[projNum].Project.Name)
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					@Html.DisplayFor(m => m[projNum].Project.Name) -
+					@Html.DisplayFor(m => m[projNum].PluginSettingsView.Plugin.DisplayName)
+				</h3>
+			</div>
+			<div class="panel-body">
+				@Html.HiddenFor(m => m[projNum].PluginSettingsView.Plugin.Id)
+				@Html.HiddenFor(m => m[projNum].PluginSettingsView.Plugin.DisplayName)
+
+				@Html.EditorFor(m => m[projNum].PluginSettingsView.Settings, "PluginSettingModelView")
+			</div>
+		</div>
+	}
+}
+else
+{
+	<div class="alert alert-info" role="alert">
+		@Resources.ProjectPluginsModel_cshtml_Execute_There_are_no_data_to_show
+	</div>
+}

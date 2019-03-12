@@ -1,0 +1,42 @@
+﻿@using Modules.UI.Resources
+
+@model Modules.UI.Models.Views.Task.CreateTaskViewModel
+
+@using (Html.BeginForm("Create", "Task", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "NewTaskForm" }))
+{
+	@Html.ValidationSummary(true)
+
+	@Html.HiddenFor(_ => _.ProjectId)
+
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		<b>@Resources.Index_cshtml_Execute_Warning</b>
+	</div>
+	<div class="modal-body">
+		<div class="panel-body">
+			<div class="form-group">
+				@if((Model.Branches != null) && Model.Branches.Any())
+				{
+					@Html.LabelFor(_ => _.Repository, new {@class = "col-sm-3 control-label"})
+					<div class="col-sm-9">
+						@Html.DropDownListFor(m => m.Repository, Model.Branches, new {@class = "form-control"})
+					</div>
+				}
+				else
+				{
+					<div class="col-sm-9">
+						@Resources.NewTask_cshtml_ProjectIsNotConfigured
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+	if ((Model.Branches != null) && Model.Branches.Any())
+	{
+		<div class="modal-footer">
+			<button type="submit" id="buttonCreateNewTask" class="btn btn-default">@Resources.Index_cshtml_Execute_Save</button>
+			<button type="button" class="btn btn-primary" data-dismiss="modal">@Resources.Index_cshtml_Execute_Close</button>
+		</div>
+	}
+}

@@ -1,0 +1,20 @@
+﻿Tasks
+where #ProjectId# == {ProjectId}
+select
+Created = #Created.ToString()#
+Finished = #Finished.ToString()#
+StartedBy = #Users.DisplayName#
+High = #HighSeverityVulns#
+Med = #MediumSeverityVulns#
+Low = #LowSeverityVulns#
+Ldap = #TaskResults.Count(r => r.TypeShort == "LDAP")#
+Xss = #TaskResults.Count(r => r.TypeShort == "XSS")#
+Total = #HighSeverityVulns# + #MediumSeverityVulns# + #LowSeverityVulns#
+FolderSize = #FolderSize# / 1024
+AnalyzedSize = #AnalyzedSize# / 1024 / 1024
+#Todo#
+#Reopen#
+#Fixed#
+#FP#
+select end
+order #Created# asc

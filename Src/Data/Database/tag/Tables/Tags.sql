@@ -1,0 +1,7 @@
+﻿CREATE TABLE [tag].[Tags] (
+    [Id]   BIGINT         IDENTITY (1, 1) NOT NULL,
+    [Name] NVARCHAR (255) NOT NULL,
+    CONSTRAINT [PK_Tags] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [UK_Tags_Name] UNIQUE NONCLUSTERED ([Name] ASC)
+);
+

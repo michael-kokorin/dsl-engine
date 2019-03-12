@@ -1,0 +1,3 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Modules.Core.Services.Query.QueryService"
+	Factory="Modules.Core.Container.UnityServiceHostFactory"
+	CodeBehind="QueryService.svc.cs" %>

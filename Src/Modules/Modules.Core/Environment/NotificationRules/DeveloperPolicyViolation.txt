@@ -1,0 +1,8 @@
+﻿event policy-violation
+subjects
+role developer
+protocol Email
+report $NotificationReport$
+attach
+report $PciDssReport$
+format Pdf

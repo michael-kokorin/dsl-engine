@@ -1,0 +1,6 @@
+﻿trigger 2016-01-01 15:00:00 repeat 60s
+subjects
+role developer
+protocol Email
+report $NotificationReport$
+attach

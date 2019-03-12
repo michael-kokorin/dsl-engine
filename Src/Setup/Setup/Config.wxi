@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+    
+    <?define CoreFolder = "Halo" ?>
+    
+    <?define ManufacturerFull = "Positive Technologies"?>
+    <?define ManufacturerSafe = "PositiveTechnologies"?>
+    
+    <?define SolutionNameFull = "SDL" ?>
+    <?define SolutionNameShort = "SDL" ?>
+    <?define SolutionNameSafe = "SDL" ?>
+
+    <?define CoreAppNameShort = "Core" ?>
+    <?define CoreAppNameFull = "$(var.ManufacturerFull) $(var.SolutionNameFull) $(var.CoreAppNameShort) $(var.ProductVersion)" ?>
+    <?define CoreAppNameSafe = "Core" ?>
+
+    <?define SaAppNameShort = "Scan Agent" ?>
+    <?define SaAppNameFull = "$(var.ManufacturerFull) $(var.SolutionNameFull) $(var.SaAppNameShort) $(var.ProductVersion)" ?>
+    <?define SaAppNameSafe = "ScanAgent" ?>
+
+    <?define SchedulerAppNameShort = "Scheduler" ?>
+    <?define SchedulerAppNameFull = "$(var.ManufacturerFull) $(var.SolutionNameFull) $(var.SchedulerAppNameShort) $(var.ProductVersion)" ?>
+    <?define SchedulerAppNameSafe = "Scheduler" ?>    
+
+    <?define UiAppNameShort = "User Interface" ?>
+    <?define UiAppNameFull = "$(var.ManufacturerFull) $(var.SolutionNameFull) $(var.UiAppNameShort) $(var.ProductVersion)" ?>
+    <?define UiAppNameSafe = "UserInterface" ?>    
+</Include>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Map>
+    <severity name="SQL Injection" severity="High" />
+    <severity name="OS commanding" severity="High" />
+    <severity name="Remote Code Execution" severity="High" />
+    <severity name="Arbitrary File Reading" severity="High" />
+    <severity name="Arbitrary File Deletion" severity="High" />
+    <severity name="Arbitrary File Modification" severity="High" />
+    <severity name="Arbitrary File Creation" severity="High" />
+    <severity name="Local File Inclusion" severity="High" />
+    <severity name="Remote File Inclusion" severity="High" />
+    <severity name="Unrestricted File Upload" severity="High" />
+    <severity name="XML External Entity" severity="High" />
+    <severity name="XPath Injection" severity="High" />
+    <severity name="LDAP Injection" severity="High" />
+    <severity name="SSRF" severity="High" />
+    <severity name="Deserialization of Untrusted Data" severity="High" />
+    <severity name="Cross-site Scripting" severity="Medium" />
+    <severity name="HTTP Response Splitting" severity="Medium" />
+    <severity name="Open Redirect" severity="Medium" />
+    <severity name="Log Forging" severity="Medium" />
+</Map>

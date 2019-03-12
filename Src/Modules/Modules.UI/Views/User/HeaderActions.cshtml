@@ -1,0 +1,25 @@
+﻿@using Modules.UI.Resources
+
+@model Modules.UI.Models.UserHeaderActionsViewModel
+
+@if (@Model.IsCanViewProjects)
+{
+	<li>@Html.ActionLink(Resources._Layout_cshtml_Execute_Projects, "Index", "Project")</li>
+}
+
+@if (@Model.IsCanViewReports)
+{
+	<li>@Html.ActionLink(Resources._Layout_cshtml_Execute_Reports, "Index", "Report")</li>
+}
+
+@if (@Model.IsCanViewQueries)
+{
+	<li>@Html.ActionLink(Resources.HeaderActions_cshtml_Execute_Queries, "List", "Query")</li>
+}
+
+@if (@Model.IsCanViewAdminPanel)
+{
+	<li>@Html.ActionLink(Resources._Layout_cshtml_Execute_Administration, "Index", "Admin")</li>
+}
+
+<li>@Html.ActionLink(Resources.HeaderActions_cshtml_Execute_About, "About", "Home")</li>

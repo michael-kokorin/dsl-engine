@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Index_cshtml_Execute_Edit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Edit project settingsView
+</comment>
+  </data>
+  <data name="_Layout_cshtml_Execute_Projects" xml:space="preserve">
+    <value>Projects</value>
+    <comment>Available projects</comment>
+  </data>
+  <data name="_Layout_cshtml_Execute_Reports" xml:space="preserve">
+    <value>Reports</value>
+    <comment>Available reports
+</comment>
+  </data>
+  <data name="_Layout_cshtml_Execute_Administration" xml:space="preserve">
+    <value>Settings</value>
+    <comment>Administration panel
+</comment>
+  </data>
+  <data name="Index_cshtml_Execute_Projects" xml:space="preserve">
+    <value>Projects list</value>
+    <comment>Project list view title</comment>
+  </data>
+  <data name="GetByProject_cshtml_Execute_Project_tasks" xml:space="preserve">
+    <value>Project scan tasks</value>
+    <comment>Project tasks list</comment>
+  </data>
+  <data name="GetByProject_cshtml_Execute_Start_new_task" xml:space="preserve">
+    <value>Start new task</value>
+    <comment>Start new task</comment>
+  </data>
+  <data name="GetTaskResults_cshtml_Execute_TaskResults" xml:space="preserve">
+    <value>Scan task results</value>
+    <comment>Scan task result UI Markup title</comment>
+  </data>
+  <data name="TableRenderView_cshtml_Execute_NoDataToShow" xml:space="preserve">
+    <value>There are no data to show</value>
+  </data>
+  <data name="TaskModel_Created_Created" xml:space="preserve">
+    <value>Created</value>
+    <comment>When the task was created</comment>
+  </data>
+  <data name="TaskModel_CreatedBy_Created_by" xml:space="preserve">
+    <value>Created by</value>
+    <comment>Who creted the task</comment>
+  </data>
+  <data name="TaskModel_Finished_Finished" xml:space="preserve">
+    <value>Finished</value>
+    <comment>When the task was finished
+</comment>
+  </data>
+  <data name="TaskModel_ScanCore_Scan_core" xml:space="preserve">
+    <value>Scan core</value>
+    <comment>Task scan core</comment>
+  </data>
+  <data name="TaskModel_Status_Ststus" xml:space="preserve">
+    <value>Status</value>
+    <comment>Task status
+</comment>
+  </data>
+  <data name="ProjectModel_Description_Description" xml:space="preserve">
+    <value>Description</value>
+    <comment>Project description
+</comment>
+  </data>
+  <data name="ProjectModel_Name_Name" xml:space="preserve">
+    <value>Name</value>
+    <comment>Project name
+</comment>
+  </data>
+  <data name="ProjectModel_SdlPolicyStatus_SDL_Policy" xml:space="preserve">
+    <value>SDL Policy</value>
+    <comment>Project SDL policy status</comment>
+  </data>
+  <data name="ProjectModel_ScanCore_Scan_core" xml:space="preserve">
+    <value>Scan core</value>
+    <comment>Project scan core</comment>
+  </data>
+  <data name="GetTaskResults_cshtml_Execute_Stop_task" xml:space="preserve">
+    <value>Stop task</value>
+    <comment>Stop scan task execution
+</comment>
+  </data>
+  <data name="ActiveDirectorySettingsModel_RootGroupPath_You_must_specify_Active_Directory_parent_group" xml:space="preserve">
+    <value>You must specify Active Directory parent group</value>
+  </data>
+  <data name="ActiveDirectorySettingsModel_RootGroupPath_Root_group" xml:space="preserve">
+    <value>Root group</value>
+  </data>
+  <data name="ActiveDirectorySettingsModel_RootGroupPath_" xml:space="preserve">
+    <value>For example: LDAP://contoso/DC=fabrikam,DC=com</value>
+  </data>
+  <data name="FileStorageSettingsModel_TempDirPath_You_must_specify_file_storage_path" xml:space="preserve">
+    <value>You must specify file storage path</value>
+  </data>
+  <data name="FileStorageSettingsModel_TempDirPath_Temp_directory" xml:space="preserve">
+    <value>Temp directory</value>
+  </data>
+  <data name="FileStorageSettingsModel_TempDirPath_For_example____contoso_temp_sdl" xml:space="preserve">
+    <value>For example: \\contoso\temp\sdl</value>
+  </data>
+  <data name="SettingsModel_DatabaseSettings_Summary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="SettingsModel_FileStorageSettings_File_storage" xml:space="preserve">
+    <value>File storage</value>
+  </data>
+  <data name="SettingsModel_ActiveDirectorySettings_Active_Directory" xml:space="preserve">
+    <value>Active Directory</value>
+  </data>
+  <data name="Index_cshtml_Execute_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Index_cshtml_Execute_Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="Index_cshtml_Execute_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Index_cshtml_Execute_Do_you_really_want_to_save_changes_" xml:space="preserve">
+    <value>Do you really want to save changes?</value>
+  </data>
+  <data name="ReportModel_Description_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="ReportModel_Name_Name" xml:space="preserve">
+    <value>Name</value>
+    <comment>Report name
+</comment>
+  </data>
+  <data name="ReportModel_Created_Created" xml:space="preserve">
+    <value>Created</value>
+    <comment>When the report was created</comment>
+  </data>
+  <data name="ReportModel_CreatedBy_Created_by" xml:space="preserve">
+    <value>Created by</value>
+    <comment>Who created the report
+</comment>
+  </data>
+  <data name="ReportModel_Modified_Modified" xml:space="preserve">
+    <value>Modified</value>
+    <comment>When the report was modified last time</comment>
+  </data>
+  <data name="ReportModel_ModifiedBy_Modified_by" xml:space="preserve">
+    <value>Modified by</value>
+    <comment>Who modified the report at last time</comment>
+  </data>
+  <data name="ReportModel_Id_Id" xml:space="preserve">
+    <value>Id</value>
+    <comment>Report identifier</comment>
+  </data>
+  <data name="Index_cshtml_Execute_Reports" xml:space="preserve">
+    <value>Reports</value>
+    <comment>Reports view name
+</comment>
+  </data>
+  <data name="Show_cshtml_Execute_Report" xml:space="preserve">
+    <value>Report</value>
+    <comment>Report view name</comment>
+  </data>
+  <data name="UserSettingsModel_ItPluginSettings_Issue_Tracker" xml:space="preserve">
+    <value>Issue Tracker</value>
+  </data>
+  <data name="UserSettingsModel_VcsPluginSettings_Version_control" xml:space="preserve">
+    <value>Version control</value>
+  </data>
+  <data name="ProjectPluginsModel_Project_Project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="ProjectPluginsModel_Plugin_Plugin" xml:space="preserve">
+    <value>Plugin</value>
+  </data>
+  <data name="PluginSettingsModel_PluginName_Plugin_name" xml:space="preserve">
+    <value>Plugin name</value>
+  </data>
+  <data name="PluginSettingsModel_Settings_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="ProjectPluginsModel_cshtml_Execute_There_are_no_data_to_show" xml:space="preserve">
+    <value>There are no data to show</value>
+  </data>
+  <data name="HeaderActions_cshtml_Execute_About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="PersonalCabinet_cshtml_Execute_Personal_cabinet" xml:space="preserve">
+    <value>Personal cabinet</value>
+  </data>
+  <data name="CreateTaskViewModel_Repository_Repository" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="SdlPolicyStatusModel_Unknown_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+    <comment>Unknown SDL policy status</comment>
+  </data>
+  <data name="SdlPolicyStatusModel_Success_Success" xml:space="preserve">
+    <value>Success</value>
+    <comment>SDL policy succesfully implemented</comment>
+  </data>
+  <data name="SdlPolicyStatusModel_Failed_Failed" xml:space="preserve">
+    <value>Failed</value>
+    <comment>SDL policy failed
+</comment>
+  </data>
+  <data name="Edit_cshtml_Execute_Edit_project" xml:space="preserve">
+    <value>Edit project</value>
+  </data>
+  <data name="ProjectSettingsModel_Alias_Alias" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="ProjectSettingsModel_Alias_Only_characters_and_numbers" xml:space="preserve">
+    <value>Only characters and numbers</value>
+  </data>
+  <data name="ProjectSettingsModel_DisplayName_Display_name" xml:space="preserve">
+    <value>Display name</value>
+  </data>
+  <data name="ProjectSettingsModel_Description_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="ProjectVcsSettingsModel_PluginId_Plugin" xml:space="preserve">
+    <value>Plugin</value>
+  </data>
+  <data name="ProjectItSettingsModel_PluginId_Plugin" xml:space="preserve">
+    <value>Plugin</value>
+  </data>
+  <data name="ProjectSdlSettingsModel_SdlRules_SDL_rules" xml:space="preserve">
+    <value>SDL rules</value>
+  </data>
+  <data name="EditProjectViewModel_ProjectSettings_Project_settings" xml:space="preserve">
+    <value>Project settings</value>
+  </data>
+  <data name="EditProjectViewModel_VcsSettings_Version_control" xml:space="preserve">
+    <value>Version control</value>
+  </data>
+  <data name="EditProjectViewModel_ItSettings_Issue_tracker" xml:space="preserve">
+    <value>Issue tracker</value>
+  </data>
+  <data name="EditProjectViewModel_RbacSettings_Access_control" xml:space="preserve">
+    <value>Access control</value>
+  </data>
+  <data name="EditProjectViewModel_SdlSettings_SDL_Rules" xml:space="preserve">
+    <value>SDL Rules</value>
+  </data>
+  <data name="EditProjectViewModel_ProjectRoles_User_role" xml:space="preserve">
+    <value>User role</value>
+  </data>
+  <data name="EditProjectViewModel_Authorities_User_Authorities" xml:space="preserve">
+    <value>User Authorities</value>
+  </data>
+  <data name="Index_cshtml_Execute_Create_new_project" xml:space="preserve">
+    <value>Create new project</value>
+  </data>
+  <data name="NewProjectViewModel_Alias_Alias" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="NewProjectViewModel_DisplayName_Display_name" xml:space="preserve">
+    <value>Display name</value>
+  </data>
+  <data name="EditProjectViewModel_Notifications_Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="ProjectNotificationSettingsModel_NotificationRules_Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="TaskStatusModel_New_New_task" xml:space="preserve">
+    <value>New task</value>
+  </data>
+  <data name="TaskStatusModel_PreProcessing_Pre_processing" xml:space="preserve">
+    <value>Pre processing</value>
+  </data>
+  <data name="TaskStatusModel_ReadyToStan_Ready_to_scan" xml:space="preserve">
+    <value>Ready to scan</value>
+  </data>
+  <data name="TaskStatusModel_Scanning_Scanning" xml:space="preserve">
+    <value>Scanning</value>
+  </data>
+  <data name="TaskStatusModel_PostProcessing_Post_processing" xml:space="preserve">
+    <value>Post processing</value>
+  </data>
+  <data name="TaskStatusModel_Done_Task_done" xml:space="preserve">
+    <value>Task done</value>
+  </data>
+  <data name="DatabaseSettingsModel_ConnectionString_Connection_string" xml:space="preserve">
+    <value>Connection string</value>
+  </data>
+  <data name="DatabaseSettingsModel_ConnectionString_Connection_string_to_database" xml:space="preserve">
+    <value>Connection string to database</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home page</value>
+  </data>
+  <data name="ScanAgentSettingsModel_ScanAgents_Scan_agents" xml:space="preserve">
+    <value>Scan agents list</value>
+  </data>
+  <data name="PluginSettingsModel_Plugins_Plugins_list" xml:space="preserve">
+    <value>Plugins list</value>
+  </data>
+  <data name="SettingsModel_ScanAgentSettings_Scan_agents" xml:space="preserve">
+    <value>Scan agents</value>
+  </data>
+  <data name="SettingsModel_PluginSettings_Plugins" xml:space="preserve">
+    <value>Plugins</value>
+  </data>
+  <data name="TaskModel_Repository_Repository" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="ScanCoreModel_DisplayName_Scan_core" xml:space="preserve">
+    <value>Scan core</value>
+  </data>
+  <data name="TaskResultsViewModel_VcsPlugin_VCS_plugin" xml:space="preserve">
+    <value>VCS plugin</value>
+  </data>
+  <data name="TaskResultsViewModel_ItPlugin_IT_plugin" xml:space="preserve">
+    <value>IT plugin</value>
+  </data>
+  <data name="ProjectTasksViewModel_ItPlugin_IT_plugin" xml:space="preserve">
+    <value>IT plugin</value>
+  </data>
+  <data name="ProjectTasksViewModel_VcsPlugin_VCS_plugin" xml:space="preserve">
+    <value>VCS plugin</value>
+  </data>
+  <data name="ProjectNotificationSettingsModel_Query_Query" xml:space="preserve">
+    <value>Data Query</value>
+  </data>
+  <data name="ProjectSdlSettingsModel_Query_Query" xml:space="preserve">
+    <value>SDL Query</value>
+  </data>
+  <data name="Index_cshtml_Execute_View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="ProjectViewModel_HealthTable_Health" xml:space="preserve">
+    <value>Scan project health</value>
+  </data>
+  <data name="ProjectViewModel_MetricsTable_Metrics" xml:space="preserve">
+    <value>Scan task  metrics</value>
+  </data>
+  <data name="ProjectViewModel_VulnerabilityTable_Vulnerabilities" xml:space="preserve">
+    <value>Vulnerabilities</value>
+  </data>
+  <data name="TaskModel_FolderPath_Folder_path" xml:space="preserve">
+    <value>Folder path</value>
+  </data>
+  <data name="TaskModel_FolderSizeKb_Folder_size__KB_" xml:space="preserve">
+    <value>Folder size (KB)</value>
+  </data>
+  <data name="TaskModel_ScanCoreWorkingTimeSec_Scan_core_working_time__s_" xml:space="preserve">
+    <value>Scan core working time (s)</value>
+  </data>
+  <data name="TaskModel_AnalyzedSizeKb_Analyzed_Size__Kb_" xml:space="preserve">
+    <value>Analyzed Size (Kb)</value>
+  </data>
+  <data name="TaskModel_AnalyzedLinesCount_Analyzed_Lines" xml:space="preserve">
+    <value>Analyzed Lines</value>
+  </data>
+  <data name="ReportModel_ProjectName_Project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="UserModel_DisplayName_Display_name" xml:space="preserve">
+    <value>Display name</value>
+  </data>
+  <data name="UserModel_Email_Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="UserModel_Login_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="UserModel_Sid_SID" xml:space="preserve">
+    <value>SID</value>
+  </data>
+  <data name="UserSettingsViewModel_UserInfo_User_info" xml:space="preserve">
+    <value>User info</value>
+  </data>
+  <data name="NotificationSettingsModel_MailServerHost_Main_server_host" xml:space="preserve">
+    <value>Main server host</value>
+  </data>
+  <data name="NotificationSettingsModel_MainServerPort_Main_server_port" xml:space="preserve">
+    <value>Main server port</value>
+  </data>
+  <data name="NotificationSettingsModel_MailBox_Main_box_name" xml:space="preserve">
+    <value>Main box name</value>
+  </data>
+  <data name="NotificationSettingsModel_IsSslEnabled_SSL_enabled" xml:space="preserve">
+    <value>SSL enabled</value>
+  </data>
+  <data name="NotificationSettingsModel_UserName_User_name" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="NotificationSettingsModel_Password_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="SettingsModel_NotificationSettings_Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="Get_cshtml_Execute_Scan_task_result" xml:space="preserve">
+    <value>Scan task result</value>
+  </data>
+  <data name="Get_cshtml_Execute_Vulnerability_info" xml:space="preserve">
+    <value>Vulnerability info</value>
+  </data>
+  <data name="Get_cshtml_Execute_Vulnerability_position" xml:space="preserve">
+    <value>Vulnerability position</value>
+  </data>
+  <data name="Get_cshtml_Execute_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="TaskResultModel_AdditionalExploitConditions_Additional_exploit_conditions" xml:space="preserve">
+    <value>Additional exploit conditions</value>
+  </data>
+  <data name="TaskResultModel_ExploitGraph_Exploit_graph" xml:space="preserve">
+    <value>Exploit graph</value>
+  </data>
+  <data name="TaskResultModel_Description_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="TaskResultModel_File_File_name" xml:space="preserve">
+    <value>File name</value>
+  </data>
+  <data name="TaskResultModel_Function_Function_name" xml:space="preserve">
+    <value>Function name</value>
+  </data>
+  <data name="TaskResultModel_IssueNumber_Issue_number" xml:space="preserve">
+    <value>Issue number</value>
+  </data>
+  <data name="TaskResultModel_IssueUrl_Issue_link" xml:space="preserve">
+    <value>Issue link</value>
+  </data>
+  <data name="TaskResultModel_LineNumber_Line_number" xml:space="preserve">
+    <value>Line number</value>
+  </data>
+  <data name="TaskResultModel_LinePosition_Position_number" xml:space="preserve">
+    <value>Position number</value>
+  </data>
+  <data name="TaskResultModel_Type_Vulnerability_type" xml:space="preserve">
+    <value>Vulnerability type</value>
+  </data>
+  <data name="TaskResultModel_TypeShort_Vulnerability_type_short" xml:space="preserve">
+    <value>Vulnerability type short</value>
+  </data>
+  <data name="TaskResultModel_Message_Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="TaskResultModel_TaskId_Task_Id" xml:space="preserve">
+    <value>Task Id</value>
+  </data>
+  <data name="TaskResultModel_SeverityType_Severity_type" xml:space="preserve">
+    <value>Severity type</value>
+  </data>
+  <data name="TaskStatusModel_ReadyToPostProcessing" xml:space="preserve">
+    <value>Ready to postprocessing</value>
+  </data>
+  <data name="NewProjectViewModel_DefaultBranchName_Default_branch" xml:space="preserve">
+    <value>Default branch</value>
+  </data>
+  <data name="ProjectSettingsModel_DefaultBranchName_Default_branch_name" xml:space="preserve">
+    <value>Default branch name</value>
+  </data>
+  <data name="List_cshtml_Execute_Query_storage" xml:space="preserve">
+    <value>Query storage</value>
+  </data>
+  <data name="CreateQueryViewModel_ProjectId_Project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="HeaderActions_cshtml_Execute_Queries" xml:space="preserve">
+    <value>Queries</value>
+  </data>
+  <data name="CreateQueryViewModel_Name_Query_name" xml:space="preserve">
+    <value>Query name</value>
+  </data>
+  <data name="Edit_cshtml_Execute_Edit_query" xml:space="preserve">
+    <value>Edit query</value>
+  </data>
+  <data name="Edit_cshtml_Execute_Query" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="Edit_cshtml_Execute_Comment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="Edit_cshtml_Execute_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Edit_cshtml_Execute_Run" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="QueryModel_Privacy_Privacy" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+  <data name="QueryModel_Name_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Edit_cshtml_Execute_Query_name_required" xml:space="preserve">
+    <value>Query name required</value>
+  </data>
+  <data name="Edit_cshtml_Execute_Current_user" xml:space="preserve">
+    <value>Current user</value>
+  </data>
+  <data name="ProjectSettingsModel_VcsSyncEnabled_VCS_sync_enabled" xml:space="preserve">
+    <value>VCS sync enabled</value>
+  </data>
+  <data name="Edit_cshtml_Execute_Constructor" xml:space="preserve">
+    <value>Constructor</value>
+  </data>
+  <data name="Edit_cshtml_Execute_Data_source" xml:space="preserve">
+    <value>Query data source</value>
+  </data>
+  <data name="Edit_cshtml_Execute_Add_block" xml:space="preserve">
+    <value>Add block</value>
+  </data>
+  <data name="Edit_cshtml_Execute_Query_parameters" xml:space="preserve">
+    <value>Query parameters</value>
+  </data>
+  <data name="Edit_cshtml_Execute_Parameter_key" xml:space="preserve">
+    <value>Parameter key</value>
+  </data>
+  <data name="Edit_cshtml_Execute_Parameter_value" xml:space="preserve">
+    <value>Parameter value</value>
+  </data>
+  <data name="Edit_cshtml_Execute_Query_is_used_by_system_components" xml:space="preserve">
+    <value>Query is used by system components. Any changes may occur troubles</value>
+  </data>
+  <data name="SdlPolicyStatusModel_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="NewProjectViewModel_Alias_Digits_and_characters_only" xml:space="preserve">
+    <value>Only digits and characters</value>
+  </data>
+  <data name="NewTask_cshtml_ProjectIsNotConfigured" xml:space="preserve">
+    <value>Repository is not configured properly or not initialized</value>
+  </data>
+  <data name="ProjectSettingsModel_CommitToIt_Create_issues" xml:space="preserve">
+    <value>Create issues</value>
+  </data>
+  <data name="ProjectSettingsModel_CommitToVcs_Commit_vulnerabilities" xml:space="preserve">
+    <value>Commit vulnerabilities</value>
+  </data>
+  <data name="ProjectSettingsModel_EnablePoll" xml:space="preserve">
+    <value>Enable polling</value>
+  </data>
+  <data name="ProjectSettingsModel_PollTimeout" xml:space="preserve">
+    <value>Polling timeout</value>
+  </data>
+  <data name="SummarySettingsModel_LicenceId_Licence_Id" xml:space="preserve">
+    <value>Licence Id</value>
+  </data>
+  <data name="SummarySettingsModel_LicenceDescription_Licence_description" xml:space="preserve">
+    <value>Licence description</value>
+  </data>
+</root>

@@ -1,0 +1,17 @@
+﻿@using Modules.UI.Resources
+@model Modules.UI.Models.Views.Plugin.PluginSettingsModel
+
+
+@Html.HiddenFor(_ => _.PluginId)
+@Html.HiddenFor(_ => _.ProjectId)
+
+@Html.AntiForgeryToken()
+
+@if (!Html.ViewData.ModelState.IsValid)
+{
+	<div class="alert alert-danger">
+		@Html.ValidationSummary(false)
+	</div>
+}
+
+@Html.EditorFor(_ => @Model.Settings, "PluginSettingModelView")

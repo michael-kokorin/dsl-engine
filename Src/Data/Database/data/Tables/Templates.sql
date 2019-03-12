@@ -1,0 +1,9 @@
+﻿CREATE TABLE [data].[Templates]
+(
+    [Id] BIGINT NOT NULL IDENTITY, 
+    [Key] NVARCHAR(100) NOT NULL, 
+    [Title] NVARCHAR(MAX) NOT NULL, 
+    [Body] NVARCHAR(MAX) NOT NULL,
+    CONSTRAINT [PK_Templates] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [UK_Templates_Key] UNIQUE ([Key])
+);

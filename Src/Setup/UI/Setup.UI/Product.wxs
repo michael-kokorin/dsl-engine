@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+
+	<?include $(sys.CURRENTDIR)..\..\Setup\config.wxi ?>
+
+	<Product Id="*" Name="$(var.UiAppNameFull)" Language="1033"
+			 Version="$(var.ProductVersion)" Manufacturer="$(var.ManufacturerFull)"
+			 UpgradeCode="cc9ac0fd-75e2-43c6-ad99-f201493e06f1">
+
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<Icon Id="favicon.ico" SourceFile="$(sys.CURRENTDIR)..\..\Setup\favicon.ico" />
+		<Property Id="ARPPRODUCTICON" Value="favicon.ico" />
+		<Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+		<Property Id="COREADDRESS" Value="http://127.0.0.1:810" />
+
+		<MajorUpgrade AllowSameVersionUpgrades="yes"
+					  DowngradeErrorMessage="A newer version of [ProductName] is already installed. If you are sure you want to downgrade, remove the existing installation via Programs and Features." />
+
+		<MediaTemplate CompressionLevel="high" EmbedCab="yes" />
+
+		<UI>
+			<UIRef Id="WixUI_InstallDir" />
+
+			<Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="InstallDirDlg" Order="2">1</Publish>
+			<Publish Dialog="InstallDirDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="2">1</Publish>
+
+			<Publish Dialog="InstallDirDlg" Control="Next" Event="NewDialog" Value="CoreConnectionDialog" Order="4">WIXUI_DONTVALIDATEPATH OR WIXUI_INSTALLDIR_VALID="1"</Publish>
+			<Publish Dialog="CoreConnectionDialog" Control="Back" Event="NewDialog" Value="InstallDirDlg"></Publish>
+
+			<Publish Dialog="CoreConnectionDialog" Control="Next" Event="NewDialog" Value="VerifyReadyDlg"></Publish>
+			<Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="CoreConnectionDialog" Order="1">NOT Installed</Publish>
+		</UI>
+
+		<Feature Id="ProductFeature" Title="$(var.UiAppNameFull)" Level="1">
+			<ComponentGroupRef Id="Binaries" />
+			<ComponentRef Id="UpdateCoreAddress" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<UI>
+			<Dialog Id="CoreConnectionDialog" Width="370" Height="270" Title="SDL Core connection">
+				<Control Id="SdlCoreAddressLabel" Type="Text" X="20" Y="60" Width="220" Height="15" TabSkip="no"
+						 Text="$(var.ManufacturerFull) SDL Core server address:" />
+				<Control Id="SdlCoreAddressEdit" Type="Edit" X="20" Y="100" Width="320" Height="18"
+						 Property="COREADDRESS" Text="{80}" />
+
+				<Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="Back"></Control>
+				<Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="Next"></Control>
+				<Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes"
+						 Text="!(loc.WixUICancel)">
+					<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+				</Control>
+
+				<Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no"
+				         Text="!(loc.InstallDirDlgBannerBitmap)" />
+				<Control Id="Description" Type="Text" X="25" Y="23" Width="280" Height="15" Transparent="yes" NoPrefix="yes">
+					<Text>Define AI SDL Core connection parameters.</Text>
+				</Control>
+				<Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+				<Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes">
+					<Text>{\DlgTitleFont}AI SDL Core</Text>
+				</Control>
+				<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
+			</Dialog>
+		</UI>
+	</Fragment>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="ManufacturerDirectory" Name="$(var.ManufacturerSafe)">
+					<Directory Id="SolutionDirectory" Name="$(var.SolutionNameSafe)">
+						<Directory Id="ApplicationDirectory" Name="$(var.UiAppNameSafe)">
+							<Directory Id="INSTALLFOLDER" />
+						</Directory>
+					</Directory>
+				</Directory>
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<DirectoryRef Id="INSTALLFOLDER">
+			<Component Id="UpdateCoreAddress" KeyPath="yes" Guid="{7AB66A71-E04D-4D33-B10E-673CFA991B38}">
+				<util:XmlFile Id="SetApiService"
+							  Action="setValue"
+							  File="[INSTALLFOLDER]Web.config"
+							  ElementPath="/configuration/system.serviceModel/client/endpoint[\[]@name='ApiService'[\]]"
+							  Name="address"
+							  Value="[COREADDRESS]/Services/UI/ApiService.svc"
+							  SelectionLanguage="XPath"
+							  Sequence="2" />
+				<util:XmlFile Id="SetQueryService"
+							  Action="setValue"
+							  File="[INSTALLFOLDER]Web.config"
+							  ElementPath="/configuration/system.serviceModel/client/endpoint[\[]@name='QueryService'[\]]"
+							  Name="address"
+							  Value="[COREADDRESS]/Services/Query/QueryService.svc"
+							  SelectionLanguage="XPath"
+							  Sequence="2" />
+				<util:XmlFile Id="SetReportService"
+							  Action="setValue"
+							  File="[INSTALLFOLDER]Web.config"
+							  ElementPath="/configuration/system.serviceModel/client/endpoint[\[]@name='ReportService'[\]]"
+							  Name="address"
+							  Value="[COREADDRESS]/Services/Report/ReportService.svc"
+							  SelectionLanguage="XPath"
+							  Sequence="2" />
+			</Component>
+		</DirectoryRef>
+	</Fragment>
+</Wix>

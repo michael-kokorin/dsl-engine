@@ -1,0 +1,3 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Modules.Core.Services.Report.ReportService"
+	Factory="Modules.Core.Container.UnityServiceHostFactory"
+	CodeBehind="ReportService.svc.cs" %>

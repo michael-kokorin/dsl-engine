@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D7B4EFA-1CB9-41BD-AC79-D43D7662F75D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Plugins.Rtc.It</RootNamespace>
+    <AssemblyName>Plugins.Rtc.It</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RestSharp.105.2.3\lib\net46\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfoGlobal.cs">
+      <Link>Properties\AssemblyInfoGlobal.cs</Link>
+    </Compile>
+    <Compile Include="Client\Api\AuthApi.cs" />
+    <Compile Include="Client\Api\BaseApi.cs" />
+    <Compile Include="Client\Api\ChangeWorkItem.cs" />
+    <Compile Include="Client\Api\CreateWorkItem.cs" />
+    <Compile Include="Client\Api\GetIssue.cs" />
+    <Compile Include="Client\Api\IssueApi.cs" />
+    <Compile Include="Client\Api\ProjectApi.cs" />
+    <Compile Include="Client\BasicAuthentication.cs" />
+    <Compile Include="Client\ClientFactory.cs" />
+    <Compile Include="Client\DataFormat.cs" />
+    <Compile Include="Client\Entity\Category.cs" />
+    <Compile Include="Client\Entity\ChangeIssue.cs" />
+    <Compile Include="Client\Entity\EntityList.cs" />
+    <Compile Include="Client\Entity\Identity.cs" />
+    <Compile Include="Client\Entity\Issue.cs" />
+    <Compile Include="Client\Entity\IssueState.cs" />
+    <Compile Include="Client\Entity\Project.cs" />
+    <Compile Include="Client\Entity\RDF.cs" />
+    <Compile Include="Client\Entity\ResourceLink.cs" />
+    <Compile Include="Client\Entity\SecurityCheck.cs" />
+    <Compile Include="Client\Entity\User.cs" />
+    <Compile Include="Client\Entity\WorkItemType.cs" />
+    <Compile Include="Client\HttpMethod.cs" />
+    <Compile Include="Client\IClientFactory.cs" />
+    <Compile Include="Client\IRequest.cs" />
+    <Compile Include="Client\IRequestFactory.cs" />
+    <Compile Include="Client\RequestFactory.cs" />
+    <Compile Include="Client\RequestResult.cs" />
+    <Compile Include="Client\Requiest.cs" />
+    <Compile Include="Client\RestSharpJsonSerializer.cs" />
+    <Compile Include="Client\RtcClient.cs" />
+    <Compile Include="Extensions\DtoExtension.cs" />
+    <Compile Include="IncorrectProjectResourceException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestException.cs" />
+    <Compile Include="RtcItPlugin.cs" />
+    <Compile Include="RtcSettings.cs" />
+    <Compile Include="WorkItemStates.cs" />
+    <Compile Include="WorkItemTypes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Plugins.Common.Contracts\Infrastructure.Plugins.Common.Contracts.csproj">
+      <Project>{a0fa309b-3a2e-4131-a653-aee1b11115b9}</Project>
+      <Name>Infrastructure.Plugins.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.Plugins.Contracts\Infrastructure.Plugins.Contracts.csproj">
+      <Project>{f1d55529-03a7-4a12-9bdd-e268ea4de947}</Project>
+      <Name>Infrastructure.Plugins.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)*.dll" "$(SolutionDir)Modules\Modules.Core\Plugins\RationalTeamConcert\" /y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

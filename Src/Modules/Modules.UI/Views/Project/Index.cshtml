@@ -1,0 +1,154 @@
+﻿@using Common.Extensions
+@using Modules.UI.Models.Data
+@using Modules.UI.Models.Entities
+@using Modules.UI.Resources
+@model Modules.UI.Models.Views.Project.ProjectsViewModel
+
+@{
+	ViewBag.Title = @Resources.Index_cshtml_Execute_Projects;
+}
+
+@if (Model.IsCanCreateProject)
+{
+@section navbar{
+	@Html.ActionLink(Resources.Index_cshtml_Execute_Create_new_project, "NewProject", "Project",
+		null,
+		new {@class = "modal-link btn btn-warning navbar-btn"})
+}}
+
+@if (@Model.Projects != null)
+{
+	foreach (var project in @Model.Projects)
+	{
+		string panelClassName;
+		string projectIconName;
+
+		switch (project.Project.SdlPolicyStatus)
+		{
+			case SdlPolicyStatusModel.Success:
+				panelClassName = "panel-success";
+				projectIconName = "glyphicon-ok-sign";
+				break;
+			case SdlPolicyStatusModel.Failed:
+				panelClassName = "panel-danger";
+				projectIconName = "glyphicon-remove-sign";
+				break;
+			case SdlPolicyStatusModel.Unknown:
+				panelClassName = "panel-default";
+				projectIconName = "glyphicon-record";
+				break;
+			default:
+				panelClassName = "panel-default";
+				projectIconName = "glyphicon-record";
+				break;
+		}
+
+		<div class="panel @panelClassName">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-md-9">
+						<div class="panel-title">
+							<span class="glyphicon @projectIconName" aria-hidden="true"></span>
+
+							@Html.ActionLink("{0} ({1})".FormatWith(project.Project.Name, project.ScanCore == null ? null : project.ScanCore.DisplayName), "GetByProject", "Task", new {projectId = project.Project.Id}, null)
+							@{
+								var rolesString = project.Roles.Select(_ => _.Name).OrderBy(_ => _).ToCommaSeparatedString();
+
+								@Html.Raw(" / <i><small>" + rolesString + "</small></i>")
+							}
+						</div>
+					</div>
+					<div class="col-md-3 text-right">
+						<button type="button" class="btn btn-xs btn-default" onclick="location.href = '@Url.Action("GetByProject", "Task", new {projectId = project.Project.Id})'">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+							@Resources.Index_cshtml_Execute_View
+						</button>
+						@if (project.IsCanEdit)
+						{
+							<button type="button" class="btn btn-xs btn-warning" onclick="location.href ='@Url.Action("Edit", "Project", new {projectId = project.Project.Id})'">
+								<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+								@Resources.Index_cshtml_Execute_Edit
+							</button>
+						}
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-4">
+						@Html.Raw(project.Project.Description)
+					</div>
+					<div class="col-sm-8">
+						<ul class="nav nav-tabs">
+							@if (project.IsCanViewHealthStat)
+							{
+								<li class="active">
+									<a data-toggle="tab" href="@string.Format(" #severityTab_{0}", @project.Project.Id)">
+										<span class="glyphicon glyphicon-stats"></span> @Html.LabelFor(_ => project.HealthTable)</a>
+								</li>
+							}
+							@if (project.IsCanViewVulnerabilitiesStat)
+							{
+								<li>
+									<a data-toggle="tab" href="@string.Format(" #vulneravilityTab_{0}", @project.Project.Id)">
+										<span class="glyphicon glyphicon-warning-sign"></span> @Html.LabelFor(_ => project.VulnerabilityTable)</a>
+								</li>
+							}
+							@if (project.IsCanViewMetricsStat)
+							{
+								<li>
+									<a data-toggle="tab" href="@string.Format(" #scanInfoTab_{0}", @project.Project.Id)">
+										<span class="glyphicon glyphicon-modal-window"></span> @Html.LabelFor(_ => project.MetricsTable)</a>
+								</li>
+							}
+						</ul>
+						<div class="tab-content">
+							@* ReSharper disable once UseStringInterpolation *@
+							<div id="@string.Format("severityTab_{0}", @project.Project.Id)" class="tab-pane fade in active">
+								@{ Html.RenderPartial("Table/TableRenderView", new TableRenderModel
+								   {
+									   Table = project.HealthTable,
+									   TargetAction = "GetTaskResults",
+									   TargetController = "Task",
+									   ArgumentSetter = row => new
+									   {
+										   TaskId = row.EntityId
+									   },
+									   RowIconClassName = "glyphicon glyphicon-tasks"
+								   }); }
+							</div>
+							@* ReSharper disable once UseStringInterpolation *@
+							<div id="@string.Format("vulneravilityTab_{0}", @project.Project.Id)" class="tab-pane fade">
+								@{ Html.RenderPartial("Table/TableRenderView", new TableRenderModel
+								   {
+									   Table = project.VulnerabilityTable,
+									   TargetAction = "GetTaskResults",
+									   TargetController = "Task",
+									   ArgumentSetter = row => new
+									   {
+										   TaskId = row.EntityId
+									   },
+									   RowIconClassName = "glyphicon glyphicon-tasks"
+								   }); }
+							</div>
+							@* ReSharper disable once UseStringInterpolation *@
+							<div id="@string.Format("scanInfoTab_{0}", @project.Project.Id)" class="tab-pane fade">
+								@{ Html.RenderPartial("Table/TableRenderView", new TableRenderModel
+								   {
+									   Table = project.MetricsTable,
+									   TargetAction = "GetTaskResults",
+									   TargetController = "Task",
+									   ArgumentSetter = row => new
+									   {
+										   TaskId = row.EntityId
+									   },
+									   RowIconClassName = "glyphicon glyphicon-tasks"
+								   }); }
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+}

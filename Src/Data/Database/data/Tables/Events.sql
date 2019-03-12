@@ -1,0 +1,8 @@
+﻿CREATE TABLE [data].[Events]
+(
+    [Id] BIGINT NOT NULL IDENTITY, 
+    [Key] NVARCHAR(100) NOT NULL, 
+    [Name] NVARCHAR(400) NOT NULL,
+    CONSTRAINT [PK_Events] PRIMARY KEY CLUSTERED ([Id] ASC), 
+    CONSTRAINT [UK_Events_Key] UNIQUE ([Key]),
+);

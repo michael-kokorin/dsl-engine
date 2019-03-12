@@ -1,0 +1,39 @@
+﻿@using Modules.Core.Contracts.UI.Dto
+@model SettingGroupDto
+@{
+	Layout = null;
+}
+
+@foreach(var valueItem in Model.Values)
+{
+	switch(valueItem.Type)
+	{
+		case SettingValueTypeDto.List:
+			@Html.Partial("~/Views/Settings/ListItem.cshtml", valueItem)
+			break;
+		case SettingValueTypeDto.Boolean:
+			@Html.Partial("~/Views/Settings/BooleanItem.cshtml", valueItem)
+			break;
+		case SettingValueTypeDto.Number:
+			@Html.Partial("~/Views/Settings/NumberItem.cshtml", valueItem)
+			break;
+		case SettingValueTypeDto.Password:
+			@Html.Partial("~/Views/Settings/PasswordItem.cshtml", valueItem)
+			break;
+		case SettingValueTypeDto.Text:
+			@Html.Partial("~/Views/Settings/TextItem.cshtml", valueItem)
+			break;
+	}
+}
+
+@foreach(var groupItem in Model.Groups ?? new List<SettingGroupDto>())
+{
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h5>@groupItem.Title</h5>
+		</div>
+		<div class="panel-body">
+			@Html.Partial("~/Views/Settings/SettingsTab.cshtml", groupItem)
+		</div>
+	</div>
+}

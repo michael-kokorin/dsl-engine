@@ -1,0 +1,84 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DbUpdateCommon.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PackageVersionTableName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PackageVersions</Value>
+    </Setting>
+    <Setting Name="DbVersionTableName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DbVersions</Value>
+    </Setting>
+    <Setting Name="VersionColumnName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Version</Value>
+    </Setting>
+    <Setting Name="ModuleColumnName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Module</Value>
+    </Setting>
+    <Setting Name="InstalledColumnName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Installed</Value>
+    </Setting>
+    <Setting Name="CommonSchemaName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">common</Value>
+    </Setting>
+    <Setting Name="DataSchemaName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">data</Value>
+    </Setting>
+    <Setting Name="L10NSchemaName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">l10n</Value>
+    </Setting>
+    <Setting Name="QueueSchemaName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">queue</Value>
+    </Setting>
+    <Setting Name="ReportSchemaName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">report</Value>
+    </Setting>
+    <Setting Name="SecuritySchemaName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">security</Value>
+    </Setting>
+    <Setting Name="SystemSchemaName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">system</Value>
+    </Setting>
+    <Setting Name="LocalizationDbPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Localization</Value>
+    </Setting>
+    <Setting Name="NotificationRulesDbPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">NotificationRules</Value>
+    </Setting>
+    <Setting Name="PluginsDbPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Plugins</Value>
+    </Setting>
+    <Setting Name="PolicyRulesDbPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PolicyRules</Value>
+    </Setting>
+    <Setting Name="ReportsDbPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Reports</Value>
+    </Setting>
+    <Setting Name="SchemaDbPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Schema</Value>
+    </Setting>
+    <Setting Name="SettingsDbPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Settings</Value>
+    </Setting>
+    <Setting Name="SystemDbPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">System</Value>
+    </Setting>
+    <Setting Name="TaskResultsDbPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TaskResults</Value>
+    </Setting>
+    <Setting Name="TasksDbPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Tasks</Value>
+    </Setting>
+    <Setting Name="TemplatesDbPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Templates</Value>
+    </Setting>
+    <Setting Name="WorkflowRulesDbPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">WorkflowRules</Value>
+    </Setting>
+    <Setting Name="TagSchemaName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">tag</Value>
+    </Setting>
+    <Setting Name="TelemetrySchemaName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">telemetry</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

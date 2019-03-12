@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEB41129-4EAD-4209-90A1-97FD1BBE0441}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Modules.Core.Contracts</RootNamespace>
+    <AssemblyName>Modules.Core.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\..\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JetBrains.Annotations, Version=10.1.5.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\JetBrains.Annotations.10.1.5\lib\net\JetBrains.Annotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfoGlobal.cs">
+      <Link>Properties\AssemblyInfoGlobal.cs</Link>
+    </Compile>
+    <Compile Include="Dto\ReferenceItemDto.cs" />
+    <Compile Include="ExternalSystems\IApiService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query\Dto\DataSourceDto.cs" />
+    <Compile Include="Query\Dto\DataSourceFieldDto.cs" />
+    <Compile Include="Query\Dto\QueryDto.cs" />
+    <Compile Include="Query\IQueryService.cs" />
+    <Compile Include="Report\Dto\ReportDto.cs" />
+    <Compile Include="Report\Dto\ReportFileDto.cs" />
+    <Compile Include="Report\IReportService.cs" />
+    <Compile Include="SA\Dto\GetScanTaskDto.cs" />
+    <Compile Include="SA\Dto\IsTaskCancelledResponseDto.cs" />
+    <Compile Include="SA\Dto\IsTaskCancelledRequestDto.cs" />
+    <Compile Include="SA\Dto\ScanAgentInfoDto.cs" />
+    <Compile Include="SA\Dto\ScanAgentSettingsDto.cs" />
+    <Compile Include="SA\Dto\ScanTaskCoreDto.cs" />
+    <Compile Include="SA\Dto\ScanTaskDto.cs" />
+    <Compile Include="Tag\Dto\TagDto.cs" />
+    <Compile Include="Tag\ITagService.cs" />
+    <Compile Include="Transport\LocaleBehaviour.cs" />
+    <Compile Include="Transport\LocaleBehaviourElement.cs" />
+    <Compile Include="Transport\LocaleMessageInspector.cs" />
+    <Compile Include="UI\Dto\Admin\ActiveDirectorySettingsDto.cs" />
+    <Compile Include="UI\Dto\Admin\DatabaseSettingsDto.cs" />
+    <Compile Include="UI\Dto\Admin\FileStorageSettingsDto.cs" />
+    <Compile Include="UI\Dto\Admin\LicenceInfoDto.cs" />
+    <Compile Include="UI\Dto\Admin\NotificationSettingsDto.cs" />
+    <Compile Include="UI\Dto\Admin\PluginSettingsDto.cs" />
+    <Compile Include="UI\Dto\Admin\ScanAgentSettingsDto.cs" />
+    <Compile Include="UI\Dto\Admin\SettingsDto.cs" />
+    <Compile Include="UI\Dto\AuthorityDto.cs" />
+    <Compile Include="UI\Dto\AuthorityRequestDto.cs" />
+    <Compile Include="UI\Dto\BranchDto.cs" />
+    <Compile Include="UI\Dto\CreateTaskDto.cs" />
+    <Compile Include="UI\Dto\Data\QueryExceptionDto.cs" />
+    <Compile Include="UI\Dto\Data\TableColumnDto.cs" />
+    <Compile Include="UI\Dto\Data\TableDto.cs" />
+    <Compile Include="UI\Dto\Data\TableRowDto.cs" />
+    <Compile Include="UI\Dto\Data\TableRowItemDto.cs" />
+    <Compile Include="UI\Dto\ProjectSettings\UpdateProjectPluginSettingDto.cs" />
+    <Compile Include="UI\Dto\SettingSubitem.cs" />
+    <Compile Include="UI\Dto\NewProjectDto.cs" />
+    <Compile Include="UI\Dto\NotificationRuleDto.cs" />
+    <Compile Include="UI\Dto\ProjectDto.cs" />
+    <Compile Include="UI\Dto\ProjectSettings\ProjectItSettingsDto.cs" />
+    <Compile Include="UI\Dto\ProjectSettings\ProjectSettingsDto.cs" />
+    <Compile Include="UI\Dto\ProjectSettings\UpdateProjectPluginSettingsDto.cs" />
+    <Compile Include="UI\Dto\ScanCoreDto.cs" />
+    <Compile Include="UI\Dto\SdlPolicyStatus.cs" />
+    <Compile Include="UI\Dto\SdlRuleDto.cs" />
+    <Compile Include="UI\Dto\SettingGroupDto.cs" />
+    <Compile Include="UI\Dto\SettingOwnerDto.cs" />
+    <Compile Include="UI\Dto\SettingValueDto.cs" />
+    <Compile Include="UI\Dto\SettingValueTypeDto.cs" />
+    <Compile Include="UI\Dto\TaskDto.cs" />
+    <Compile Include="UI\Dto\TaskResolutionStatusDto.cs" />
+    <Compile Include="UI\Dto\TaskResultDto.cs" />
+    <Compile Include="UI\Dto\TaskStatusDto.cs" />
+    <Compile Include="UI\Dto\UserDto.cs" />
+    <Compile Include="UI\Dto\UserInterfaceInfoDto.cs" />
+    <Compile Include="UI\Dto\UserRoleDto.cs" />
+    <Compile Include="UI\Dto\UserSettings\PluginDto.cs" />
+    <Compile Include="UI\Dto\UserSettings\PluginSettingDto.cs" />
+    <Compile Include="UI\Dto\UserSettings\SettingsTypeDto.cs" />
+    <Compile Include="UI\Dto\UserUpdatedDto.cs" />
+    <Compile Include="UI\IApiService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common\Common.csproj">
+      <Project>{991BFEDD-C5D6-4A01-8138-682A0D6115F3}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.RequestHandling.Contracts\Infrastructure.RequestHandling.Contracts.csproj">
+      <Project>{1935e830-deec-43a2-bd6e-276bb87844bc}</Project>
+      <Name>Infrastructure.RequestHandling.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\packages\Microsoft.AnalyzerPowerPack.1.1.0\analyzers\dotnet\cs\Microsoft.AnalyzerPowerPack.Common.dll" />
+    <Analyzer Include="..\..\packages\Microsoft.AnalyzerPowerPack.1.1.0\analyzers\dotnet\cs\Microsoft.AnalyzerPowerPack.CSharp.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

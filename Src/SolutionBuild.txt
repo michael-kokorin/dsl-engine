@@ -1,0 +1,19 @@
+﻿1. Открыть View->SQL Server Object Explorer и проверить, что (localdb)\ProjectsV12 существует и доступен
+2. Открыть Modules.Core -> Web.config и найти connectionStrings
+2.1. Проверить, что data source в SdlContext указывает на описанную выше базу данных
+2.2. Проверить, что data source в SdlDbConnection указывает на описанную выше базу данных
+3. Открыть Modules.Scheduler -> App.config и найти connectionStrings
+3.1. Проверить, что data source в SdlContext указывает на описанную выше базу данных
+4. Проверить, что initial catalog во всех трех расположения (2.1, 2.2 и 3.1) имеет одинаковое значение.
+5.Открыть Modules.SA -> App.Config и найти CoresFolderPath
+5.1. Проверить, что значение этого элемента указывает на папку, где расположены ядра сканирования, т.е. ядро .NET должно быть в папке sharp, ядро PHP - в php, ядро Java - в java.
+6. Запустить Modules.Core
+7. Проверить, что по строке подключения из пункта 2.1. создалась база данных
+8. Запустить Modules.UI
+9. Запустить Modules.Scheduler
+10. Запустить Modules.SA
+11. Зайти на github.com -> Settings -> Personal access token и сгенерировать новый токен
+12. Открыть личный кабинет и на вкладках Version Control и Issue Tracker ввести токен с шага 11 и нажать сохранить.
+13. Зайти в Settings -> File Storage и указать путь до пустой существующей папки
+14. Зайти в раздел редактирования проекта и на вкладках Version Control и Issue Tracker указать расположение проекта и токен для доступа с пункта 11
+11. Всё запущено, сконфигурировано и готово к работе!!!!

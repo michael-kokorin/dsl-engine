@@ -1,0 +1,59 @@
+﻿@using Modules.UI.Extensions
+@using Modules.UI.Models.Data
+@using Modules.UI.Resources
+@model Modules.UI.Models.Views.Task.ProjectTasksViewModel
+
+@{
+    ViewBag.Title = Resources.GetByProject_cshtml_Execute_Project_tasks;
+}
+
+@if (Model.IsCanCreateTask)
+{
+@section navbar{
+    @Html.ActionLink(@Resources.GetByProject_cshtml_Execute_Start_new_task, "NewTask", "Task",
+        new {projectId = Model.Project.Id},
+        new {@class = "modal-link btn btn-warning navbar-btn"})
+}}
+
+@if (Model.Project != null)
+{
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>@Html.LabelFor(_ => _.Project.Name): @Html.DisplayFor(_ => Model.Project.Name)</p>
+                </div>
+                <div class="col-md-4">
+                    <p>@Html.LabelFor(_ => _.Project.SdlPolicyStatus): @Model.Project.SdlPolicyStatus.DisplayName()</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>@Html.LabelFor(_ => Model.ScanCore): @Html.DisplayFor(_ => Model.ScanCore.DisplayName)</p>
+                </div>
+                <div class="col-md-4">
+                    <p>@Html.LabelFor(_ => _.VcsPlugin): @Html.DisplayFor(_ => _.VcsPlugin.DisplayName)</p>
+                </div>
+                <div class="col-md-4">
+                    <p>@Html.LabelFor(_ => _.ItPlugin): @Html.DisplayFor(_ => _.ItPlugin.DisplayName)</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>@Html.Raw(Model.Project.Description)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@{ Html.RenderPartial("Table/TableRenderView", new TableRenderModel
+   {
+       Table = Model.Table,
+       TargetAction = "GetTaskResults",
+       TargetController = "Task",
+       ArgumentSetter = row => new
+       {
+           TaskId = row.EntityId
+       }
+   }); }

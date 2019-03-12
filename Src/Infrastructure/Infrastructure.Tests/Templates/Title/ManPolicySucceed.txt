@@ -1,0 +1,1 @@
+﻿$if(Task)$ $Task:{ Task | FYI: $Task.Value.ProjectName$ - Политика восстановлена (ветка: $Task.Value.ProjectBranch$) }$ $endif$

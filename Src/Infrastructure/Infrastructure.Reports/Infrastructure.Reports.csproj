@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E6DB353-7298-4AD0-A8B7-3349E6EC8FA3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infrastructure.Reports</RootNamespace>
+    <AssemblyName>Infrastructure.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JetBrains.Annotations, Version=10.1.5.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\JetBrains.Annotations.10.1.5\lib\net\JetBrains.Annotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NReco.PdfGenerator, Version=1.1.12.0, Culture=neutral, PublicKeyToken=231663d50a41b451, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NReco.PdfGenerator.1.1.12.0\lib\net20\NReco.PdfGenerator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfoGlobal.cs">
+      <Link>Properties\AssemblyInfoGlobal.cs</Link>
+    </Compile>
+    <Compile Include="Blocks\BoolReportBlock\BoolReportBlock.cs" />
+    <Compile Include="Blocks\BoolReportBlock\BoolReportBlockVizualizer.cs" />
+    <Compile Include="Blocks\Chart\ChartColumn.cs" />
+    <Compile Include="Blocks\Chart\ChartLabel.cs" />
+    <Compile Include="Blocks\Chart\ChartReportBlock.cs" />
+    <Compile Include="Blocks\Chart\ChartType.cs" />
+    <Compile Include="Blocks\Container\ContainerOrientation.cs" />
+    <Compile Include="Blocks\Container\ContainerReportBlock.cs" />
+    <Compile Include="Blocks\HtmlDoc\HtmlDocReportBlock.cs" />
+    <Compile Include="Blocks\Html\HtmlReportBlock.cs" />
+    <Compile Include="Blocks\Html\HtmlReportBlockVizualizer.cs" />
+    <Compile Include="Blocks\Image\ImageReportBlock.cs" />
+    <Compile Include="Blocks\Image\ImageReportBlockVizualizer.cs" />
+    <Compile Include="Blocks\IQuaryableReportBlock.cs" />
+    <Compile Include="Blocks\Iterator\IteratorReportBlock.cs" />
+    <Compile Include="Blocks\IReportBlocks.cs" />
+    <Compile Include="Blocks\Label\LabelFontStyle.cs" />
+    <Compile Include="Blocks\Label\LabelHorizontalAlign.cs" />
+    <Compile Include="Blocks\Label\LabelReportBlock.cs" />
+    <Compile Include="Blocks\Label\LabelVerticalalign.cs" />
+    <Compile Include="Blocks\Link\EmptyLinkReportBlockChildException.cs" />
+    <Compile Include="Blocks\Link\EmptyLinkReportBlockTargetException.cs" />
+    <Compile Include="Blocks\Link\LinkReportBlock.cs" />
+    <Compile Include="Blocks\Link\LinkReportBlockVizualizer.cs" />
+    <Compile Include="Blocks\QueryScope\QueryScopeReportBlock.cs" />
+    <Compile Include="Blocks\QueryScope\QueryScopeReportBlockVizualizer.cs" />
+    <Compile Include="Blocks\ReportBlock.cs" />
+    <Compile Include="Blocks\ReportItemColor.cs" />
+    <Compile Include="Blocks\Table\TableReportBlockParameters.cs" />
+    <Compile Include="Blocks\Table\TableReportBlock.cs" />
+    <Compile Include="Blocks\Chart\ChartReportBlockVizualizer.cs" />
+    <Compile Include="Blocks\Container\ContainerReportBlockVizualizer.cs" />
+    <Compile Include="Blocks\Iterator\EmptyIteratorTemplateException.cs" />
+    <Compile Include="Blocks\HtmlDoc\HtmlDocReportBlockVizualizer.cs" />
+    <Compile Include="Blocks\Chart\IChartScriptProvider.cs" />
+    <Compile Include="Blocks\IncorrectBlockQueryKeyException.cs" />
+    <Compile Include="Blocks\Iterator\IteratorReportBlockVizualizer.cs" />
+    <Compile Include="Blocks\IReportBlockVizualizationManager.cs" />
+    <Compile Include="Blocks\IReportBlockVizualizer.cs" />
+    <Compile Include="Blocks\IReportBlockVizualizerFabric.cs" />
+    <Compile Include="Blocks\Label\LabelReportBlockVizualizer.cs" />
+    <Compile Include="Blocks\QueryResultNotFoundException.cs" />
+    <Compile Include="Blocks\ReportBlockVizualizationManager.cs" />
+    <Compile Include="Blocks\ReportBlockVizualizerFabric.cs" />
+    <Compile Include="Blocks\Chart\ResourceChartScriptProvider.cs" />
+    <Compile Include="Blocks\Table\TableReportBlockVizualizer.cs" />
+    <Compile Include="Extensions\ContainerExtension.cs" />
+    <Compile Include="Generation\IncorrectReportRuleException.cs" />
+    <Compile Include="Generation\IReportGenerationPipelineManager.cs" />
+    <Compile Include="Generation\ReportGenerationPipelineManager.cs" />
+    <Compile Include="Generation\Stages\AddDefaultParametersStage.cs" />
+    <Compile Include="Generation\Stages\DefaultReportParameters.cs" />
+    <Compile Include="Generation\Stages\DefaultTemplateVariables.cs" />
+    <Compile Include="Generation\Stages\EmptyReportRuleTemplateException.cs" />
+    <Compile Include="Generation\Stages\ExecuteQueriesStage.cs" />
+    <Compile Include="Generation\Stages\IReportGenerationStage.cs" />
+    <Compile Include="Generation\Stages\IReportGenerationStageDispatcher.cs" />
+    <Compile Include="Generation\Stages\Query\IReportQueryLinkDirector.cs" />
+    <Compile Include="Generation\Stages\Query\IReportQueryLinkExecutor.cs" />
+    <Compile Include="Generation\Stages\Query\ReportQueryExecutor.cs" />
+    <Compile Include="Generation\Stages\Query\ReportQueryLinkDirector.cs" />
+    <Compile Include="Generation\Stages\Query\ReportQueryLinkExecutor.cs" />
+    <Compile Include="Generation\Stages\RenderTitleStage.cs" />
+    <Compile Include="Generation\Stages\ReportGenerationStage.cs" />
+    <Compile Include="Generation\Stages\ReportGenerationStageDispatcher.cs" />
+    <Compile Include="Generation\Stages\ReportVizualizationStage.cs" />
+    <Compile Include="Generation\Stages\RequiredParameterDoesNotSpecifiedException.cs" />
+    <Compile Include="Generation\Stages\UnknownReportGenerationStageException.cs" />
+    <Compile Include="Generation\Stages\ValidateParametersStage.cs" />
+    <Compile Include="Html\HtmlStyle.cs" />
+    <Compile Include="Html\HtmlStyleAlreadyDefinedException.cs" />
+    <Compile Include="Html\HtmlStyleKey.cs" />
+    <Compile Include="IReportAuthorityValidator.cs" />
+    <Compile Include="IReportBuilder.cs" />
+    <Compile Include="IReportFolderPathProvider.cs" />
+    <Compile Include="IReportFolderPathStorage.cs" />
+    <Compile Include="IReportFileStorage.cs" />
+    <Compile Include="IReportStorage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportAlreadyExistsException.cs" />
+    <Compile Include="ReportAuthorityValidator.cs" />
+    <Compile Include="ReportBuilder.cs" />
+    <Compile Include="ReportContainerModule.cs" />
+    <Compile Include="ReportDoesNotExistsException.cs" />
+    <Compile Include="ReportFile.cs" />
+    <Compile Include="IReportFileExtensionProvider.cs" />
+    <Compile Include="ReportFileExtensionProvider.cs" />
+    <Compile Include="ConfigReportFolderPathStorage.cs" />
+    <Compile Include="ReportFolderPathProvider.cs" />
+    <Compile Include="ReportFileStorage.cs" />
+    <Compile Include="IReportQuery.cs" />
+    <Compile Include="ReportParameter.cs" />
+    <Compile Include="ReportQuery.cs" />
+    <Compile Include="ReportQueryLink.cs" />
+    <Compile Include="ReportQueryParameter.cs" />
+    <Compile Include="ReportRule.cs" />
+    <Compile Include="ReportRuleIsEmptyException.cs" />
+    <Compile Include="ReportStorage.cs" />
+    <Compile Include="ReportBundle.cs" />
+    <Compile Include="ReportTemplate.cs" />
+    <Compile Include="Translation\HtmlReportTranslator.cs" />
+    <Compile Include="Translation\IReportTranslationManager.cs" />
+    <Compile Include="Translation\IReportTranslator.cs" />
+    <Compile Include="Translation\IReportTranslatorFabric.cs" />
+    <Compile Include="Translation\PdfReportTranslator.cs" />
+    <Compile Include="Translation\ReportTranslationManager.cs" />
+    <Compile Include="Translation\ReportTranslatorFabric.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common\Common.csproj">
+      <Project>{991bfedd-c5d6-4a01-8138-682a0d6115f3}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Repository\Repository.csproj">
+      <Project>{8de5dbc1-ac8f-48ab-a5a9-9c119657cf8d}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.Engines.Dsl\Infrastructure.Engines.Dsl.csproj">
+      <Project>{810CCB2C-DBC4-4186-A1D0-9F574B1B6C24}</Project>
+      <Name>Infrastructure.Engines.Dsl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.Engines\Infrastructure.Engines.csproj">
+      <Project>{3e4feb5c-54a1-4e94-b072-7df67afc897b}</Project>
+      <Name>Infrastructure.Engines</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.Query\Infrastructure.Query.csproj">
+      <Project>{4abdd478-e5aa-4985-9fe8-09ff1d02a16f}</Project>
+      <Name>Infrastructure.Query</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.UserInterface\Infrastructure.UserInterface.csproj">
+      <Project>{245F195B-2A57-4B49-9A80-921BBCE69E59}</Project>
+      <Name>Infrastructure.UserInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{ebdd610e-c30b-44c3-9056-77f57387cb46}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Blocks\Chart\Chart.js" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

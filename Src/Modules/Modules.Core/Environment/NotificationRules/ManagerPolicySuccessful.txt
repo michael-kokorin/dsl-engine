@@ -1,0 +1,8 @@
+﻿event policy-successful
+subjects
+role securitymanager
+protocol Email
+report $NotificationReport$
+attach
+report $PciDssReport$
+format Pdf

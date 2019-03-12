@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{991BFEDD-C5D6-4A01-8138-682A0D6115F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <DontImportPostSharp>True</DontImportPostSharp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\..\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JetBrains.Annotations, Version=10.1.5.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\JetBrains.Annotations.10.1.5\lib\net\JetBrains.Annotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NLog.4.3.5\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PostSharp, Version=4.2.18.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PostSharp.4.2.18\lib\net35-client\PostSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfoGlobal.cs">
+      <Link>Properties\AssemblyInfoGlobal.cs</Link>
+    </Compile>
+    <Compile Include="Command\CommandDispatcher.cs" />
+    <Compile Include="Command\ContainerCommandHandlerProvider.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\ICommandHandler.cs" />
+    <Compile Include="Command\ICommandDispatcher.cs" />
+    <Compile Include="Command\ICommandHandlerProvider.cs" />
+    <Compile Include="Command\UnknownCommandException.cs" />
+    <Compile Include="CommonContainerModule.cs" />
+    <Compile Include="Container\Container.cs" />
+    <Compile Include="Container\IContainer.cs" />
+    <Compile Include="Container\IContainerModule.cs" />
+    <Compile Include="Container\ILifeManagerFactory.cs" />
+    <Compile Include="Container\IoC.cs" />
+    <Compile Include="Container\LifeManagerFactory.cs" />
+    <Compile Include="Container\PerRequestLifetimeManager.cs" />
+    <Compile Include="Container\ReuseScope.cs" />
+    <Compile Include="Data\DataSourceProvider.cs" />
+    <Compile Include="Data\IDataSourceInitializer.cs" />
+    <Compile Include="Data\IDataSourceProvider.cs" />
+    <Compile Include="Data\IDataSource{T}.cs" />
+    <Compile Include="Enums\DataSourceFieldDataType.cs" />
+    <Compile Include="Enums\DataSourceFieldType.cs" />
+    <Compile Include="Enums\NotificationProtocolType.cs" />
+    <Compile Include="Enums\PluginType.cs" />
+    <Compile Include="Enums\QueryPrivacyType.cs" />
+    <Compile Include="Enums\QueryVisibilityType.cs" />
+    <Compile Include="Enums\ReportFileType.cs" />
+    <Compile Include="Enums\ReportFileTypeExtensionAttribute.cs" />
+    <Compile Include="Enums\SdlPolicyStatus.cs" />
+    <Compile Include="Enums\TableColumnType.cs" />
+    <Compile Include="Enums\DataSourceType.cs" />
+    <Compile Include="Enums\TaskResolutionStatus.cs" />
+    <Compile Include="Enums\TaskStatus.cs" />
+    <Compile Include="Enums\VulnerabilitySeverityType.cs" />
+    <Compile Include="Exceptions\ModuleVersionIsNotSupportedException.cs" />
+    <Compile Include="Extensions\UnityContainerExtension.cs" />
+    <Compile Include="Extensions\DateTimeExtension.cs" />
+    <Compile Include="Extensions\DictionaryExtension.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\JsonExtension.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="FileSystem\FileSystemInfoProvider.cs" />
+    <Compile Include="FileSystem\FileWriter.cs" />
+    <Compile Include="FileSystem\IFileSystemInfoProvider.cs" />
+    <Compile Include="FileSystem\IFileWriter.cs" />
+    <Compile Include="Html\HtmlEncoder.cs" />
+    <Compile Include="Html\IHtmlEncoder.cs" />
+    <Compile Include="Json\KnownConverter.cs" />
+    <Compile Include="Licencing\ConfigInstallationLicenceIdProvider.cs" />
+    <Compile Include="Licencing\EmptyLicenceIdException.cs" />
+    <Compile Include="Licencing\IInstallationLicenceIdProvider.cs" />
+    <Compile Include="Licencing\ILicence.cs" />
+    <Compile Include="Licencing\ILicenceComponent.cs" />
+    <Compile Include="Licencing\ILicenceProvider.cs" />
+    <Compile Include="Licencing\IncorrectLicenceIdException.cs" />
+    <Compile Include="Licencing\LicenceProvider.cs" />
+    <Compile Include="Licencing\Licences\FtpLicence.cs" />
+    <Compile Include="Licencing\Licences\Licence.cs" />
+    <Compile Include="Licencing\Licences\LicenceIds.cs" />
+    <Compile Include="Licencing\PluginLicenceComponent.cs" />
+    <Compile Include="Licencing\Licences\SdlLicence.cs" />
+    <Compile Include="Licencing\UserCapabilityKey.cs" />
+    <Compile Include="Licencing\UserInterfaceLicenceComponent.cs" />
+    <Compile Include="Logging\ExecutionTimeLogger.cs" />
+    <Compile Include="Logging\ILog.cs" />
+    <Compile Include="Logging\LogMethodAttribute.cs" />
+    <Compile Include="Logging\NLogLog.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query\IDataQuery.cs" />
+    <Compile Include="Query\DataQueryHandlerProvider.cs" />
+    <Compile Include="Query\DataQueryDispatcher.cs" />
+    <Compile Include="Query\IDataQueryHandler.cs" />
+    <Compile Include="Query\IDataQueryDispatcher.cs" />
+    <Compile Include="Query\IDataQueryHandlerProvider.cs" />
+    <Compile Include="Query\UnknownDataQueryException.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="FileSystem\FileLoader.cs" />
+    <Compile Include="Security\Authorities.cs" />
+    <Compile Include="Security\IAuthority.cs" />
+    <Compile Include="Security\IUserAuthorityValidator.cs" />
+    <Compile Include="Security\IUserPrincipalProvider.cs" />
+    <Compile Include="Security\IUserPrincipal.cs" />
+    <Compile Include="Extensions\XmlSerializerExtension.cs" />
+    <Compile Include="Security\UserInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Security\UserRoleAliases.cs" />
+    <Compile Include="Settings\AppConfigManager.cs" />
+    <Compile Include="Settings\IConfigManager.cs" />
+    <Compile Include="Settings\WebConfigManager.cs" />
+    <Compile Include="SystemComponents\AssemblySystemVersionProvider.cs" />
+    <Compile Include="SystemComponents\ISystemVersionProvider.cs" />
+    <Compile Include="Time\DateTimeService.cs" />
+    <Compile Include="Time\ITimeService.cs" />
+    <Compile Include="Time\TimeMeasurement.cs" />
+    <Compile Include="Transaction\EmptyTransaction.cs" />
+    <Compile Include="Transaction\EmptyUnitOfWork.cs" />
+    <Compile Include="Transaction\IUnitOfWork.cs" />
+    <Compile Include="Transaction\ITransaction.cs" />
+    <Compile Include="Validation\IValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\packages\Microsoft.AnalyzerPowerPack.1.1.0\analyzers\dotnet\cs\Microsoft.AnalyzerPowerPack.Common.dll" />
+    <Analyzer Include="..\..\packages\Microsoft.AnalyzerPowerPack.1.1.0\analyzers\dotnet\cs\Microsoft.AnalyzerPowerPack.CSharp.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\packages\PostSharp.4.2.18\tools\PostSharp.targets" Condition="Exists('..\..\packages\PostSharp.4.2.18\tools\PostSharp.targets')" />
+  <Target Name="EnsurePostSharpImported" BeforeTargets="BeforeBuild" Condition="'$(PostSharp30Imported)' == ''">
+    <Error Condition="!Exists('..\..\packages\PostSharp.4.2.18\tools\PostSharp.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://www.postsharp.net/links/nuget-restore." />
+    <Error Condition="Exists('..\..\packages\PostSharp.4.2.18\tools\PostSharp.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://www.postsharp.net/links/nuget-restore." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,76 @@
+﻿@using Microsoft.Ajax.Utilities
+@using Modules.UI.Resources
+
+@model Modules.UI.Models.Data.TableRenderModel
+
+@* ReSharper disable MergeSequentialChecks *@
+@if ((@Model != null) &&
+					(@Model.Table != null) &&
+					(@Model.Table.Columns != null) &&
+					@Model.Table.Columns.Any() &&
+					(@Model.Table.Rows != null) &&
+					@Model.Table.Rows.Any())
+{
+	@* ReSharper restore MergeSequentialChecks *@
+
+var orderedColumns = @Model.Table.Columns
+	.OrderBy(_ => _.Order)
+	.ThenBy(_ => _.Name);
+
+	<div style="width: 100%; overflow: auto">
+		<table class="table" id="@Model.TableName">
+			<thead>
+			<tr>
+				<th style="width: 20px"/>
+
+				@foreach (var column in orderedColumns)
+				{
+					<th id="@column.Key"><a href="#" data-toggle="tooltip" title="@column.Description">@column.Name</a></th>
+				}
+			</tr>
+			</thead>
+			<tbody>
+			@foreach (var row in @Model.Table.Rows)
+			{
+				<tr>
+					<td><span class="@Model.RowIconClassName" aria-hidden="true"></span></td>
+
+					@foreach (var rowItem in orderedColumns.Select(column => @row.Items.FirstOrDefault(_ => _.ColumnKey == column.Key)))
+					{
+						<td>
+							@* ReSharper disable once MergeSequentialChecks *@
+							@if ((rowItem != null) &&
+							     (rowItem.Value != null) &&
+							     (rowItem.Value.ToString().IsNullOrWhiteSpace() == false))
+							{
+								if ((row.EntityId != null) &&
+								    (Model.TargetAction != null) &&
+								    (Model.TargetController != null) &&
+								    (Model.ArgumentSetter != null))
+								{
+									@Html.ActionLink(
+										@rowItem.Value.ToString(),
+										Model.TargetAction,
+										Model.TargetController,
+										Model.ArgumentSetter.Invoke(row),
+										null)
+								}
+								else
+								{
+									@Html.Raw(rowItem.Value.ToString())
+								}
+							}
+						</td>
+					}
+				</tr>
+			}
+			</tbody>
+		</table>
+	</div>
+}
+else
+{
+	<p>
+		<i>@Html.Raw(Resources.TableRenderView_cshtml_Execute_NoDataToShow)</i>
+	</p>
+}

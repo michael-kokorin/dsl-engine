@@ -1,0 +1,21 @@
+﻿@using Modules.UI.Models.Data
+@using Modules.UI.Resources
+@model Modules.UI.Models.Views.Report.ReportsViewModel
+
+@{
+	ViewBag.Title = Resources.Index_cshtml_Execute_Reports;
+}
+
+@{ Html.RenderPartial(
+	   "Table/TableRenderView",
+	   new TableRenderModel
+	   {
+		   RowIconClassName = "glyphicon glycon-report",
+		   Table = Model.Table,
+		   TargetAction = "Show",
+		   TargetController = "Report",
+		   ArgumentSetter = row => new
+		   {
+			   reportId = row.EntityId
+		   }
+	   }); }

@@ -1,0 +1,123 @@
+﻿@using Modules.UI.Resources
+@model Modules.UI.Models.Views.Result.TaskResultViewModel
+
+@{
+    ViewBag.Title = Resources.Get_cshtml_Execute_Scan_task_result;
+}
+
+<div class="panel panel-default">
+    <div class="panel-body" style=" word-wrap: break-word;">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        @Resources.Get_cshtml_Execute_Vulnerability_info
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    @Html.LabelFor(_ => _.TaskResult.TaskId, new {@class = "col-md-4 control-label"})
+                                    <div class="col-md-8" style="padding-top: 6px">
+                                        @Html.DisplayFor(_ => _.TaskResult.TaskId)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(_ => _.TaskResult.IssueNumber, new {@class = "col-md-4 control-label"})
+                                    <div class="col-md-8" style="padding-top: 6px">
+                                        @Html.DisplayFor(_ => _.TaskResult.IssueNumber)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(_ => _.TaskResult.IssueUrl, new {@class = "col-md-4 control-label"})
+                                    <div class="col-md-8" style="padding-top: 6px">
+                                        <a href="@Html.DisplayFor(_ => _.TaskResult.IssueUrl)">@Html.DisplayFor(_ => _.TaskResult.IssueUrl)</a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(_ => _.TaskResult.Type, new {@class = "col-md-4 control-label"})
+                                    <div class="col-md-8" style="padding-top: 6px">
+                                        @Html.DisplayFor(_ => _.TaskResult.Type)
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        @Resources.Get_cshtml_Execute_Vulnerability_position
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    @Html.LabelFor(_ => _.TaskResult.File, new {@class = "col-md-4 control-label"})
+                                    <div class="col-md-8" style="padding-top: 6px">
+                                        @Html.DisplayFor(_ => _.TaskResult.File)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(_ => _.TaskResult.Function, new {@class = "col-md-4 control-label"})
+
+                                    <div class="col-md-8" style="padding-top: 6px">
+                                        @Html.DisplayFor(_ => _.TaskResult.Function)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(_ => _.TaskResult.LineNumber, new {@class = "col-md-4 control-label"})
+                                    <div class="col-md-8" style="padding-top: 6px">
+                                        @Html.DisplayFor(_ => _.TaskResult.LineNumber)
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(_ => _.TaskResult.LinePosition, new {@class = "col-md-4 control-label"})
+                                    <div class="col-md-8" style="padding-top: 6px">
+                                        @Html.DisplayFor(_ => _.TaskResult.LinePosition)
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                @Resources.Get_cshtml_Execute_Description
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            @Html.LabelFor(_ => _.TaskResult.Message, new { @class = "col-md-3 control-label" })
+                            <div class="col-md-9" style="padding-top: 6px;">
+                                @Html.DisplayFor(_ => _.TaskResult.Message)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(_ => _.TaskResult.AdditionalExploitConditions, new { @class = "col-md-3 control-label" })
+                            <div class="col-md-9" style="padding-top: 6px;">
+                                @Html.DisplayFor(_ => _.TaskResult.AdditionalExploitConditions)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(_ => _.TaskResult.ExploitGraph, new {@class = "col-md-3 control-label"})
+                            <div class="col-md-9" style="padding-top: 6px;">
+                                @Html.DisplayFor(_ => _.TaskResult.ExploitGraph)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(_ => _.TaskResult.Description, new { @class = "col-md-3 control-label" })
+                            <div class="col-md-9" style="padding-top: 6px;">
+                                @Html.DisplayFor(_ => _.TaskResult.Description)
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

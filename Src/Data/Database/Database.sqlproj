@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{f9877cf7-85a1-4229-a9af-4d5933050561}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Database</RootNamespace>
+    <AssemblyName>Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <ReadCommittedSnapshot>True</ReadCommittedSnapshot>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="common\" />
+    <Folder Include="common\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="security\Tables\" />
+    <Folder Include="data\" />
+    <Folder Include="data\Tables\" />
+    <Folder Include="report\" />
+    <Folder Include="report\Tables\" />
+    <Folder Include="queue" />
+    <Folder Include="queue\Tables" />
+    <Folder Include="system\" />
+    <Folder Include="system\Tables\" />
+    <Folder Include="l10n\" />
+    <Folder Include="l10n\Functions\" />
+    <Folder Include="tag\" />
+    <Folder Include="tag\Tables\" />
+    <Folder Include="telemetry\" />
+    <Folder Include="telemetry\Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="common\Tables\Configuration.sql" />
+    <Build Include="Security\common.sql" />
+    <Build Include="security\Tables\Users.sql" />
+    <Build Include="security\Tables\Authorities.sql" />
+    <Build Include="data\Tables\Projects.sql" />
+    <Build Include="data\Tables\Tasks.sql" />
+    <Build Include="Security\security.sql" />
+    <Build Include="Security\data.sql" />
+    <Build Include="security\Tables\Roles.sql" />
+    <Build Include="security\Tables\RoleAuthorities.sql" />
+    <Build Include="data\Tables\Plugins.sql" />
+    <Build Include="report\Tables\Reports.sql" />
+    <Build Include="Security\report.sql" />
+    <Build Include="data\Tables\NotificationRules.sql" />
+    <Build Include="data\Tables\ScanAgents.sql" />
+    <Build Include="security\Tables\UserProjectSettings.sql" />
+    <Build Include="data\Tables\TaskResults.sql" />
+    <Build Include="data\Tables\Events.sql" />
+    <Build Include="Security\queue.sql" />
+    <Build Include="queue\Tables\Queue.sql" />
+    <Build Include="data\Tables\QueryEntityNames.sql" />
+    <Build Include="data\Tables\Templates.sql" />
+    <Build Include="data\Tables\WorkflowActions.sql" />
+    <Build Include="data\Tables\WorkflowRules.sql" />
+    <Build Include="data\Tables\WorkflowRuleToEvents.sql" />
+    <Build Include="data\Tables\PolicyRules.sql" />
+    <Build Include="data\Tables\UserInterfaces.sql" />
+    <Build Include="l10n.sql" />
+    <Build Include="Cultures.sql" />
+    <Build Include="system\Tables\Tables_l10n.sql" />
+    <Build Include="system\Tables\Tables.sql" />
+    <Build Include="system\Tables\TableColumns_l10n.sql" />
+    <Build Include="system\Tables\TableColumns.sql" />
+    <Build Include="l10n\Functions\GetTables.sql" />
+    <Build Include="l10n\Functions\GetTableColumns.sql" />
+    <Build Include="Security\system.sql" />
+    <Build Include="data\Tables\Queries.sql" />
+    <Build Include="system\Tables\PackageVersions.sql" />
+    <Build Include="system\Tables\DbVersions.sql" />
+    <Build Include="data\Tables\TaskStatuses.sql" />
+    <Build Include="data\Tables\TaskResolutions.sql" />
+    <Build Include="data\Tables\SdlStatuses.sql" />
+    <Build Include="tag\Tables\TagEntities.sql" />
+    <Build Include="tag\Tables\Tags.sql" />
+    <Build Include="Security\tag.sql" />
+    <Build Include="data\Tables\SettingValues.sql" />
+    <Build Include="data\Tables\Settings_l10n.sql" />
+    <Build Include="data\Tables\Settings.sql" />
+    <Build Include="data\Tables\SettingGroups_l10n.sql" />
+    <Build Include="data\Tables\SettingGroups.sql" />
+    <Build Include="l10n\Functions\GetSettings.sql" />
+    <Build Include="l10n\Functions\GetSettingGroups.sql" />
+    <Build Include="telemetry\Tables\TaskTelemetry.sql" />
+    <Build Include="telemetry\Tables\ReportTelemetry.sql" />
+    <Build Include="telemetry\Tables\QueryTelemetry.sql" />
+    <Build Include="telemetry\Tables\ItPluginTelemetry.sql" />
+    <Build Include="telemetry\Tables\VcsPluginTelemetry.sql" />
+    <Build Include="telemetry\Tables\ProjectTelemetry.sql" />
+    <Build Include="Security\telemetry.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PT_2.Sdl.Database.publish.xml" />
+  </ItemGroup>
+</Project>

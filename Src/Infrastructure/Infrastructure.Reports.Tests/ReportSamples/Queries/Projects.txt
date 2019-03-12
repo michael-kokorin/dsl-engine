@@ -1,0 +1,23 @@
+﻿Projects
+select
+ProjectName = #DisplayName#
+
+Branch=#Tasks.LastOrDefault()?.Repository#
+
+High=#Tasks.LastOrDefault()?.HighSeverityVulns#
+Med=#Tasks.LastOrDefault()?.MediumSeverityVulns#
+Low=#Tasks.LastOrDefault()?.LowSeverityVulns#
+
+Todo=#Tasks.LastOrDefault()?.Todo#
+Reopened=#Tasks.LastOrDefault()?.Reopen#
+Fixed=#Tasks.LastOrDefault()?.Fixed#
+FP=#Tasks.LastOrDefault()?.FP#
+
+Ldap = #Tasks.LastOrDefault()?.TaskResults?.Count(r => r.TypeShort == "LDAP")#
+Xss = #Tasks.LastOrDefault()?.TaskResults?.Count(r => r.TypeShort == "XSS")#
+
+FolderSize=#Tasks.LastOrDefault()?.FolderSize# / 1024
+AnalyzedSize=#Tasks.LastOrDefault()?.AnalyzedSize# / 1024 / 1024
+ScanCoreWorkingTime=#Tasks.LastOrDefault()?.ScanCoreWorkingTime# / 1000
+
+select end

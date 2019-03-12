@@ -1,0 +1,31 @@
+﻿<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-md-2" style="height: 100%">
+				<div style="vertical-align: central">
+					<label>Combine</label><br/>
+					<select ng-disabled="!controller.isCanEdit" style="width: 80px" class="form-control"
+					        ng-change="controller.syncWithText()"
+					        ng-model="specification.Condition" ng-readonly="!controller.isCanEdit"
+					        ng-options="a.Value as a.Text for a in controller.filterConditions"></select>
+				</div>
+			</div>
+			<div class="col-md-10">
+				<div class="row">
+					<sdl-filter-block-specification block="block"
+					                                parent="specification"
+													parentparent="parent"
+					                                specification="specification.LeftSpecification"
+					                                controller="controller"/><br/>
+				</div>
+				<div class="row">
+					<sdl-filter-block-specification block="block"
+					                                parent="specification"
+													parentparent="parent"
+					                                specification="specification.RightSpecification"
+					                                controller="controller"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

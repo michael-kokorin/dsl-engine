@@ -1,0 +1,57 @@
+﻿<div style="width:430px">
+	<div class="row">
+		<div class="col-md-4">
+			<label>Variable</label>
+		</div>
+		<div class="col-md-4">
+			<label>Func</label>
+		</div>
+		<div class="col-md-4">
+			<label>Value</label>
+		</div>
+	</div>
+	<div class="row" style="width: 100%">
+		<div class="col-md-4">
+			<sdl-filter-block-specification block="block"
+			                                parent="specification"
+											parentparent="parent"
+			                                specification="specification.LeftSpecification"
+			                                controller="controller"/>
+		</div>
+		<div class="col-md-4">
+			<select class="form-control" ng-disabled="!controller.isCanEdit"
+			        ng-model="specification.Operator" ng-readonly="!controller.isCanEdit"
+			        ng-options="a.Value as a.Text for a in controller.filterOperations"
+			        ng-change="controller.syncWithText()"></select>
+		</div>
+		<div class="col-md-3">
+			<sdl-filter-block-specification block="block"
+			                                parent="specification"
+											parentparent="parent"
+			                                specification="specification.RightSpecification"
+			                                controller="controller"/>
+		</div>
+		<div class="col-md-1">
+			<button class="btn btn-warning"
+					ng-show="controller.isCanEdit"
+			        ng-disabled="block.Specification == specification || parent.Specification == specification"
+			        ng-click="controller.removeFilter(block, parent, parentParent, specification)">
+				<span class="glyphicon glyphicon-trash"></span>
+			</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<button type="button" class="btn btn-defaul btn-xs form-control" ng-show="controller.isCanEdit"
+			        ng-click="controller.addFilter(block, parent, specification)">
+				Add filter
+			</button>
+		</div>
+		<div class="col-md-6">
+			<button type="button" class="btn btn-defaul btn-xs form-control" ng-show="controller.isCanEdit"
+					ng-click="controller.inGroup(block, parent, specification)">
+				In group
+			</button>			
+		</div>
+	</div>
+</div>

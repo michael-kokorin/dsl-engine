@@ -1,0 +1,87 @@
+﻿@using Modules.UI.Extensions
+@using Modules.UI.Models.Data
+@using Modules.UI.Resources
+@model Modules.UI.Models.Views.Task.TaskResultsViewModel
+
+@{
+    ViewBag.Title = Resources.GetTaskResults_cshtml_Execute_TaskResults;
+}
+
+@if (Model.IsCanBeStopped)
+{
+@section navbar{
+    @Html.ActionLink(@Resources.GetTaskResults_cshtml_Execute_Stop_task, "Stop", "Task", new {taskId = Model.Task.Id}, new {@class = "btn btn-danger navbar-btn"})
+}}
+else
+{
+@section navbar{
+    @Html.ActionLink("Rescan", "Rescan", "Task", new { projectId = Model.Task.ProjectId, repository = Model.Task.Repository}, new {@class = "btn btn-success navbar-btn"})
+}
+}
+
+@if (Model.Task != null)
+{
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-4">
+                    <p>@Html.LabelFor(_ => _.Task.Created): @Html.DisplayFor(_ => _.Task.Created)</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>@Html.LabelFor(_ => _.Task.CreatedBy): @Html.DisplayFor(_ => _.Task.CreatedBy)</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>@Html.LabelFor(_ => _.Task.Status): @Model.Task.Status.DisplayName()</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <p>@Html.LabelFor(_ => _.Task.Finished): @Html.DisplayFor(_ => _.Task.Finished)</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>@Html.LabelFor(_ => _.Task.Repository): @Html.DisplayFor(_ => _.Task.Repository)</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>@Html.LabelFor(_ => _.Task.SdlPolicyStatus): @Model.Task.SdlPolicyStatus.DisplayName()</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <p>@Html.LabelFor(_ => _.ScanCore.DisplayName): @Html.DisplayFor(_ => _.ScanCore.DisplayName)</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>@Html.LabelFor(_ => _.VcsPlugin): @Html.DisplayFor(_ => _.VcsPlugin.DisplayName)</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>@Html.LabelFor(_ => _.ItPlugin): @Html.DisplayFor(_ => _.ItPlugin.DisplayName)</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <p>@Html.LabelFor(_ => _.Task.FolderPath): @Html.DisplayFor(_ => _.Task.FolderPath)</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>@Html.LabelFor(_ => _.Task.FolderSizeKb): @Html.DisplayFor(_ => _.Task.FolderSizeKb)</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>@Html.LabelFor(_ => _.Task.ScanCoreWorkingTimeSec): @Html.DisplayFor(_ => _.Task.ScanCoreWorkingTimeSec)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@{ Html.RenderPartial(
+       "Table/TableRenderView",
+       new TableRenderModel
+       {
+           RowIconClassName = "glyphicon glyphicon-tasks",
+           Table = Model.Table,
+           TargetAction = "Get",
+           TargetController = "TaskResult",
+           ArgumentSetter = row => new
+           {
+               ResultId = row.EntityId
+           }
+       }); }

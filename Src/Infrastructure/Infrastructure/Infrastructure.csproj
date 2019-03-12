@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBDD610E-C30B-44C3-9056-77F57387CB46}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infrastructure</RootNamespace>
+    <AssemblyName>Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <DontImportPostSharp>True</DontImportPostSharp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\..\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr4.StringTemplate, Version=4.0.6.9004, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Antlr4.StringTemplate.4.0.6.9004\lib\net35\Antlr4.StringTemplate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JetBrains.Annotations, Version=10.1.5.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\JetBrains.Annotations.10.1.5\lib\net\JetBrains.Annotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PostSharp, Version=4.2.18.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PostSharp.4.2.18\lib\net35-client\PostSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfoGlobal.cs">
+      <Link>Properties\AssemblyInfoGlobal.cs</Link>
+    </Compile>
+    <Compile Include="ConfigurationKeys.cs" />
+    <Compile Include="DatabaseConfigurationProvider.cs" />
+    <Compile Include="DataSource\DataSourceAccessValidator.cs" />
+    <Compile Include="DataSource\DataSourceAuthorityNameBuilder.cs" />
+    <Compile Include="DataSource\DataSourceAuthorityProvider.cs" />
+    <Compile Include="DataSource\DataSourceFieldAccessValidator.cs" />
+    <Compile Include="DataSource\IDataSourceAuthorityNameBuilder.cs" />
+    <Compile Include="DataSource\IDataSourceAuthorityProvider.cs" />
+    <Compile Include="DataSource\DataSourceDoesNotExistsException.cs" />
+    <Compile Include="DataSource\DataSourceFieldInfo.cs" />
+    <Compile Include="DataSource\DataSourceFieldInfoProvider.cs" />
+    <Compile Include="DataSource\DataSourceInfo.cs" />
+    <Compile Include="DataSource\DataSourceInfoProvider.cs" />
+    <Compile Include="DataSource\DataSourceFieldDoesNotExistsException.cs" />
+    <Compile Include="DataSource\IDataSourceAccessValidator.cs" />
+    <Compile Include="DataSource\IDataSourceFieldAccessValidator.cs" />
+    <Compile Include="DataSource\IDataSourceFieldInfoProvider.cs" />
+    <Compile Include="DataSource\IDataSourceInfoProvider.cs" />
+    <Compile Include="Events\EventProvider.cs" />
+    <Compile Include="Events\Event.cs" />
+    <Compile Include="Events\Events.cs" />
+    <Compile Include="Events\IEventProvider.cs" />
+    <Compile Include="Events\UnknownEventException.cs" />
+    <Compile Include="Extensions\ConfigurationProviderExtension.cs" />
+    <Compile Include="Extensions\ContainerExtension.cs" />
+    <Compile Include="Extensions\DatabaseExtension.cs" />
+    <Compile Include="Extensions\EntityExtension.cs" />
+    <Compile Include="Telemetry\TelemetryQueue.cs" />
+    <Compile Include="Telemetry\EntityTelemetryCreatorProvider.cs" />
+    <Compile Include="Telemetry\IEntityTelemetryCreatorProvider.cs" />
+    <Compile Include="Telemetry\ITelemetryInitializer.cs" />
+    <Compile Include="Telemetry\ITelemetryQueue.cs" />
+    <Compile Include="Telemetry\ITelemetryRepositoryResolver.cs" />
+    <Compile Include="Telemetry\ITelemetryRouter.cs" />
+    <Compile Include="Policy\ISdlPolicyProvider.cs" />
+    <Compile Include="Policy\SdlPolicyProvider.cs" />
+    <Compile Include="Resources\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Tags\IncorrectTagLengthException.cs" />
+    <Compile Include="Tags\IncorrectTagNameException.cs" />
+    <Compile Include="Tags\ITagDataSourceProvider.cs" />
+    <Compile Include="Tags\ITagEntityProvider.cs" />
+    <Compile Include="Tags\ITagEntityRepositoryProvider.cs" />
+    <Compile Include="Tags\ITagProvider.cs" />
+    <Compile Include="Tags\ITagService.cs" />
+    <Compile Include="Tags\ITagValidator.cs" />
+    <Compile Include="Tags\TagDataSourceProvider.cs" />
+    <Compile Include="Tags\TagDoesNotExistsException.cs" />
+    <Compile Include="Tags\TagEntityLinkDoesNotExists.cs" />
+    <Compile Include="Tags\TagEntityProvider.cs" />
+    <Compile Include="Tags\TagEntityRepositoryProvider.cs" />
+    <Compile Include="Tags\TagProvider.cs" />
+    <Compile Include="Tags\TagService.cs" />
+    <Compile Include="Tags\TagValidator.cs" />
+    <Compile Include="Telemetry\IEntityTelemetryCreator.cs" />
+    <Compile Include="Telemetry\ITelemetryScope.cs" />
+    <Compile Include="Telemetry\ITelemetryScopeProvider.cs" />
+    <Compile Include="Telemetry\Entities\ItPluginInfo.cs" />
+    <Compile Include="Telemetry\Entities\ItPluginTelemetryCreator.cs" />
+    <Compile Include="Telemetry\Entities\ProjectTelemetryCreator.cs" />
+    <Compile Include="Telemetry\Entities\ReportTelemetryCreator.cs" />
+    <Compile Include="Telemetry\Entities\TaskTelemetryCreator.cs" />
+    <Compile Include="Telemetry\TelemetryOperationNames.cs" />
+    <Compile Include="Telemetry\TelemetryOperationStatus.cs" />
+    <Compile Include="Telemetry\Entities\QueryTelemetryCreator.cs" />
+    <Compile Include="Telemetry\TelemetryInitializer.cs" />
+    <Compile Include="Telemetry\TelemetryRepositoryResolver.cs" />
+    <Compile Include="Telemetry\TelemetryRouter.cs" />
+    <Compile Include="Telemetry\TelemetryScope.cs" />
+    <Compile Include="Telemetry\TelemetryScopeProvider.cs" />
+    <Compile Include="Telemetry\Entities\VcsPluginInfo.cs" />
+    <Compile Include="Telemetry\Entities\VcsPluginTelemetryCreator.cs" />
+    <Compile Include="Templates\TemplateWithTitle.cs" />
+    <Compile Include="Vulnerability\IVulnerabilityShortTypeResolver.cs" />
+    <Compile Include="Security\Authority.cs" />
+    <Compile Include="Security\AuthorityAlreadyExistsException.cs" />
+    <Compile Include="Security\AuthorityExtension.cs" />
+    <Compile Include="Security\AuthorityProvider.cs" />
+    <Compile Include="Security\IAuthorityProvider.cs" />
+    <Compile Include="IConfigurationProvider.cs" />
+    <Compile Include="Mail\DatabaseMailConnectionParametersProvider.cs" />
+    <Compile Include="Mail\IMailConnectionParametersProvider.cs" />
+    <Compile Include="Mail\IMailProvider.cs" />
+    <Compile Include="Mail\IMailSender.cs" />
+    <Compile Include="Mail\MailClient.cs" />
+    <Compile Include="Mail\MailProvider.cs" />
+    <Compile Include="Mail\IncorrectMailSettingsException.cs" />
+    <Compile Include="Mail\MailSettingIsNotDefinedException.cs" />
+    <Compile Include="Mail\SmtpMailSender.cs" />
+    <Compile Include="InfrastructureContainerModule.cs" />
+    <Compile Include="MessageQueue\DatabaseMessageQueue.cs" />
+    <Compile Include="MessageQueue\DatabaseQueueReader.cs" />
+    <Compile Include="MessageQueue\DatabaseQueueWriter.cs" />
+    <Compile Include="MessageQueue\IMessageQueue.cs" />
+    <Compile Include="MessageQueue\IQueueReader.cs" />
+    <Compile Include="MessageQueue\IQueueWriter.cs" />
+    <Compile Include="MessageQueue\MessageQueueKeys.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Mail\IMailClient.cs" />
+    <Compile Include="Mail\MailConnectionParameters.cs" />
+    <Compile Include="Mail\Email.cs" />
+    <Compile Include="Templates\Antlr4Template.cs" />
+    <Compile Include="Templates\TemplateBuilder.cs" />
+    <Compile Include="Templates\ITemplate.cs" />
+    <Compile Include="Templates\ITemplateWithTitle.cs" />
+    <Compile Include="Templates\TemplateNames.cs" />
+    <Compile Include="Templates\TemplateProvider.cs" />
+    <Compile Include="Templates\ITemplateBuilder.cs" />
+    <Compile Include="Templates\ITemplateProvider.cs" />
+    <Compile Include="Templates\TemplateNotFoundException.cs" />
+    <Compile Include="Variables.cs" />
+    <Compile Include="Vulnerability\IVulnerabilitySeverityResolver.cs" />
+    <Compile Include="Vulnerability\XmlVulnerabilitySeverityResolver.cs" />
+    <Compile Include="Vulnerability\XmlVulnerabilityShortTypeResolver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common\Common.csproj">
+      <Project>{991bfedd-c5d6-4a01-8138-682a0d6115f3}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Repository\Repository.csproj">
+      <Project>{8de5dbc1-ac8f-48ab-a5a9-9c119657cf8d}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Resources\SeverityMap.vsm">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resources\TypeMap.vtm" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resources.ru.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\packages\Microsoft.AnalyzerPowerPack.1.1.0\analyzers\dotnet\cs\Microsoft.AnalyzerPowerPack.Common.dll" />
+    <Analyzer Include="..\..\packages\Microsoft.AnalyzerPowerPack.1.1.0\analyzers\dotnet\cs\Microsoft.AnalyzerPowerPack.CSharp.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\packages\PostSharp.4.2.18\tools\PostSharp.targets" Condition="Exists('..\..\packages\PostSharp.4.2.18\tools\PostSharp.targets')" />
+  <Target Name="EnsurePostSharpImported" BeforeTargets="BeforeBuild" Condition="'$(PostSharp30Imported)' == ''">
+    <Error Condition="!Exists('..\..\packages\PostSharp.4.2.18\tools\PostSharp.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://www.postsharp.net/links/nuget-restore." />
+    <Error Condition="Exists('..\..\packages\PostSharp.4.2.18\tools\PostSharp.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://www.postsharp.net/links/nuget-restore." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

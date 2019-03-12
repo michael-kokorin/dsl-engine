@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FBEDD0DA-7B82-475B-85C7-57965730531D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infrastructure.Reports.Tests</RootNamespace>
+    <AssemblyName>Infrastructure.Reports.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions, Version=4.9.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentAssertions.4.9.0\lib\net45\FluentAssertions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=4.9.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentAssertions.4.9.0\lib\net45\FluentAssertions.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JetBrains.Annotations, Version=10.1.5.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\JetBrains.Annotations.10.1.5\lib\net\JetBrains.Annotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Moq, Version=4.5.9.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moq.4.5.9\lib\net45\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfoGlobal.cs">
+      <Link>Properties\AssemblyInfoGlobal.cs</Link>
+    </Compile>
+    <Compile Include="Blocks\Chart\ChartColorTest.cs" />
+    <Compile Include="Blocks\HtmlDoc\HtmlDocReportBlockVizualizerTest.cs" />
+    <Compile Include="Blocks\Label\LabelReportBlockTest.cs" />
+    <Compile Include="Blocks\Label\LabelReportBlockVizualizerTest.cs" />
+    <Compile Include="Blocks\Container\ContainerReportBlockVizualizerTest.cs" />
+    <Compile Include="ReportSamples\Telemetry\ItPluginTelemetryReport.cs" />
+    <Compile Include="ReportSamples\Telemetry\ProjectTelemetryReport.cs" />
+    <Compile Include="Blocks\Table\TableReportBlockVizualizerTest.cs" />
+    <Compile Include="ConfigReportFolderPathStorageTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportAuthorityValidatorTest.cs" />
+    <Compile Include="ReportBuilderTest.cs" />
+    <Compile Include="ReportRuleTest.cs" />
+    <Compile Include="ReportSamples\AiOwaspTopTenReport.cs" />
+    <Compile Include="ReportSamples\AiPciDssReport.cs" />
+    <Compile Include="ReportSamples\FtpReportTest.cs" />
+    <Compile Include="ReportSamples\FtpTechReportTest.cs" />
+    <Compile Include="ReportSamples\InnerQueriesExample.cs" />
+    <Compile Include="ReportSamples\NotificationHtmlReport.cs" />
+    <Compile Include="ReportSamples\PlaceholderReportTest.cs" />
+    <Compile Include="ReportSamples\Telemetry\QueryTelemetry.cs" />
+    <Compile Include="ReportSamples\Telemetry\ReportTelemetryReport.cs" />
+    <Compile Include="ReportSamples\Telemetry\TaskTelemetryReport.cs" />
+    <Compile Include="ReportSamples\Telemetry\VcsTelemetryReport.cs" />
+    <Compile Include="ReportStorageTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common\Common.csproj">
+      <Project>{991BFEDD-C5D6-4A01-8138-682A0D6115F3}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Repository\Repository.csproj">
+      <Project>{8DE5DBC1-AC8F-48AB-A5A9-9C119657CF8D}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.Engines\Infrastructure.Engines.csproj">
+      <Project>{3E4FEB5C-54A1-4E94-B072-7DF67AFC897B}</Project>
+      <Name>Infrastructure.Engines</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.Reports\Infrastructure.Reports.csproj">
+      <Project>{8E6DB353-7298-4AD0-A8B7-3349E6EC8FA3}</Project>
+      <Name>Infrastructure.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{EBDD610E-C30B-44C3-9056-77F57387CB46}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="ReportSamples\NotificationTemplates\DevScanFinished.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ReportSamples\NotificationTemplates\DevPolicySucceed.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ReportSamples\NotificationTemplates\DevPolicyViolated.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ReportSamples\NotificationTemplates\ManPolicySucceed.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ReportSamples\NotificationTemplates\ManPolicyViolated.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ReportSamples\NotificationTemplates\ManScanFinished.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReportSamples\Queries\Project.txt" />
+    <Content Include="ReportSamples\Queries\Projects.txt" />
+    <Content Include="ReportSamples\Queries\ProjectsVulnTypeSummary.txt" />
+    <Content Include="ReportSamples\Queries\ProjectTasks.txt" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

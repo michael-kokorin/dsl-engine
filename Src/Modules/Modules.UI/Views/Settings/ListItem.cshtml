@@ -1,0 +1,42 @@
+﻿@using Common.Extensions
+@using Modules.Core.Contracts.UI.Dto
+@model SettingValueDto
+@{
+	Layout = null;
+	var items = Model.DefaultValue.FromJson<SettingSubitem[]>();
+}
+
+<div class="form-group">
+	<label class="col-sm-4 control-label" for="@Model.Id">@Model.Title</label>
+	<div class="col-sm-8">
+		<select class="form-control" data-id="setting_@Model.Id" id="@Model.Id" name="@Model.Id">
+			@foreach(var item in items)
+			{
+				<option value="@item.Key" @(item.Key == @Model.Value ? "selected=\"selected\"" : string.Empty)>@item.Text</option>
+			}
+		</select>
+	</div>
+</div>
+
+@if (@Model.ChildGroups.Any(_ => _ != null))
+{
+	<script type="text/javascript">
+	$(function()
+	{
+		$('select[name=@Model.Id]').on('change', function()
+		{
+			$('div[data-id^=item]').hide();
+			$(`div[data-id=item-@Model.Id-${this.value}]`).show();
+		});
+	});
+	</script>
+	for (var index = 0; index < items.Length; index++)
+	{
+		<div class="panel panel-default" data-id="item-@Model.Id-@items[index].Key" style="display: @((items[index].Key == Model.Value) || ((index == 0) && (Model.Value == null)) ? "block" : "none");padding: 2px">
+			@if ((index < Model.ChildGroups.Count) && (Model.ChildGroups[index] != null))
+			{
+				@Html.Partial("~/Views/Settings/SettingsTab.cshtml", Model.ChildGroups[index])
+			}
+		</div>
+	}
+}

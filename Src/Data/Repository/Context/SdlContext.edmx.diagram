@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="083c785e3eb54945a9f49e9e18a0f238" Name="MainDiagram">
+        <EntityTypeShape EntityType="Context.Configuration" Width="1.5" PointX="0.75" PointY="1.875" />
+        <EntityTypeShape EntityType="Context.Events" Width="1.5" PointX="5.25" PointY="47" />
+        <EntityTypeShape EntityType="Context.Plugins" Width="1.5" PointX="0.75" PointY="27.25" />
+        <EntityTypeShape EntityType="Context.PolicyRules" Width="1.5" PointX="5.25" PointY="39.75" />
+        <EntityTypeShape EntityType="Context.Queries" Width="1.5" PointX="5.25" PointY="17" />
+        <EntityTypeShape EntityType="Context.QueryEntityNames" Width="1.5" PointX="0.75" PointY="8.875" />
+        <EntityTypeShape EntityType="Context.SdlStatuses" Width="1.5" PointX="0.75" PointY="30.625" />
+        <EntityTypeShape EntityType="Context.SettingGroups" Width="1.5" PointX="14.75" PointY="2.75" />
+        <EntityTypeShape EntityType="Context.Settings" Width="1.5" PointX="17" PointY="2.125" />
+        <EntityTypeShape EntityType="Context.SettingValues" Width="1.5" PointX="19.25" PointY="2.875" />
+        <EntityTypeShape EntityType="Context.TaskResolutions" Width="1.5" PointX="9" PointY="28.75" />
+        <EntityTypeShape EntityType="Context.TaskStatuses" Width="1.5" PointX="9" PointY="26.375" />
+        <EntityTypeShape EntityType="Context.Templates" Width="1.5" PointX="8.75" PointY="9.875" />
+        <EntityTypeShape EntityType="Context.UserInterfaces" Width="1.5" PointX="0.75" PointY="12.875" />
+        <EntityTypeShape EntityType="Context.WorkflowActions" Width="1.5" PointX="2.75" PointY="12.875" />
+        <EntityTypeShape EntityType="Context.WorkflowRules" Width="1.5" PointX="5.25" PointY="54.875" />
+        <EntityTypeShape EntityType="Context.WorkflowRuleToEvents" Width="1.5" PointX="7.5" PointY="55.875" />
+        <EntityTypeShape EntityType="Context.Queue" Width="1.5" PointX="4.75" PointY="12.875" />
+        <EntityTypeShape EntityType="Context.Reports" Width="1.5" PointX="5.25" PointY="26.625" />
+        <EntityTypeShape EntityType="Context.Authorities" Width="1.5" PointX="7.5" PointY="12.625" />
+        <EntityTypeShape EntityType="Context.RoleAuthorities" Width="1.5" PointX="9.75" PointY="16.5" />
+        <EntityTypeShape EntityType="Context.Roles" Width="1.5" PointX="7.5" PointY="15.875" />
+        <EntityTypeShape EntityType="Context.UserProjectSettings" Width="1.5" PointX="12.75" PointY="16.75" />
+        <EntityTypeShape EntityType="Context.Users" Width="1.5" PointX="0.75" PointY="22.375" />
+        <EntityTypeShape EntityType="Context.DbVersions" Width="1.5" PointX="14.75" PointY="6.875" />
+        <EntityTypeShape EntityType="Context.PackageVersions" Width="1.5" PointX="14.75" PointY="13.875" />
+        <EntityTypeShape EntityType="Context.TableColumns" Width="1.5" PointX="12" PointY="9.75" />
+        <EntityTypeShape EntityType="Context.Tables" Width="1.5" PointX="9.75" PointY="5.625" />
+        <AssociationConnector Association="Context.FK_WorkflowRuleToEvents_Events_EventId" />
+        <AssociationConnector Association="Context.FK_Queries_Users_CreatedById" />
+        <AssociationConnector Association="Context.FK_Queries_Users_ModifiedById" />
+        <AssociationConnector Association="Context.FK_Roles_Queries_TaskResultsQueryId" />
+        <AssociationConnector Association="Context.FK_Roles_Queries_TasksQueryId" />
+        <AssociationConnector Association="Context.FK_SettingGroups_SettingGroups_ParentGroupId" />
+        <AssociationConnector Association="Context.FK_Settings_SettingGroups_SettingGroupId" />
+        <AssociationConnector Association="Context.FK_Settings_Settings_ParentSettingId" />
+        <AssociationConnector Association="Context.FK_SettingValues_Settings_SettingId" />
+        <AssociationConnector Association="Context.FK_WorkflowRuleToEvents_WorkflowRules_WorkflowRuleId" />
+        <AssociationConnector Association="Context.FK_Reports_Users_CreatedById" />
+        <AssociationConnector Association="Context.FK_Reports_Users_ModifiedById" />
+        <AssociationConnector Association="Context.FK_RoleAuthorities_Authorities_AuthorityId" />
+        <AssociationConnector Association="Context.FK_RoleAuthorities_Roles_RoleId" />
+        <AssociationConnector Association="Context.FK_UserProjectSettings_Roles_PreferedRoleId" />
+        <AssociationConnector Association="Context.FK_UserProjectSettings_Users_UserId" />
+        <AssociationConnector Association="Context.FK_TableColumns_Tables_ReferenceTableId" />
+        <AssociationConnector Association="Context.FK_TableColumns_Tables_TableId" />
+        <EntityTypeShape EntityType="Context.Cultures" Width="1.5" PointX="0.75" PointY="8.875" />
+        <AssociationConnector Association="Context.FK_Queries_Cultures_TargetCultureId" />
+        <AssociationConnector Association="Context.FK_TableColumns_Cultures_CultureId" />
+        <AssociationConnector Association="Context.FK_Tables_Cultures_CultureId" />
+        <EntityTypeShape EntityType="Context.TagEntities" Width="1.5" PointX="12" PointY="6" />
+        <EntityTypeShape EntityType="Context.Tags" Width="1.5" PointX="9.75" PointY="2.25" />
+        <AssociationConnector Association="Context.FK_TagEntities_Tables_TableId" />
+        <AssociationConnector Association="Context.FK_TagEntities_Tags_TagId" />
+        <EntityTypeShape EntityType="Context.NotificationRules" Width="1.5" PointX="5.25" PointY="31" />
+        <EntityTypeShape EntityType="Context.TaskResults" Width="1.5" PointX="13.5" PointY="21.75" />
+        <EntityTypeShape EntityType="Context.Projects" Width="1.5" PointX="3" PointY="23.625" />
+        <AssociationConnector Association="Context.FK_NotificationRules_Projects_ProjectId" />
+        <AssociationConnector Association="Context.FK_Projects_Plugins_ItPluginId" />
+        <AssociationConnector Association="Context.FK_Projects_Plugins_VcsPluginId" />
+        <AssociationConnector Association="Context.FK_PolicyRules_Projects_ProjectId" />
+        <AssociationConnector Association="Context.FK_Projects_SdlStatuses_SdlPolicyStatus" />
+        <AssociationConnector Association="Context.FK_Projects_Users_CreatedById" />
+        <AssociationConnector Association="Context.FK_Projects_Users_ModifiedById" />
+        <AssociationConnector Association="Context.FK_Queries_Projects_ProjectId" />
+        <AssociationConnector Association="Context.FK_Reports_Projects_ProjectId" />
+        <AssociationConnector Association="Context.FK_Roles_Projects_ProjectId" />
+        <AssociationConnector Association="Context.FK_UserProjectSettings_Projects_ProjectId" />
+        <AssociationConnector Association="Context.FK_WorkflowRules_Projects_ProjectId" />
+        <AssociationConnector Association="Context.FK_SettingGroups_Plugins" />
+        <AssociationConnector Association="Context.FK_Settings_Plugins" />
+        <EntityTypeShape EntityType="Context.Tasks" Width="1.5" PointX="11.25" PointY="20.75" />
+        <AssociationConnector Association="Context.FK_Tasks_Projects_ProjectId" />
+        <AssociationConnector Association="Context.FK_Tasks_SdlStatuses_SdlStatus" />
+        <AssociationConnector Association="Context.FK_Tasks_TaskResolutions_Resolution" />
+        <AssociationConnector Association="Context.FK_TaskResults_Tasks_TaskId" />
+        <AssociationConnector Association="Context.FK_Tasks_TaskStatuses_Status" />
+        <AssociationConnector Association="Context.FK_Tasks_Users_CreatedById" />
+        <AssociationConnector Association="Context.FK_Tasks_Users_ModifiedById" />
+        <AssociationConnector Association="Context.FK_SettingValues_Projects_ProjectId" />
+        <EntityTypeShape EntityType="Context.ScanAgents" Width="1.5" PointX="3.375" PointY="0.875" />
+        <AssociationConnector Association="Context.FK_Tasks_ScanAgents_AgentId" />
+        </Diagram>
+      <Diagram DiagramId="0257b31ee3eb475da9ae8c84e99e23e4" Name="TelemetryDiagram" >
+        <EntityTypeShape EntityType="Context.ItPluginTelemetry" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Context.ProjectTelemetry" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Context.QueryTelemetry" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Context.ReportTelemetry" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Context.TaskTelemetry" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Context.VcsPluginTelemetry" Width="1.5" PointX="2.75" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

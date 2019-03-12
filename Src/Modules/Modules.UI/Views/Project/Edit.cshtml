@@ -1,0 +1,509 @@
+﻿@using Modules.UI.Extensions
+@using Modules.UI.Resources
+
+@model Modules.UI.Models.Views.Project.EditProjectViewModel
+
+@{
+	ViewBag.Title = Resources.Edit_cshtml_Execute_Edit_project;
+}
+
+@section scripts{
+	<script type="text/javascript">
+		$(function () {
+			function updateRbacData() {
+				const selectedRoleId = $("#SelectedRoleId").val();
+				var selectedAuthorities = $("#SelectedAuthorities");
+				const projectId = $("#ProjectId").val();
+				$.ajax({
+					cache: false,
+					type: "GET",
+					url: "@(Url.Action("GetAuthorities"))",
+					data: { "roleId": selectedRoleId, "projectId": projectId },
+					success: function (data) {
+						selectedAuthorities.html('');
+						$.each(data,
+							function (id, option) {
+								selectedAuthorities.append($('<option></option>').val(option.Value).html(option.Text));
+							});
+					}
+				});
+			}
+
+			$("#SelectedRoleId").change(updateRbacData);
+
+			function updateSelectedNotification() {
+				const selectedNotificationRuleId = $("#SelectedNotificationId").val();
+
+				var queryTextArea = $('#notificationQueryTextArea');
+
+				$.get("@(Url.Action("GetNotificationRule"))",
+					{ "ruleId": selectedNotificationRuleId },
+					function (data) {
+						queryTextArea.val(data.Query);
+					});
+			}
+
+			$("#SelectedNotificationId").change(updateSelectedNotification);
+
+			function updateSelectedSdl() {
+				const selectedSdlRuleId = $("#SelectedSdlRuleId").val();
+
+				var sdlQueryTextArea = $('#sdlQueryTextArea');
+
+				$.get("@(Url.Action("GetPolicyRule"))",
+					{ "ruleId": selectedSdlRuleId },
+					function (data) {
+						sdlQueryTextArea.val(data.Query);
+					});
+			}
+
+			$("#SelectedSdlRuleId").change(updateSelectedSdl);
+
+			function saveNotificationRule() {
+				const selectedNotificationRuleId = $("#SelectedNotificationId").val();
+
+				const queryTextArea = $('#notificationQueryTextArea').val();
+
+				$.post("@(Url.Action("SaveNotificationRule", "Project"))",
+				{
+					RuleId: selectedNotificationRuleId,
+					Query: queryTextArea
+				});
+			}
+
+			$("#buttonSaveNotificationChanges").click(saveNotificationRule);
+
+			function getVcsSettings() {
+				$("#vcsSettings").text("Loading...");
+
+				const selectedVcsId = $("#SelectedVcsId").val();
+				const projectId = $("#ProjectId").val();
+
+				$("#vcsSettings")
+					.load(
+						"@Url.Action("GetPluginSettings")",
+						{ 'projectId': projectId, 'pluginId': selectedVcsId },
+						function (response, status, xhr) {
+							if (status == "error") {
+								alert("Failed to load VCS settings.");
+							}
+						});
+			}
+
+			$("#SelectedVcsId").change(getVcsSettings);
+
+			function getItSettings() {
+				$("#itSettings").text("Loading...");
+
+				const selectedItId = $("#SelectedItId").val();
+				const projectId = $("#ProjectId").val();
+
+				$("#itSettings")
+					.load(
+						"@Url.Action("GetPluginSettings")",
+						{ 'projectId': projectId, 'pluginId': selectedItId },
+						function (response, status, xhr) {
+							if (status == "error") {
+								alert("Failed to load IT settings.");
+							}
+						});
+			}
+
+			$("#SelectedItId").change(getItSettings);
+
+			$(document)
+				.ready(function () {
+					if ($("#tabRbacSettings").length) {
+						updateRbacData();
+					}
+					if ($("#tabSdlSettings").length) {
+						updateSelectedSdl();
+					}
+					if ($("#tabNotifications").length) {
+						updateSelectedNotification();
+					}
+
+					getVcsSettings();
+					getItSettings();
+				});
+		});
+
+		function getItSettings(itPluginId) {
+			$("#itSettings").text("Loading...");
+
+			const projectId = $("#ProjectId").val();
+
+			$("#itSettings")
+				.load(
+					"@Url.Action("GetPluginSettings")",
+					{ 'projectId': projectId, 'pluginId': itPluginId },
+					function (response, status, xhr) {
+						if (status == "error") {
+							alert("An error occurred while loading the results.");
+						}
+					});
+		}
+
+		function SaveSettings(e) {
+			var id = $(e.target).data('id');
+			var tab = $(`div#tab_${id}`);
+			var result = new Array();
+			var inputItems = tab.find('input[type=text], input[type=password], input[type=number]');
+			for (let index = 0; index < inputItems.length; index++) {
+				let item = $(inputItems[index]);
+				result.push({
+					"Id": item.attr('id'),
+					"Value": item.val()
+				});
+			}
+
+			var checkboxItems = tab.find('input[type=checkbox]');
+			for (let index = 0; index < checkboxItems.length; index++) {
+				let item = $(checkboxItems[index]);
+				result.push({
+					"Id": item.attr('name'),
+					"Value": item.is(':checked') === true ? "True" : "False"
+				});
+			}
+
+			var selectItems = tab.find('select');
+			for (let index = 0; index < selectItems.length; index++) {
+				let item = $(selectItems[index]);
+				result.push({
+					"Id": item.attr('id'),
+					"Value": item.val()
+				});
+			}
+
+			$.post('@Url.Action("SaveSettings")',
+				{
+					values: JSON.stringify(result)
+				},
+				function () {
+
+				});
+		}
+	</script>
+}
+
+<div class="row">
+	<div class="col-lg-3 col-md-3 col-sm-3">
+		<ul class="nav nav-pills nav-stacked red" role="tablist">
+			@if (Model.ProjectSettings.CanRead)
+			{
+				<li role="presentation" class="active">
+					<a href="#tabSettings" aria-controls="tabSettings" role="tab" data-toggle="tab">
+						<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+						@Html.DisplayNameFor(_ => _.ProjectSettings)
+					</a>
+				</li>
+			}
+			@if (Model.VcsSettings.CanRead)
+			{
+				<li role="presentation">
+					<a href="#tabVcsSettings" aria-controls="tabVcsSettings" role="tab" data-toggle="tab">
+						<span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+						@Html.DisplayNameFor(_ => _.VcsSettings)
+					</a>
+				</li>
+			}
+			@if (Model.ItSettings.CanRead)
+			{
+				<li role="presentation">
+					<a href="#tabItSettings" aria-controls="tabItSettings" role="tab" data-toggle="tab">
+						<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+						@Html.DisplayNameFor(_ => _.ItSettings)
+					</a>
+				</li>
+			}
+			@if (Model.RbacSettings.CanRead)
+			{
+				<li role="presentation">
+					<a href="#tabRbacSettings" aria-controls="tabRbacSettings" role="tab" data-toggle="tab">
+						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+						@Html.DisplayNameFor(_ => _.RbacSettings)
+					</a>
+				</li>
+			}
+			@if (Model.SdlSettings.CanRead)
+			{
+				<li role="presentation">
+					<a href="#tabSdlSettings" aria-controls="tabSdlSettings" role="tab" data-toggle="tab">
+						<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+						@Html.DisplayNameFor(_ => _.SdlSettings)
+					</a>
+				</li>
+			}
+			@if (Model.Notifications.CanRead)
+			{
+				<li role="presentation">
+					<a href="#tabNotifications" aria-controls="tabNotifications" role="tab" data-toggle="tab">
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+						@Html.DisplayNameFor(_ => _.Notifications)
+					</a>
+				</li>
+			}
+
+			@for (var index = 0; index < Model.SettingTabs.Length; index++)
+			{
+				<li role="presentation">
+					<a href="#tab_@index" aria-controls="tab_@index" role="tab" data-toggle="tab">
+						<span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+						@Model.SettingTabs[index].Title
+					</a>
+				</li>
+			}
+		</ul>
+	</div>
+	<div class="col-lg-9 col-md-9 col-xs-9">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="tab-content">
+					@if (Model.ProjectSettings.CanRead)
+					{
+						<div class="tab-pane fade in active" id="tabSettings">
+							@using (Html.BeginForm("UpdateSettings", "Project", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "formProjectSettings" }))
+							{
+								if (!Html.ViewData.ModelState.IsValid)
+								{
+									<div class="alert alert-danger">
+										@Html.ValidationSummary(false)
+									</div>
+								}
+
+								@Html.HiddenFor(_ => _.ProjectSettings.CanRead)
+								@Html.HiddenFor(_ => _.ProjectSettings.CanWrite)
+								@Html.HiddenFor(_ => _.ProjectId)
+
+								<div class="form-group">
+									@Html.LabelFor(_ => _.ProjectSettings.Alias, new { @class = "col-sm-3 control-label" })
+									<div class="col-sm-9">
+										@Html.TextBoxFor(m => m.ProjectSettings.Alias, new { @id = "projectAlias", @class = "form-control" }.Disabled(!Model.ProjectSettings.CanWrite))
+										@Html.ValidationMessageFor(_ => _.ProjectSettings.Alias, null, new { @class = "label label-danger" })
+										<p>
+											<small>@Html.DescriptionFor(_ => Model.ProjectSettings.Alias)</small>
+										</p>
+									</div>
+								</div>
+								<div class="form-group">
+									@Html.LabelFor(_ => _.ProjectSettings.DisplayName, new { @class = "col-sm-3 control-label" })
+									<div class="col-sm-9">
+										@Html.TextBoxFor(m => m.ProjectSettings.DisplayName, new { @id = "projectName", @class = "form-control" }.Disabled(!Model.ProjectSettings.CanWrite))
+										@Html.ValidationMessageFor(m => m.ProjectSettings.DisplayName, null, new { @class = "label label-danger" })
+										<p>
+											<small>@Html.DescriptionFor(_ => Model.ProjectSettings.DisplayName)</small>
+										</p>
+									</div>
+								</div>
+								<div class="form-group">
+									@Html.LabelFor(_ => _.ProjectSettings.DefaultBranchName, new { @class = "col-sm-3 control-label" })
+									<div class="col-sm-9">
+										@Html.TextBoxFor(m => m.ProjectSettings.DefaultBranchName, new { @id = "projectName", @class = "form-control" }.Disabled(!Model.ProjectSettings.CanWrite))
+										@Html.ValidationMessageFor(m => m.ProjectSettings.DefaultBranchName, null, new { @class = "label label-danger" })
+										<p>
+											<small>@Html.DescriptionFor(_ => Model.ProjectSettings.DefaultBranchName)</small>
+										</p>
+									</div>
+								</div>
+								<div class="form-group">
+									@Html.LabelFor(_ => _.ProjectSettings.VcsSyncEnabled, new {@class = "col-sm-3 control-label"})
+									<div class="col-sm-9">
+										<div class="checkbox">
+											@Html.CheckBoxFor(_ => _.ProjectSettings.VcsSyncEnabled, new {@style = "margin-left: 3px"}.Disabled(!Model.ProjectSettings.CanWrite))
+										</div>
+									</div>
+								</div>
+								if (Model.ProjectSettings.CommitToVcsEnabled)
+								 {
+									 <div class="form-group">
+										 @Html.LabelFor(_ => _.ProjectSettings.CommitToVcs, new {@class = "col-sm-3 control-label"})
+										 <div class="col-sm-9">
+											 <div class="checkbox">
+												 @Html.CheckBoxFor(_ => _.ProjectSettings.CommitToVcs, new {@style = "margin-left: 3px"}.Disabled(!Model.ProjectSettings.CommitToVcsEnabled || !Model.ProjectSettings.CanWrite))
+											 </div>
+										 </div>
+									 </div>
+								 }
+								if (Model.ProjectSettings.CommitToItEnabled)
+								 {
+									 <div class="form-group">
+										 @Html.LabelFor(_ => _.ProjectSettings.CommitToIt, new {@class = "col-sm-3 control-label"})
+										 <div class="col-sm-9">
+											 <div class="checkbox">
+												 @Html.CheckBoxFor(_ => _.ProjectSettings.CommitToIt, new {@style = "margin-left: 3px"}.Disabled(!Model.ProjectSettings.CommitToItEnabled || !Model.ProjectSettings.CanWrite))
+											 </div>
+										 </div>
+									 </div>
+								 }
+								<div class="form-group">
+									@Html.LabelFor(_ => _.ProjectSettings.EnablePoll, new { @class = "col-sm-3 control-label" })
+									<div class="col-sm-9">
+										<div class="checkbox">
+											@Html.CheckBoxFor(_ => _.ProjectSettings.EnablePoll, new { @style = "margin-left: 3px" })
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									@Html.LabelFor(_ => _.ProjectSettings.PollTimeout, new { @class = "col-sm-3 control-label" })
+									<div class="col-sm-9">
+										<div class="checkbox">
+											@Html.TextBoxFor(_ => _.ProjectSettings.PollTimeout, new { @style = "margin-left: 3px" })
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									@Html.LabelFor(_ => _.ProjectSettings.Description, new { @class = "col-sm-3 control-label" })
+									<div class="col-sm-9">
+										@Html.TextAreaFor(m => m.ProjectSettings.Description, new { @id = "projectDesc", @class = "form-control", @style = "max-width:100%", @rows = 10 }.Disabled(!Model.ProjectSettings.CanWrite))
+										@Html.ValidationMessageFor(m => m.ProjectSettings.Description, null, new { @class = "label label-danger" })
+										<p>
+											<small>@Html.DescriptionFor(_ => Model.ProjectSettings.Description)</small>
+										</p>
+									</div>
+								</div>
+								if (Model.ProjectSettings.CanWrite)
+								{
+									<div class="form-group">
+										<div class="col-sm-offset-3 col-sm-9">
+											<button id="buttonSaveChanges" type="submit" class="btn btn-primary">@Resources.Index_cshtml_Execute_Save</button>
+										</div>
+									</div>
+								}
+							}
+						</div>
+					}
+					@if (Model.VcsSettings.CanRead)
+					{
+						<div role="tabpanel" class="tab-pane fade" id="tabVcsSettings">
+							@using (Html.BeginForm("SavePluginSettings", "Project", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+							{
+								<div class="form-group">
+									@Html.LabelFor(_ => _.SelectedVcsId, new { @class = "col-sm-3 control-label" })
+									<div class="col-sm-9">
+										@Html.DropDownListFor(_ => _.SelectedVcsId, Model.VcsPlugins, new { @class = "form-control" }.Disabled(!Model.VcsSettings.CanWrite))
+									</div>
+								</div>
+
+								<div id="vcsSettings"></div>
+
+								if (Model.VcsSettings.CanWrite)
+								{
+									<div class="form-group">
+										<div class="col-sm-offset-3 col-sm-9">
+											<button id="buttonSaveChanges" type="submit" class="btn btn-primary">@Resources.Index_cshtml_Execute_Save</button>
+										</div>
+									</div>
+								}
+							}
+						</div>
+					}
+					@if (Model.ItSettings.CanRead)
+					{
+						<div role="tabpanel" class="tab-pane fade" id="tabItSettings">
+							@using (Html.BeginForm("SavePluginSettings", "Project", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+							{
+								<div class="form-group">
+									@Html.LabelFor(_ => _.SelectedItId, new { @class = "col-sm-3 control-label" })
+									<div class="col-sm-9">
+										@Html.DropDownListFor(_ => _.SelectedItId, Model.ItPlugins, new { @class = "form-control" }.Disabled(!Model.ItSettings.CanWrite))
+									</div>
+								</div>
+
+								<div id="itSettings"></div>
+
+								if (Model.ItSettings.CanWrite)
+								{
+									<div class="form-group">
+										<div class="col-sm-offset-3 col-sm-9">
+											<button id="buttonSaveChanges" type="submit" class="btn btn-primary">@Resources.Index_cshtml_Execute_Save</button>
+										</div>
+									</div>
+								}
+							}
+						</div>
+					}
+					@if (Model.RbacSettings.CanRead)
+					{
+						<div role="tabpanel" class="tab-pane fade" id="tabRbacSettings">
+							<form class="form-horizontal">
+								<div class="form-group">
+									@Html.LabelFor(_ => _.ProjectRoles, new { @class = "col-sm-3 control-label" })
+									<div class="col-sm-9">
+										@Html.DropDownListFor(_ => _.SelectedRoleId, Model.ProjectRoles, new { @class = "form-control" })
+									</div>
+								</div>
+								<div class="form-group">
+									@Html.LabelFor(_ => _.Authorities, new { @class = "col-sm-3 control-label" })
+									<div class="col-sm-9">
+										@Html.ListBoxFor(_ => _.SelectedAuthorities, Model.Authorities, new { @class = "form-control", @size = 15, @style = "max-width:100%" })
+									</div>
+								</div>
+							</form>
+						</div>
+					}
+					@if (Model.SdlSettings.CanRead)
+					{
+						<div role="tabpanel" class="tab-pane fade" id="tabSdlSettings">
+							<form class="form-horizontal">
+								<div class="form-group">
+									@Html.LabelFor(_ => _.SdlSettings.SdlRules, new { @class = "col-sm-3 control-label" })
+									<div class="col-sm-9">
+										@Html.DropDownListFor(_ => _.SelectedSdlRuleId, Model.SdlSettings.SdlRules, new { @class = "form-control" })
+									</div>
+								</div>
+								<div class="form-group">
+									@Html.LabelFor(_ => _.SdlSettings.Query, new { @class = "col-sm-3 control-label" })
+									<div class="col-sm-9">
+										@Html.TextArea("sdlQueryTextArea", new { @class = "form-control", @style = "max-width:100%", @rows = 10 }.Disabled(true))
+									</div>
+								</div>
+							</form>
+						</div>
+					}
+					@if (Model.Notifications.CanRead)
+					{
+						<div role="tabpanel" class="tab-pane fade" id="tabNotifications">
+							<form class="form-horizontal">
+								<div class="form-group">
+									@Html.LabelFor(_ => _.Notifications.NotificationRules, new { @class = "col-sm-3 control-label" })
+									<div class="col-sm-9">
+										@Html.DropDownListFor(_ => _.SelectedNotificationId, Model.Notifications.NotificationRules, new { @class = "form-control" })
+									</div>
+								</div>
+								<div class="form-group">
+									@Html.LabelFor(_ => _.Notifications.Query, new { @class = "col-sm-3 control-label" })
+									<div class="col-sm-9">
+										@Html.TextArea("notificationQueryTextArea", new { @class = "form-control", @style = "max-width:100%", @rows = 10 }.Disabled(!Model.Notifications.CanWrite))
+									</div>
+								</div>
+								@if (Model.Notifications.CanWrite)
+								{
+									<div class="form-group">
+										<div class="col-sm-offset-3 col-sm-9">
+											<button id="buttonSaveNotificationChanges" type="button" class="btn btn-primary">@Resources.Index_cshtml_Execute_Save</button>
+										</div>
+									</div>
+								}
+							</form>
+						</div>
+					}
+					@for (var index = 0; index < Model.SettingTabs.Length; index++)
+					{
+						<div role="tabpanel" class="tab-pane fade" id="tab_@index">
+							<form class="form-horizontal">
+								@Html.Partial("~/Views/Settings/SettingsTab.cshtml", Model.SettingTabs[index])
+								<div class="form-group">
+									<div class="col-sm-offset-3 col-sm-9">
+										<button type="button" class="btn btn-primary" data-id="@index" onclick="SaveSettings(event)">
+											@Resources.Index_cshtml_Execute_Save
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

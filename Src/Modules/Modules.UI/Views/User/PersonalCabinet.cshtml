@@ -1,0 +1,112 @@
+﻿@using Modules.UI.Extensions
+@using Modules.UI.Resources
+@model Modules.UI.Models.Views.PersonalCabinet.UserSettingsViewModel
+
+@{
+	ViewBag.Title = Resources.PersonalCabinet_cshtml_Execute_Personal_cabinet;
+}
+
+<div class="row">
+	<div class="col-lg-3">
+		<ul class="nav nav-pills nav-stacked red" role="tablist">
+			<li role="presentation" class="active">
+				<a href="#tabUserInfo" aria-controls="tabUserInfo" role="tab" data-toggle="tab">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+					@Html.DisplayNameFor(_ => _.UserInfo)
+				</a>
+			</li>
+			@if (Model.VcsPluginSettings.Any())
+			{
+				<li role="presentation">
+					<a href="#tabVcsSettings" aria-controls="tabVcsSettings" role="tab" data-toggle="tab">
+						<span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+						@Html.DisplayNameFor(_ => _.VcsPluginSettings)
+					</a>
+				</li>
+			}
+			@if (Model.ItPluginSettings.Any())
+			{
+				<li role="presentation">
+					<a href="#tabItSettings" aria-controls="tabItSettings" role="tab" data-toggle="tab">
+						<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+						@Html.DisplayNameFor(_ => _.ItPluginSettings)
+					</a>
+				</li>
+			}
+		</ul>
+	</div>
+	<div class="col-lg-9">
+		<div class="panel panel-default row-height active">
+			<div class="panel-body">
+				@using (Html.BeginForm("PersonalCabinet", "User", FormMethod.Post, new { @class = "form-horizontal" }))
+				{
+					<div class="tab-content">
+
+						@if (!Html.ViewData.ModelState.IsValid)
+						{
+							<div class="alert alert-danger">
+								@Html.ValidationSummary(false)
+							</div>
+						}
+
+						@Html.HiddenFor(_ => _.UserInfo.Id)
+						@Html.HiddenFor(_ => _.UserInfo.Login)
+						@Html.HiddenFor(_ => _.UserInfo.Sid)
+
+						<div role="tabpanel" class="tab-pane fade in active" id="tabUserInfo">
+							<div class="form-group">
+								@Html.LabelFor(_ => _.UserInfo.Sid, new { @class = "col-sm-3 control-label" })
+								<div class="col-sm-9">
+									@Html.TextBoxFor(m => m.UserInfo.Sid, new { @class = "form-control", @style = "max-width:65%" }.Disabled(true))
+								</div>
+							</div>
+							<div class="form-group">
+								@Html.LabelFor(_ => _.UserInfo.Login, new { @class = "col-sm-3 control-label" })
+								<div class="col-sm-9">
+									@Html.TextBoxFor(m => m.UserInfo.Login, new { @class = "form-control" }.Disabled(true))
+								</div>
+							</div>
+							<div class="form-group">
+								@Html.LabelFor(_ => _.UserInfo.DisplayName, new { @class = "col-sm-3 control-label" })
+								<div class="col-sm-9">
+									@Html.TextBoxFor(m => m.UserInfo.DisplayName, new { @class = "form-control" })
+									@Html.ValidationMessageFor(m => m.UserInfo.DisplayName, null, new { @id = "userDisplayName", @class = "label label-danger" })
+									<p>
+										<small>@Html.DescriptionFor(_ => _.UserInfo.DisplayName)</small>
+									</p>
+								</div>
+							</div>
+							<div class="form-group">
+								@Html.LabelFor(_ => _.UserInfo.Email, new { @class = "col-sm-3 control-label" })
+								<div class="col-sm-9">
+									@Html.TextBoxFor(m => m.UserInfo.Email, new { @class = "form-control" })
+									@Html.ValidationMessageFor(m => m.UserInfo.Email, null, new { @id = "userEmail", @class = "label label-danger" })
+									<p>
+										<small>@Html.DescriptionFor(_ => _.UserInfo.Email)</small>
+									</p>
+								</div>
+							</div>
+						</div>
+						@if (Model.VcsPluginSettings.Any())
+						{
+							<div role="tabpanel" class="tab-pane fade" id="tabVcsSettings">
+								@Html.EditorFor(_ => @Model.VcsPluginSettings, "ProjectPluginsModel")
+							</div>
+						}
+						@if (Model.ItPluginSettings.Any())
+						{
+							<div role="tabpanel" class="tab-pane fade" id="tabItSettings">
+								@Html.EditorFor(_ => Model.ItPluginSettings, "ProjectPluginsModel")
+							</div>
+						}
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-3 col-sm-9">
+							<button type="submit" class="btn btn-primary">@Resources.Index_cshtml_Execute_Save</button>
+						</div>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>

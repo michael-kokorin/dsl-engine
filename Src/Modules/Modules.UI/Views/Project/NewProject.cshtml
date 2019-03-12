@@ -1,0 +1,56 @@
+﻿@using Modules.UI.Extensions
+@using Modules.UI.Resources
+
+@model Modules.UI.Models.Views.Project.NewProjectViewModel
+
+@using (Html.BeginForm("Create", "Project", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "formNewProject" }))
+{
+    @Html.ValidationSummary(true)
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <b>@Resources.Index_cshtml_Execute_Warning</b>
+    </div>
+    <div class="modal-body">
+        <div class="panel-body">
+            <div class="form-group">
+                @Html.LabelFor(_ => _.Alias, new {@class = "col-sm-3 control-label"})
+                <div class="col-sm-9">
+                    @Html.TextBoxFor(m => m.Alias, new {@class = "form-control", @id="textBoxNewProjectAlias"})
+                    @Html.ValidationMessageFor(_ => _.Alias, null, new {@class = "label label-danger"})
+                    <p><small>@Html.DescriptionFor(_ => Model.Alias)</small>
+                    </p>
+                </div>
+            </div>
+	        <div class="form-group">
+		        @Html.LabelFor(_ => _.DisplayName, new {@class = "col-sm-3 control-label"})
+		        <div class="col-sm-9">
+			        @Html.TextBoxFor(m => m.DisplayName, new {@class = "form-control", @id = "textBoxNewProjectDisplayName"})
+			        @Html.ValidationMessageFor(_ => _.DisplayName, null, new {@class = "label label-danger"})
+		        </div>
+	        </div>
+			<div class="form-group">
+				@Html.LabelFor(_ => _.DefaultBranchName, new { @class = "col-sm-3 control-label" })
+				<div class="col-sm-9">
+					@Html.TextBoxFor(m => m.DefaultBranchName, new { @class = "form-control", @id="textBoxNewProjectDefaultBranchName" })
+					@Html.ValidationMessageFor(_ => _.DefaultBranchName, null, new { @class = "label label-danger" })
+				</div>
+			</div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" id="buttonCreateNewProject" class="btn btn-default">@Resources.Index_cshtml_Execute_Save</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">@Resources.Index_cshtml_Execute_Close</button>
+    </div>
+}
+
+<script type="text/javascript">
+    $(function ()
+    {
+        $("#buttonCreateNewProject").click(function ()
+        {
+            $.validator.unobtrusive.parse("#formNewProject");
+        });
+    });
+</script>

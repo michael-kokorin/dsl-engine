@@ -1,0 +1,53 @@
+﻿<div class="row">
+	<div class="col-md-1">
+
+	</div>
+	<div class="col-md-2">
+		<label>Variable name</label>
+	</div>
+	<div class="col-md-2">
+		<b>Sort direction</b>
+	</div>
+	<div class="col-md-7">
+		
+	</div>
+</div>
+<div ng-repeat="item in block.Items.$values">
+	<div class="row">
+		<div class="col-md-1">
+			<label class="control-label text-center">#{{$index + 1}}</label>
+		</div>
+		<div class="col-md-2">
+			<input type="text" ng-readonly="!controller.isCanEdit" ng-model="item.OrderFieldName" class="form-control" ng-change="controller.syncWithText()"/>
+		</div>
+		<div class="col-md-2">
+			<select ng-model="item.SortOrder" ng-disabled="!controller.isCanEdit" ng-options="a.Value as a.Text for a in controller.sortOrderDirections" class="form-control" ng-change="controller.syncWithText()"></select>
+		</div>
+		<div class="col-md-7">
+			<button class="btn btn-defaul" ng-show="controller.isCanEdit" ng-click="controller.moveOrderItemUp(block, item)">
+				<span class="glyphicon glyphicon-chevron-up"></span>
+			</button>
+			<button class="btn btn-defaul" ng-show="controller.isCanEdit" ng-click="controller.moveOrderItemDown(block, item)">
+				<span class="glyphicon glyphicon-chevron-down"></span>
+			</button>
+			<button class="btn btn-warning" ng-show="controller.isCanEdit" ng-click="controller.removeOrderItem(block, item)">
+				<span class="glyphicon glyphicon-trash"></span>
+			</button>
+		</div>
+	</div>
+	<br/>
+</div>
+<div class="row">
+	<div class="col-md-1">
+
+	</div>
+	<div class="col-md-2">
+		<button class="btn btn-primary" ng-show="controller.isCanEdit" ng-click="controller.addOrderItem(block)">Add order item</button>
+	</div>
+	<div class="col-md-2">
+
+	</div>
+	<div class="col-md-7">
+
+	</div>
+</div>

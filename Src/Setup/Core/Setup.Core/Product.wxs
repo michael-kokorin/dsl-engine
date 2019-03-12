@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+
+	<?include $(sys.CURRENTDIR)..\..\Setup\config.wxi ?>
+
+	<Product Id="*" Name="$(var.CoreAppNameFull)" Language="1033"
+			 Version="$(var.ProductVersion)" Manufacturer="$(var.ManufacturerFull)"
+			 UpgradeCode="f3fc9c1c-84ce-4ed3-9008-d968580b1c8d">
+
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<Icon Id="favicon.ico" SourceFile="$(sys.CURRENTDIR)..\..\Setup\favicon.ico" />
+		<Property Id="ARPPRODUCTICON" Value="favicon.ico" />
+		<Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+		<Property Id="DB_CON_STR"
+				  Value="data source=localhost;initial catalog=Database;integrated security=true;MultipleActiveResultSets=True;" />
+		<Property Id="LICENCEID" Value="B79E0EFE-D806-4B8C-9B1A-B5827AC22BFC" />
+
+		<MajorUpgrade AllowSameVersionUpgrades="yes"
+					  DowngradeErrorMessage="A newer version of [ProductName] is already installed. If you are sure you want to downgrade, remove the existing installation via Programs and Features." />
+
+		<MediaTemplate CompressionLevel="high" EmbedCab="yes" />
+
+		<UI>
+			<UIRef Id="WixUI_InstallDir" />
+
+			<Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="InstallDirDlg" Order="2">1</Publish>
+
+			<Publish Dialog="InstallDirDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="2">1</Publish>
+			<Publish Dialog="InstallDirDlg" Control="Next" Event="NewDialog" Value="DatabaseConnectionDialog" Order="4">WIXUI_DONTVALIDATEPATH OR WIXUI_INSTALLDIR_VALID="1"</Publish>
+
+			<Publish Dialog="DatabaseConnectionDialog" Control="Back" Event="NewDialog" Value="InstallDirDlg"></Publish>
+			<Publish Dialog="DatabaseConnectionDialog" Control="Next" Event="NewDialog" Value="LicenceDialog"></Publish>
+
+			<Publish Dialog="LicenceDialog" Control="Back" Event="NewDialog" Value="DatabaseConnectionDialog"></Publish>
+			<Publish Dialog="LicenceDialog" Control="Next" Event="NewDialog" Value="VerifyReadyDlg"></Publish>
+
+			<Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="LicenceDialog"
+					 Order="1">
+				NOT Installed
+			</Publish>
+		</UI>
+
+		<Feature Id="ProductFeature" Title="$(var.CoreAppNameFull)" Level="1">
+			<ComponentGroupRef Id="Binaries" />
+			<ComponentRef Id="UpdateConfig" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<UI>
+			<Dialog Id="DatabaseConnectionDialog" Width="370" Height="270" Title="Database connection">
+				<Control Id="CoreDatabaseAddressLabel" Type="Text" X="20" Y="60" Width="280" Height="15" TabSkip="no"
+						 Text="SQL Server connection string:" />
+				<Control Id="DatabaseConnectionStringEdit" Type="Edit" X="20" Y="100" Width="320" Height="20"
+						 Property="DB_CON_STR" Text="{512}" />
+				<Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="Back"></Control>
+				<Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="Next"></Control>
+				<Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes"
+						 Text="!(loc.WixUICancel)">
+					<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+				</Control>
+
+				<Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no"
+						 Text="!(loc.InstallDirDlgBannerBitmap)" />
+				<Control Id="Description" Type="Text" X="25" Y="23" Width="280" Height="15" Transparent="yes" NoPrefix="yes">
+					<Text>Define database connection parameters.</Text>
+				</Control>
+				<Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+				<Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes">
+					<Text>{\DlgTitleFont}Database</Text>
+				</Control>
+				<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
+			</Dialog>
+		</UI>
+	</Fragment>
+
+	<Fragment>
+		<UI>
+			<Dialog Id="LicenceDialog" Width="370" Height="270" Title="Product edition">
+				<Control Id="SelectLicenceLabel" Type="Text" X="20" Y="60" Width="280" Height="15" TabSkip="no"
+						 Text="Select installation type:" />
+
+				<Control Id="LicencesSelector" Type="RadioButtonGroup" X="40" Y="90" Width="305" Height="100" Property="LICENCEID"
+						 Text="This is My Group">
+					<RadioButtonGroup Property="LICENCEID">
+						<RadioButton Value="B79E0EFE-D806-4B8C-9B1A-B5827AC22BFC" X="0" Y="0" Width="200" Height="15"
+									 Text="Default AI.SSDL edition" />
+						<RadioButton Value="AE016AFB-0A29-475A-9411-06EC6C77174A" X="0" Y="20" Width="200" Height="15"
+									 Text="AI SSDL FTP edition" />
+					</RadioButtonGroup>
+				</Control>
+
+				<Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="Back"></Control>
+				<Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="Next"></Control>
+				<Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes"
+						 Text="!(loc.WixUICancel)">
+					<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+				</Control>
+
+				<Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no"
+						 Text="!(loc.InstallDirDlgBannerBitmap)" />
+				<Control Id="Description" Type="Text" X="25" Y="23" Width="280" Height="15" Transparent="yes" NoPrefix="yes">
+					<Text>Define database connection parameters.</Text>
+				</Control>
+				<Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+				<Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes">
+					<Text>{\DlgTitleFont}Database</Text>
+				</Control>
+				<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
+			</Dialog>
+		</UI>
+	</Fragment>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="ManufacturerDirectory" Name="$(var.ManufacturerSafe)">
+					<Directory Id="SolutionDirectory" Name="$(var.SolutionNameSafe)">
+						<Directory Id="ApplicationDirectory" Name="$(var.CoreAppNameSafe)">
+							<Directory Id="INSTALLFOLDER">
+							</Directory>
+						</Directory>
+					</Directory>
+				</Directory>
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<DirectoryRef Id="INSTALLFOLDER">
+			<Component Id="UpdateConfig" KeyPath="yes" Guid="{7AB66A71-E04D-4D33-B10E-673CFA991B38}">
+				<util:XmlFile Id="SetDatabaseConnectionStringForEF"
+							  Action="setValue"
+							  File="[INSTALLFOLDER]Web.config"
+							  ElementPath="/configuration/connectionStrings/add[\[]@name='SdlContext'[\]]"
+							  Name="connectionString"
+							  Value="metadata=res://*/Context.SdlContext.csdl|res://*/Context.SdlContext.ssdl|res://*/Context.SdlContext.msl;provider=System.Data.SqlClient;provider connection string=&quot;[DB_CON_STR];App=EntityFramework&quot;"
+							  SelectionLanguage="XPath"
+							  Sequence="1" />
+
+				<util:XmlFile Id="SetDatabaseConnectionStringForMigrations"
+							  Action="setValue"
+							  File="[INSTALLFOLDER]Web.config"
+							  ElementPath="/configuration/connectionStrings/add[\[]@name='SdlDbConnection'[\]]"
+							  Name="connectionString"
+							  Value="[DB_CON_STR]"
+							  SelectionLanguage="XPath"
+							  Sequence="2" />
+
+				<util:XmlConfig Id="RemovePluginsFolder"
+								On="install"
+								Action="delete"
+								Node="element"
+								File="[INSTALLFOLDER]Web.config"
+								VerifyPath="/configuration/appSettings/add[\[]@key='PluginsFolder'[\]]"
+								ElementPath="/configuration/appSettings"
+								Sequence="3" />
+
+				<util:XmlConfig Id="RemoveLdapStorage"
+								On="install"
+								Action="delete"
+								Node="element"
+								File="[INSTALLFOLDER]Web.config"
+								VerifyPath="/configuration/appSettings/add[\[]@key='ActiveDirectoryRootGroup'[\]]"
+								ElementPath="/configuration/appSettings"
+								Sequence="4" />
+
+				<util:XmlConfig Id="RemoveTempStorage"
+								On="install"
+								Action="delete"
+								Node="element"
+								File="[INSTALLFOLDER]Web.config"
+								VerifyPath="/configuration/appSettings/add[\[]@key='TempDirPath'[\]]"
+								ElementPath="/configuration/appSettings"
+								Sequence="5" />
+
+				<util:XmlFile Id="SetLicenceId"
+							  Action="setValue"
+							  File="[INSTALLFOLDER]Web.config"
+							  ElementPath="/configuration/appSettings/add[\[]@key='SystemLicenceId'[\]]"
+							  Name="value"
+							  Value="[LICENCEID]"
+							  SelectionLanguage="XPath"
+							  Sequence="6" />
+
+			</Component>
+		</DirectoryRef>
+	</Fragment>
+</Wix>

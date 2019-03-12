@@ -1,0 +1,40 @@
+﻿@using Modules.UI.Extensions
+@using Modules.UI.Models.Entities
+@model IList<PluginSettingModel>
+
+@if ((Model != null) && @Model.Any())
+{
+	for (var setNum = 0; setNum < Model.Count; setNum++)
+	{
+		@Html.HiddenFor(m => m[setNum].DisplayName)
+		@Html.HiddenFor(m => m[setNum].SettingId)
+		@Html.HiddenFor(m => m[setNum].Type)
+
+		<div class="form-group">
+			<div class="col-sm-3 control-label">
+				<label>@Html.DisplayFor(m => m[setNum].DisplayName)</label>
+			</div>
+			<div class="col-sm-9">
+				@switch (Model[setNum].Type)
+				{
+					case PluginSettingTypeModel.Password:
+						@Html.PasswordFor(m => m[setNum].Value, new {@class = "form-control", value = Model[setNum].Value})
+						break;
+					case PluginSettingTypeModel.Text:
+						@Html.TextBoxFor(m => m[setNum].Value, new {@class = "form-control"})
+						break;
+					case PluginSettingTypeModel.Bool:
+						@Html.CheckBoxFor(m => m[setNum].BoolValue, new { @class="checkbox", @style = "margin-left: 3px" })
+						break;
+				}
+				@if (!string.IsNullOrEmpty(Model[setNum].Description))
+				{
+					<p>
+						<small>@Html.DescriptionFor(_ => _[setNum].Description)</small>
+					</p>
+				}
+				@Html.ValidationMessageFor(m => m[setNum].Value, null, new {@class = "label label-danger"})
+			</div>
+		</div>
+	}
+}

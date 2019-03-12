@@ -1,0 +1,45 @@
+﻿@using Modules.UI.Resources;
+
+@model Modules.UI.Models.Views.Query.CreateQueryViewModel
+
+@using (Html.BeginForm("CreateQuery", "Query", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "CreateQueryForm" }))
+{
+	@Html.ValidationSummary(true)
+
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+	<b>@Resources.Index_cshtml_Execute_Warning</b>
+</div>
+<div class="modal-body">
+	<div class="panel-body">
+		<div class="form-group">
+			@Html.LabelFor(_ => _.ProjectId, new {@class = "col-sm-3 control-label"})
+			<div class="col-sm-9">
+				@Html.DropDownListFor(m => m.ProjectId, new SelectList(ViewBag.Projects, "Id", "Name"), new {@class = "form-control"})
+			</div>
+		</div>
+		<div class="form-group">
+			@Html.LabelFor(_ => _.Name, new { @class = "col-sm-3 control-label" })
+			<div class="col-sm-9">
+				@Html.TextBoxFor(_ => _.Name, new { @class = "form-control", @id="textBoxQueryName" })
+				@Html.ValidationMessageFor(_ => _.Name, null, new { @class = "label label-danger" })
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+	<button type="submit" id="buttonCreateNewQuery" class="btn btn-default">@Resources.Index_cshtml_Execute_Save</button>
+	<button type="button" class="btn btn-primary" data-dismiss="modal">@Resources.Index_cshtml_Execute_Close</button>
+</div>
+}
+
+<script type="text/javascript">
+    $(function ()
+    {
+    	$("#buttonCreateNewQuery").click(function ()
+        {
+        	$.validator.unobtrusive.parse("#CreateQueryForm");
+        });
+    });
+</script>
